@@ -17,7 +17,7 @@ namespace Server.Spells
 		public override bool RevealOnCast { get { return false; } }
 		public override TimeSpan GetCastRecovery(){ return TimeSpan.Zero; }
 		public override double CastDelayFastScalar { get { return 0; } }
-		public override TimeSpan CastDelayBase{ get{ return TimeSpan.FromSeconds( 3.0 ); } }
+		public override TimeSpan CastDelayBase{ get{ return TimeSpan.FromSeconds( 1.0 ); } }
 		public override int GetMana(){ return 0; }
 		public override bool ConsumeReagents(){ return true; }
 		public override bool CheckFizzle(){ return true; }
@@ -57,9 +57,8 @@ namespace Server.Spells
 			Caster.Flying = false;
 			BuffInfo.RemoveBuff( Caster, BuffIcon.Fly );
 			Caster.Animate( 60, 10, 1, true, false, 0 );
-			Caster.SendLocalizedMessage( 1112567 ); // You are flying.
-            Caster.Flying = true;
-            BuffInfo.AddBuff( Caster, new BuffInfo( BuffIcon.Fly, 1112567 ) );
+			Caster.Flying = true;
+			BuffInfo.AddBuff( Caster, new BuffInfo( BuffIcon.Fly, 1112567 ) );
 			FinishSequence();
 		}
 	}

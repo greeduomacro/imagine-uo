@@ -28,124 +28,121 @@ using Server.Engines.PartySystem;
 
 namespace Server.Mobiles
 {
-    #region Enums
-    [Flags]
-    public enum PlayerFlag // First 16 bits are reserved for default-distro use, start custom flags at 0x00010000
-    {
-        None 					= 0x00000000,
-        Glassblowing 			= 0x00000001,
-        Masonry 				= 0x00000002,
-        SandMining 				= 0x00000004,
-        StoneMining 			= 0x00000008,
-        ToggleMiningStone 		= 0x00000010,
-        KarmaLocked 			= 0x00000020,
-        AutoRenewInsurance 		= 0x00000040,
-        UseOwnFilter 			= 0x00000080,
-        PublicMyRunUO 			= 0x00000100,
-        PagingSquelched 		= 0x00000200,
-        Young 					= 0x00000400,
-        AcceptGuildInvites 		= 0x00000800,
-        DisplayChampionTitle 	= 0x00001000,
-        HasStatReward 			= 0x00002000,
+	#region Enums
+	[Flags]
+	public enum PlayerFlag // First 16 bits are reserved for default-distro use, start custom flags at 0x00010000
+	{
+		None 					= 0x00000000,
+		Glassblowing 			= 0x00000001,
+		Masonry 				= 0x00000002,
+		SandMining 				= 0x00000004,
+		StoneMining 			= 0x00000008,
+		ToggleMiningStone 		= 0x00000010,
+		KarmaLocked 			= 0x00000020,
+		AutoRenewInsurance 		= 0x00000040,
+		UseOwnFilter 			= 0x00000080,
+		PublicMyRunUO 			= 0x00000100,
+		PagingSquelched 		= 0x00000200,
+		Young 					= 0x00000400,
+		AcceptGuildInvites 		= 0x00000800,
+		DisplayChampionTitle 	= 0x00001000,
+		HasStatReward 			= 0x00002000,
 
-        #region Mondain's Legacy
-        Bedlam 					= 0x00010000,
-        LibraryFriend 			= 0x00020000,
-        Spellweaving 			= 0x00040000,
-        #endregion
+		#region Mondain's Legacy
+		Bedlam 					= 0x00010000,
+		LibraryFriend 			= 0x00020000,
+		Spellweaving 			= 0x00040000,
+		#endregion
 
-        #region SA Gemmining
-        GemMining 				= 0x00080000,
-        ToggleMiningGem 		= 0x00100000,
-        #endregion
-    }
+		#region SA Gemmining
+		GemMining 				= 0x00080000,
+		ToggleMiningGem 		= 0x00100000,
+		#endregion
+	}
 
-    public enum NpcGuild
-    {
-        None,
-        MagesGuild,
-        WarriorsGuild,
-        ThievesGuild,
-        RangersGuild,
-        HealersGuild,
-        MinersGuild,
-        MerchantsGuild,
-        TinkersGuild,
-        TailorsGuild,
-        FishermensGuild,
-        BardsGuild,
-        BlacksmithsGuild
-    }
+	public enum NpcGuild
+	{
+		None,
+		MagesGuild,
+		WarriorsGuild,
+		ThievesGuild,
+		RangersGuild,
+		HealersGuild,
+		MinersGuild,
+		MerchantsGuild,
+		TinkersGuild,
+		TailorsGuild,
+		FishermensGuild,
+		BardsGuild,
+		BlacksmithsGuild
+	}
 
-    public enum SolenFriendship
-    {
-        None,
-        Red,
-        Black
-    }
-    #endregion
+	public enum SolenFriendship
+	{
+		None,
+		Red,
+		Black
+	}
+	#endregion
 
-    public class PlayerMobile : Mobile, IHonorTarget
-    {
+	public class PlayerMobile : Mobile, IHonorTarget
+	{
+		public override void ToggleFlying()
+		{
+			if ( Race != Race.Gargoyle )
+				return;
+			else if ( Flying )
+			{
+				Freeze( TimeSpan.FromSeconds( 0.5 ) );
+				Animate( 61, 10, 1, true, false, 0 );
+				Flying = false;
+				BuffInfo.RemoveBuff( this, BuffIcon.Fly );
+				BaseMount.Dismount(this);
+				return;
+			}
 
-        #region SA
-        public override void ToggleFlying()
-        {
-            if (Race != Race.Gargoyle)
-                return;
-            else if (Flying)
-            {
-                Freeze(TimeSpan.FromSeconds(1));
-                Animate(61, 10, 1, true, false, 0);
-                Flying = false;
-                BuffInfo.RemoveBuff( this, BuffIcon.Fly );
-                SendMessage("You have landed.");
+			BlockMountType type = BaseMount.GetMountPrevention(this);
 
-                BaseMount.Dismount(this);
-                return;
-            }
-
-            BlockMountType type = BaseMount.GetMountPrevention(this);
-
-            if (!Alive)
-                SendLocalizedMessage(1113082); // You may not fly while dead.
-            else if (IsBodyMod && !(BodyMod == 666 || BodyMod == 667))
-                SendLocalizedMessage(1112453); // You can't fly in your current form!
-            else if (type != BlockMountType.None)
-            {
-                switch (type)
-                {
+			if (!Alive)
+				SendLocalizedMessage(1113082); // You may not fly while dead.
+			else if (IsBodyMod && !(BodyMod == 666 || BodyMod == 667))
+				SendLocalizedMessage(1112453); // You can't fly in your current form!
+			else if (type != BlockMountType.None)
+			{
+				switch (type)
+				{
 					case BlockMountType.Dazed: SendLocalizedMessage( 1112457 ); break; // You are still too dazed to fly.
 					case BlockMountType.BolaRecovery: SendLocalizedMessage(1112455); break; // You cannot fly while recovering from a bola throw.
 					case BlockMountType.DismountRecovery: SendLocalizedMessage(1112456); break; // You cannot fly while recovering from a dismount maneuver.
-                        }
-                return;
-            }
-            else if (Hits < 25) // TODO confirm
-                SendLocalizedMessage(1112454); // You must heal before flying.
-            else
-            {
+				}
+
+  				return;
+			}
+			else if ( Hits < 25 ) // TODO confirm
+				SendLocalizedMessage(1112454); // You must heal before flying.
+			else
+			{
 				if ( !Flying )
 				{
 					// No message?
 
-                	if (Spell is FlySpell)
-                	{
-                	    FlySpell spell = (FlySpell)Spell;
-               	 	    spell.Stop();
-                	}
-	                new FlySpell(this).Cast();
-    	        }
+					if ( Spell is FlySpell )
+					{
+						FlySpell spell = (FlySpell)Spell;
+						spell.Stop();
+					}
+
+					new FlySpell(this).Cast();
+				}
 				else
 				{
 					Flying = false;
 					BuffInfo.RemoveBuff( this, BuffIcon.Fly );
 				}
 			}
-        }
-        #endregion
+	}
 
-        private class CountAndTimeStamp
+	private class CountAndTimeStamp
         {
             private int m_Count;
             private DateTime m_Stamp;
