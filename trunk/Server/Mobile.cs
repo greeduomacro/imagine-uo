@@ -6314,22 +6314,46 @@ namespace Server
 					{
 						state.Mobile.ProcessDelta();
 
-						//if ( state.StygianAbyss ) {
-							//if( pNew == null )
-								//pNew = Packet.Acquire( new NewMobileAnimation( this, action, frameCount, delay ) );
+						if( p == null )
+						{
+							if ( this.Race == Race.Gargoyle )
+								{
+								frameCount = 10;
 
-							//state.Send( pNew );
-						//} else {
-							if( p == null )
+									if (action >= 200 && action <= 259 && !this.Flying)
+											action = 17;
+									if (action >= 260 && action <= 270 && !this.Flying)
+											action = 16;
+									if (action >= 200 && action <= 259 && this.Flying)
+											action = 75;
+									if (action >= 260 && action <= 270 && this.Flying)
+											action = 75;
+
+									if (action == 31 && this.Flying)
+											action = 71;
+									if (action == 20 && this.Flying)
+											action = 77;
+									if (action >= 9 && action <= 11 && this.Flying)
+											action = 71;
+									if (action >= 12 && action <= 14 && this.Flying)
+											action = 72;
+									if (action == 34 && this.Flying)
+											action = 78;
+								
+								
+								}
+
+							//if ( state.IsPost7000 )
+							//	p = Packet.Acquire( new NewMobileAnimation( this, action, frameCount, delay ) );
+							//else
 								p = Packet.Acquire( new MobileAnimation( this, action, frameCount, repeatCount, forward, repeat, delay ) );
+						}
 
-							state.Send( p );
-						//}
+						state.Send( p );
 					}
 				}
 
 				Packet.Release( p );
-				//Packet.Release( pNew );
 
 				eable.Free();
 			}
