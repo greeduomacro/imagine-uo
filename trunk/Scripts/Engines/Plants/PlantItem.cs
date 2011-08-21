@@ -314,23 +314,23 @@ namespace Server.Engines.Plants
 					if ( typeInfo.ContainsPlant && m_PlantStatus == PlantStatus.Plant )
 					{
 						// a bowl of ~1_val~ dirt with a ~2_val~ [bright] ~3_val~ ~4_val~
-						list.Add( hueInfo.IsBright() ? 1060832 : 1060831, args );
+						list.Add( hueInfo.IsBright() ? 1060832 : 1060831, "bowl" + "\t" + args );
 					}
 					else
 					{
 						// a bowl of ~1_val~ dirt with a ~2_val~ [bright] ~3_val~ ~4_val~ ~5_val~
-						list.Add( hueInfo.IsBright() ? 1061887 : 1061888, args + "\t#" + GetLocalizedPlantStatus().ToString() );
+						list.Add( hueInfo.IsBright() ? 1061887 : 1061888, "bowl" + "\t" + args + "\t#" + GetLocalizedPlantStatus().ToString() );
 					}
 				}
 				else
 				{
 					// a bowl of ~1_val~ dirt with a ~2_val~ [bright] ~3_val~ ~4_val~
-					list.Add( hueInfo.IsBright() ? 1060832 : 1060831, args + "\t#" + GetLocalizedPlantStatus().ToString() );
+					list.Add( hueInfo.IsBright() ? 1060832 : 1060831, "bowl" + "\t" + args + "\t#" + GetLocalizedPlantStatus().ToString() );
 				}
 			}
 			else
 			{
-				list.Add( 1060830, "#" + m_PlantSystem.GetLocalizedDirtStatus() ); // a bowl of ~1_val~ dirt
+				list.Add( 1060830, "bowl" + "\t" + "#" + m_PlantSystem.GetLocalizedDirtStatus() ); // a bowl of ~1_val~ dirt
 			}
 		}
 
