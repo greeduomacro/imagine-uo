@@ -314,12 +314,13 @@ namespace Server.Engines.Craft
                 SetNeededExpansion(index, Expansion.SE);
             }
             #region SA
-            /*if (Core.SA)
-                {
-                    AddCraft(typeof(GargishSash), 1015283, "Gargish Sash", 4.1, 29.1, typeof(Cloth), 1044286, 4, 1044287);
-                    AddCraft(typeof(GargishHalfApron), 1015283, "Gargish Half Apron", 20.7, 45.7, typeof(Cloth), 1044286, 6, 1044287);
-                }
-                  */
+            #region Marlando
+            if (Core.SA)
+            {
+                AddCraft(typeof(GargishSash), 1015283, "Gargish Sash", 4.1, 29.1, typeof(Cloth), 1044286, 4, 1044287);
+                //AddCraft(typeof(GargishHalfApron), 1015283, "Gargish Half Apron", 20.7, 45.7, typeof(Cloth), 1044286, 6, 1044287);
+            }
+            #endregion
             #endregion
             #endregion
 

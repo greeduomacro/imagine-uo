@@ -34,7 +34,11 @@ namespace Server
 		Myrmidon,
 		Necromancer,
 		Paladin,
-		Virtue
+		Virtue,
+		Luck,
+		Knights,
+		Scout,
+		Sorcerer
 	}
 	
 	public static class SetHelper

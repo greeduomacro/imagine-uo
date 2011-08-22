@@ -77,6 +77,13 @@ namespace Server.Items
 			{
 				SkillName.Spellweaving
 			};
+        private static SkillName[] m_SASkills = new SkillName[]
+			{
+				SkillName.Imbuing,
+                SkillName.Throwing,
+                SkillName.Mysticism
+			};
+       
 
 		private static List<SkillName> _Skills = new List<SkillName>();
 
@@ -88,6 +95,8 @@ namespace Server.Items
 				{
 					switch ( Core.Expansion )
 					{
+                        
+                        case Expansion.SA: _Skills.AddRange(m_MLSkills); goto case Expansion.ML;
 						case Expansion.ML: _Skills.AddRange( m_MLSkills ); goto case Expansion.SE;
 						case Expansion.SE: _Skills.AddRange( m_SESkills ); goto case Expansion.AOS;
 						case Expansion.AOS: _Skills.AddRange( m_AOSSkills ); goto default;

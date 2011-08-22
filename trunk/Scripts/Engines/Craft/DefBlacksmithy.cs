@@ -661,9 +661,26 @@ namespace Server.Engines.Craft
 					
 					index = AddCraft( typeof( GargishTalwar ), 1011081, 1095373, 75.0, 150.0, typeof( IronIngot ), 1044036, 18, 1044037 );
 					SetNeededExpansion( index, Expansion.SA );
-					
+                               					
 					index = AddCraft( typeof( Shortblade ), 1011081, 1095374, 28.0, 100.0, typeof( IronIngot ), 1044036, 12, 1044037 );
 					SetNeededExpansion( index, Expansion.SA );
+
+                    #region Marlando
+                    index = AddCraft(typeof(GargishBoneHarvester), 1011081, "Gargish Bone Harvester", 33.0, 83.0, typeof(IronIngot), 1044036, 10, 1044037);
+                    SetNeededExpansion(index, Expansion.SA);
+
+                    index = AddCraft(typeof(GargishDaisho), 1011081, "Gargish Daisho", 60.0, 110.0, typeof(IronIngot), 1044036, 15, 1044037);
+                    SetNeededExpansion(index, Expansion.SA);
+
+                    index = AddCraft(typeof(GargishKatana), 1011081, "Gargish Katana", 44.1, 94.1, typeof(IronIngot), 1044036, 8, 1044037);
+                    SetNeededExpansion(index, Expansion.SA);
+
+                    index = AddCraft(typeof(GargishKryss), 1011081, "Gargish Kryss", 36.7, 86.7, typeof(IronIngot), 1044036, 8, 1044037);
+                    SetNeededExpansion(index, Expansion.SA);
+
+                    index = AddCraft(typeof(GargishTekagi), 1011081, "Gargish Tekagi", 55.0, 105.0, typeof(IronIngot), 1044036, 12, 1044037);
+                    SetNeededExpansion(index, Expansion.SA); 
+                    #endregion
 					
 					#endregion
 				}
@@ -713,7 +730,16 @@ namespace Server.Engines.Craft
         	{	
 				index = AddCraft( typeof( DualShortAxes ), 1011082, 1095360, 75.0, 125.0, typeof( IronIngot ), 1044036, 24, 1044037 );
 				SetNeededExpansion( index, Expansion.SA );
-			}
+
+                #region Marlando
+                index = AddCraft(typeof(GargishAxe), 1011082, "Gargish Axe", 34.2, 84.2, typeof(IronIngot), 1044036, 14, 1044037);
+                SetNeededExpansion(index, Expansion.SA);
+
+                index = AddCraft(typeof(GargishBattleAxe), 1011082, "Gargish Battle Axe", 30.4, 80.4, typeof(IronIngot), 1044036, 14, 1044037);
+                SetNeededExpansion(index, Expansion.SA); 
+                #endregion
+               
+            }
 			#endregion
 
 			#endregion
@@ -819,7 +845,20 @@ namespace Server.Engines.Craft
 	        {	
 			index = AddCraft( typeof( DiscMace ), 1011084, 1029929, 70.0, 100.0, typeof( IronIngot ), 1044036, 20, 1044037 );
 			SetNeededExpansion( index, Expansion.SA );
-			}
+
+            #region Marlando
+            index = AddCraft(typeof(GargishMaul), 1011084, "Gargish Maul", 19.4, 69.4, typeof(IronIngot), 1044036, 10, 1044037);
+            SetNeededExpansion(index, Expansion.SA);
+
+            index = AddCraft(typeof(GargishTessen), 1011084, "Gargish Tessen", 50.0, 100.0, typeof(IronIngot), 1044036, 16, 1044037);
+            AddSkill(index, SkillName.Tailoring, 50.0, 55.0);
+            AddRes(index, typeof(Cloth), 1044286, 10, 1044287);
+            SetNeededExpansion(index, Expansion.SA);
+
+            index = AddCraft(typeof(GargishWarHammer), 1011084, "Gargish War Hammer", 34.2, 84.2, typeof(IronIngot), 1044036, 16, 1044037);
+            SetNeededExpansion(index, Expansion.SA);
+            } 
+            #endregion
 			#endregion
 
 			#endregion
