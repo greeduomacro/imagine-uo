@@ -1890,8 +1890,8 @@ namespace Server.Mobiles
 
 			if (deleteTime > TimeSpan.Zero || LastOwner != null && !Controlled && !IsStabled)
 			{
-				if (deleteTime == TimeSpan.Zero)
-					deleteTime = TimeSpan.FromDays(3.0);
+				if( deleteTime <= TimeSpan.Zero || deleteTime > TimeSpan.FromDays( 3.0 ))
+					deleteTime = TimeSpan.FromDays( 3.0 );
 
 				m_DeleteTimer = new DeleteTimer(this, deleteTime);
 				m_DeleteTimer.Start();
