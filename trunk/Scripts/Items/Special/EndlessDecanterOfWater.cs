@@ -30,9 +30,15 @@ namespace Server.Items
 		{
 			if ( targ is Item )
 			{
-				Item item = targ as Item;
+				Item item = (Item)targ;
+				IWaterSource src;
 
-				if ( item is IWaterSource )
+				src = ( item as IWaterSource );
+
+				if ( src == null && item is AddonComponent )
+					src = ( ((AddonComponent)item).Addon as IWaterSource );
+
+				if ( src != null )
 				{
 					m_Link = item;
 					base.Fill_OnTarget( from, targ );
@@ -41,10 +47,6 @@ namespace Server.Items
 				{
 					from.SendMessage( "You may only fill this with water." );
 				}
-			}
-			else
-			{
-				from.SendMessage( "You may only fill this with water." );
 			}
 		}
 
@@ -82,6 +84,9 @@ namespace Server.Items
 			base.Serialize( writer );
 
 			writer.Write( (int) 0 );
+
+			// Version 1
+			writer.Write( (Item) m_Link );
 		}
 		
 		public override void Deserialize(GenericReader reader)
@@ -89,6 +94,15 @@ namespace Server.Items
 			base.Deserialize( reader );
 
 			int version = reader.ReadInt();
+
+			switch( version )
+			{
+				case 0:
+				{
+					m_Link = reader.ReadItem();
+					break;
+				}
+			}
 		}
 	}
 }
