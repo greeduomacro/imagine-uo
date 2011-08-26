@@ -1031,6 +1031,48 @@ namespace Server.Items
 					}
 				}
 			}
+			else if ( targ is WaterElemental )
+			{
+				WaterElemental we = targ as WaterElemental;
+
+				if ( this is Pitcher && this.Quantity == this.MaxQuantity )
+				{
+					if ( we.Summoned == true )
+					{
+						from.SendLocalizedMessage( 1115895 ); // It seems that this water elemental no longer has a magical decanter...
+					}
+					else if ( we.HasPitcher == false )
+					{
+						from.SendLocalizedMessage( 1115895 ); // It seems that this water elemental no longer has a magical decanter...
+					}
+					else
+					{
+						Effects.SendMovingEffect( from, we, this.ItemID, 7, 0, false, false, this.Hue, 0 );
+
+						if ( Utility.Random( 100 ) < 3 )
+						{
+							EndlessDecanterOfWater edw = new EndlessDecanterOfWater();
+
+							Effects.SendMovingEffect( we, from, edw.ItemID, 7, 0, false, false, edw.Hue, 0 );
+
+							from.AddToBackpack( edw );
+							from.SendLocalizedMessage( 1115897 ); // The water elemental has thrown a magical decanter back to you!
+							we.HasPitcher = false;
+							
+						}
+						else
+						{
+							from.SendLocalizedMessage( 1115896 ); // The water pitcher has shattered.
+							//Play Sound?
+						}
+					}
+				}
+				else
+				{
+					from.SendLocalizedMessage( 500846 ); // Can't pour it there.
+				}
+				
+			}
 			else
 			{
 				from.SendLocalizedMessage( 500846 ); // Can't pour it there.
