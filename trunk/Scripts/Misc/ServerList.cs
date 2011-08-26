@@ -38,7 +38,7 @@ namespace Server.Misc
 		 * firewalls) or specific IP adddresses you can do so by modifying the file SocketOptions.cs found in this directory.
 		 */
 
-		public static readonly string Address = "fsouls.no-ip.org";
+		public static readonly string Address = null;
 		public static readonly string ServerName = "RunUO TC";
 
 		public static readonly bool AutoDetect = true;
