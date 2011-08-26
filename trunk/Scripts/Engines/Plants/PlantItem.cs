@@ -444,6 +444,12 @@ namespace Server.Engines.Plants
 
 				from.PlaySound( 0x4E );
 				LabelTo( from, 1061858 ); // You soften the dirt with water.
+
+				if ( beverage is EndlessDecanterOfWater )
+				{
+					EndlessDecanterOfWater edw = beverage as EndlessDecanterOfWater;
+					EndlessDecanterOfWater.Refill( from, edw );
+				}
 			}
 			else if ( item is BasePotion )
 			{

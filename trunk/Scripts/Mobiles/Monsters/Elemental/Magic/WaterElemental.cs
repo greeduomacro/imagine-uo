@@ -7,12 +7,23 @@ namespace Server.Mobiles
 	[CorpseName( "a water elemental corpse" )]
 	public class WaterElemental : BaseCreature
 	{
+		private bool m_HasPitcher;
+
+		[CommandProperty( AccessLevel.GameMaster )]
+		public bool HasPitcher
+		{
+			get{ return m_HasPitcher; }
+			set{ m_HasPitcher = value; }
+		}
+
 		public override double DispelDifficulty{ get{ return 117.5; } }
 		public override double DispelFocus{ get{ return 45.0; } }
 
 		[Constructable]
 		public WaterElemental () : base( AIType.AI_Mage, FightMode.Closest, 10, 1, 0.2, 0.4 )
 		{
+			m_HasPitcher = true;
+
 			Name = "a water elemental";
 			Body = 16;
 			BaseSoundID = 278;
@@ -67,12 +78,23 @@ namespace Server.Mobiles
 		{
 			base.Serialize( writer );
 			writer.Write( (int) 0 );
+
+			writer.Write( (bool) m_HasPitcher );
 		}
 
 		public override void Deserialize( GenericReader reader )
 		{
 			base.Deserialize( reader );
 			int version = reader.ReadInt();
+
+			switch( version )
+			{
+				case 0:
+				{
+					m_HasPitcher = reader.ReadBool();
+					break;
+				}
+			}
 		}
 	}
 }
