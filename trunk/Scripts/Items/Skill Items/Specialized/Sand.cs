@@ -21,6 +21,7 @@ namespace Server.Items
 		{
             Stackable = Core.ML;
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Sand( Serial serial ) : base( serial )

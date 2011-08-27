@@ -24,6 +24,7 @@ namespace Server.Items
 		public LeatherDyeTub()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public override void OnDoubleClick( Mobile from )

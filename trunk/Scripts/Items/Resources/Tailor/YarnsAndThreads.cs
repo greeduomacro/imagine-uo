@@ -15,6 +15,7 @@ namespace Server.Items
 			Stackable = true;
 			Weight = 1.0;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public BaseClothMaterial( Serial serial ) : base( serial )

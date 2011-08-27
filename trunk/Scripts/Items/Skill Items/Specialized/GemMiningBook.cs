@@ -15,6 +15,7 @@ namespace Server.Items
 		public GemMiningBook() : base( 0xFBE )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public GemMiningBook( Serial serial ) : base( serial )

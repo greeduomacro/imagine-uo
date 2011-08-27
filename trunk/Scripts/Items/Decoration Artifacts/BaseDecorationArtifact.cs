@@ -12,6 +12,7 @@ namespace Server.Items
 		public BaseDecorationArtifact( int itemID ) : base( itemID )
 		{
 			Weight = 10.0;
+			ItemValue = GearScore.GetItemValue( this );
 		}
 
 		public override void GetProperties( ObjectPropertyList list )
@@ -49,6 +50,7 @@ namespace Server.Items
 		public BaseDecorationContainerArtifact( int itemID ) : base( itemID )
 		{
 			Weight = 10.0;
+			ItemValue = GearScore.GetItemValue( this );
 		}
 
 		public override void AddNameProperties( ObjectPropertyList list )

@@ -17,11 +17,13 @@ namespace Server.Items
 		public BaseRunicTool( CraftResource resource, int itemID ) : base( itemID )
 		{
 			m_Resource = resource;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public BaseRunicTool( CraftResource resource, int uses, int itemID ) : base( uses, itemID )
 		{
 			m_Resource = resource;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public BaseRunicTool( Serial serial ) : base( serial )

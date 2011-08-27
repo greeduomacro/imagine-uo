@@ -15,6 +15,7 @@ namespace Server.Items
 		public MasonryBook() : base( 0xFBE )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public MasonryBook( Serial serial ) : base( serial )

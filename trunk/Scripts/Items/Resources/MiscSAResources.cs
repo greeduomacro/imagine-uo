@@ -18,6 +18,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public AbyssalCloth( Serial serial )
@@ -57,6 +58,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ArcanicRuneStone( Serial serial )
@@ -96,6 +98,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public BottleIchor( Serial serial )
@@ -135,6 +138,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ChagaMushroom( Serial serial )
@@ -173,6 +177,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public CrushedGlass( Serial serial )
@@ -211,6 +216,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public CrystalShards( Serial serial )
@@ -250,6 +256,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public CrystallineBlackrock( Serial serial )
@@ -288,6 +295,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public DaemonClaw( Serial serial )
@@ -326,6 +334,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public DelicateScales( Serial serial )
@@ -364,6 +373,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ElvenFletchings( Serial serial )
@@ -402,6 +412,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EssencePrecision( Serial serial )
@@ -440,6 +451,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EssenceAchievement( Serial serial )
@@ -478,6 +490,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EssenceBalance( Serial serial )
@@ -516,6 +529,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EssenceControl( Serial serial )
@@ -554,6 +568,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EssenceDiligence( Serial serial )
@@ -592,6 +607,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EssenceDirection( Serial serial )
@@ -630,6 +646,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EssenceFeeling( Serial serial )
@@ -668,6 +685,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EssenceOrder( Serial serial )
@@ -707,6 +725,7 @@ namespace Server.Items
 			Stackable = true;
 			Amount = amount;
 			Hue = 150;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EssencePassion( Serial serial )
@@ -746,6 +765,7 @@ namespace Server.Items
 			Stackable = true;
 			Amount = amount;
 			Hue = 883;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EssencePersistence( Serial serial )
@@ -785,6 +805,7 @@ namespace Server.Items
 			Stackable = true;
 			Amount = amount;
 			Hue = 731;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EssenceSingularity( Serial serial )
@@ -815,7 +836,7 @@ namespace Server.Items
 		public FeyWings()
 			: base( 0x5726 )
 		{
-			
+			ItemValue = ItemValue.Common;
 		}
 
 		public FeyWings( Serial serial )
@@ -846,7 +867,7 @@ namespace Server.Items
 		public FaeryDust()
 			: base( 0x5745 )
 		{
-			
+			ItemValue = ItemValue.Common;
 		}
 
 		public FaeryDust( Serial serial )
@@ -875,7 +896,7 @@ namespace Server.Items
 		public Fur()
 			: base( 0x1875 )
 		{
-			
+			ItemValue = ItemValue.Common;
 		}
 
 		public Fur( Serial serial )
@@ -914,6 +935,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public GoblinBlood( Serial serial )
@@ -944,7 +966,7 @@ namespace Server.Items
 		public HornAbyssalInferno()
 			: base( 0x2dB7 )
 		{
-			
+			ItemValue = ItemValue.Common;
 		}
 
 		public HornAbyssalInferno( Serial serial )
@@ -975,7 +997,7 @@ namespace Server.Items
 		public KepetchWax()
 			: base( 0x5745 )
 		{
-			
+			ItemValue = ItemValue.Common;
 		}
 
 		public KepetchWax( Serial serial )
@@ -1014,6 +1036,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public LavaSerpenCrust( Serial serial )
@@ -1044,7 +1067,7 @@ namespace Server.Items
 		public Lodestone()
 			: base( 0x5739 )
 		{
-			
+			ItemValue = ItemValue.Common;
 		}
 
 		public Lodestone( Serial serial )
@@ -1083,6 +1106,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public MedusaBlood( Serial serial )
@@ -1121,6 +1145,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public PlantClippings( Serial serial )
@@ -1159,6 +1184,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public PowderedIron( Serial serial )
@@ -1197,6 +1223,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public PrimalLichDust( Serial serial )
@@ -1235,6 +1262,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public RaptorTeeth( Serial serial )
@@ -1273,6 +1301,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ReflectiveWolfEye( Serial serial )
@@ -1311,6 +1340,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public SeedRenewal( Serial serial )
@@ -1349,6 +1379,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ShimmeringCrystal( Serial serial )
@@ -1387,6 +1418,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public SilverSerpentVenom( Serial serial )
@@ -1425,6 +1457,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public SilverSnakeSkin( Serial serial )
@@ -1463,6 +1496,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public SlithEye( Serial serial )
@@ -1501,6 +1535,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public SlithTongue( Serial serial )
@@ -1539,6 +1574,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public SpiderCarapace( Serial serial )
@@ -1577,6 +1613,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ScouringToxin( Serial serial )
@@ -1615,6 +1652,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ToxicVenomSac( Serial serial )
@@ -1653,6 +1691,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public UndyingFlesh( Serial serial )
@@ -1691,6 +1730,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public VialVitirol( Serial serial )
@@ -1729,6 +1769,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public VileTentacles( Serial serial )
@@ -1767,6 +1808,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public VoidCore( Serial serial )
@@ -1805,6 +1847,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public VoidEssence( Serial serial )
@@ -1843,6 +1886,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public VoidOrb( Serial serial )

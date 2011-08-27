@@ -1671,55 +1671,149 @@ namespace Server.Items
 
 		public override void AddNameProperty( ObjectPropertyList list )
 		{
-			int oreType;
+			string oreType = CraftResources.GetName( m_Resource );
 
-			switch ( m_Resource )
-			{
-				case CraftResource.DullCopper:		oreType = 1053108; break; // dull copper
-				case CraftResource.ShadowIron:		oreType = 1053107; break; // shadow iron
-				case CraftResource.Copper:			oreType = 1053106; break; // copper
-				case CraftResource.Bronze:			oreType = 1053105; break; // bronze
-				case CraftResource.Gold:			oreType = 1053104; break; // golden
-				case CraftResource.Agapite:			oreType = 1053103; break; // agapite
-				case CraftResource.Verite:			oreType = 1053102; break; // verite
-				case CraftResource.Valorite:		oreType = 1053101; break; // valorite
-				case CraftResource.SpinedLeather:	oreType = 1061118; break; // spined
-				case CraftResource.HornedLeather:	oreType = 1061117; break; // horned
-				case CraftResource.BarbedLeather:	oreType = 1061116; break; // barbed
-				case CraftResource.RedScales:		oreType = 1060814; break; // red
-				case CraftResource.YellowScales:	oreType = 1060818; break; // yellow
-				case CraftResource.BlackScales:		oreType = 1060820; break; // black
-				case CraftResource.GreenScales:		oreType = 1060819; break; // green
-				case CraftResource.WhiteScales:		oreType = 1060821; break; // white
-				case CraftResource.BlueScales:		oreType = 1060815; break; // blue
-				
-				#region Mondain's Legacy
-				case CraftResource.OakWood:			oreType = 1072533; break; // oak
-				case CraftResource.AshWood:			oreType = 1072534; break; // ash
-				case CraftResource.YewWood:			oreType = 1072535; break; // yew
-				case CraftResource.Heartwood:		oreType = 1072536; break; // heartwood
-				case CraftResource.Bloodwood:		oreType = 1072538; break; // bloodwood
-				case CraftResource.Frostwood:		oreType = 1072539; break; // frostwood
-				#endregion
-				
-				default: oreType = 0; break;
-			}
+			if ( oreType == "Iron" || oreType == "None" || oreType == "Normal" )
+				oreType = null;
 
 			if ( m_Quality == ArmorQuality.Exceptional )
 			{
-				if ( oreType != 0 )
-					list.Add( 1053100, "#{0}\t{1}", oreType, GetNameString() ); // exceptional ~1_oretype~ ~2_armortype~
+				if ( oreType != null )
+				{
+					if( ItemValue == ItemValue.Trash  )		//  Gray (Junk)
+					{
+						list.Add( 1116690, "<BASEFONT COLOR=#808080>{0}\t{1}\t{2}<BASEFONT COLOR=#FFFFFF>", "Exceptional", oreType, GetNameString() );
+					}
+					else if( ItemValue == ItemValue.Common )	// White (Common)
+					{
+						list.Add( 1116690, "<BASEFONT COLOR=#FFFAFA>{0}\t{1}\t{2}<BASEFONT COLOR=#FFFFFF>", "Exceptional", oreType, GetNameString() );
+					}
+					else if( ItemValue == ItemValue.Uncommon ) 	// Green (Uncommon)
+					{
+						list.Add( 1116690, "<BASEFONT COLOR=#1EFF00>{0}\t{1}\t{2}<BASEFONT COLOR=#FFFFFF>", "Exceptional", oreType, GetNameString() );
+					}
+					else if( ItemValue == ItemValue.Rare )		// Blue (Rare)
+					{
+						list.Add( 1116690, "<BASEFONT COLOR=#0070FF>{0}\t{1}\t{2}<BASEFONT COLOR=#FFFFFF>", "Exceptional", oreType, GetNameString() );
+					}
+					else if( ItemValue == ItemValue.Epic )		// Purple (Epic)
+					{
+						list.Add( 1116690, "<BASEFONT COLOR=#A335EE>{0}\t{1}\t{2}<BASEFONT COLOR=#FFFFFF>", "Exceptional", oreType, GetNameString() );
+					}
+					else if ( ItemValue == ItemValue.Legendary )	// Orange (Legendary)
+					{
+						list.Add( 1116690, "<BASEFONT COLOR=#FF8000>{0}\t{1}\t{2}<BASEFONT COLOR=#FFFFFF>", "Exceptional", oreType, GetNameString() );
+					}
+					else if ( ItemValue == ItemValue.Fabled )	// Red (Fabled)
+					{
+						list.Add( 1116690, "<BASEFONT COLOR=#FF0000>{0}\t{1}\t{2}<BASEFONT COLOR=#FFFFFF>", "Exceptional", oreType, GetNameString() );
+					}
+					else if ( ItemValue == ItemValue.Mythical )	// Gold (Mythical)
+					{
+						list.Add( 1116690, "<BASEFONT COLOR=#B8860B>{0}\t{1}\t{2}<BASEFONT COLOR=#FFFFFF>", "Exceptional", oreType, GetNameString() );
+					}
+					else if ( ItemValue == ItemValue.Fabulous )	// Pink (Fabulous)
+					{
+						list.Add( 1116690, "<BASEFONT COLOR=#FF69B4>{0}\t{1}\t{2}<BASEFONT COLOR=#FFFFFF>", "Exceptional", oreType, GetNameString() );
+					}
+					else
+					{
+						list.Add( 1116690, "#{0}\t{1}\t{2}", "Exceptional", oreType, GetNameString() );
+					}
+				}
 				else
-					list.Add( 1050040, GetNameString() ); // exceptional ~1_ITEMNAME~
+				{
+					if( ItemValue == ItemValue.Trash  )		//  Gray (Junk)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#808080>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", "Exceptional", GetNameString() );
+					}
+					else if( ItemValue == ItemValue.Common )	// White (Common)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#FFFAFA>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", "Exceptional", GetNameString() );
+					}
+					else if( ItemValue == ItemValue.Uncommon ) 	// Green (Uncommon)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#1EFF00>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", "Exceptional", GetNameString() );
+					}
+					else if( ItemValue == ItemValue.Rare )		// Blue (Rare)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#0070FF>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", "Exceptional", GetNameString() );
+					}
+					else if( ItemValue == ItemValue.Epic )		// Purple (Epic)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#A335EE>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", "Exceptional", GetNameString() );
+					}
+					else if ( ItemValue == ItemValue.Legendary )	// Orange (Legendary)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#FF8000>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", "Exceptional", GetNameString() );
+					}
+					else if ( ItemValue == ItemValue.Fabled )	// Red (Fabled)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#FF0000>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", "Exceptional", GetNameString() );
+					}
+					else if ( ItemValue == ItemValue.Mythical )	// Gold (Mythical)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#B8860B>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", "Exceptional", GetNameString() );
+					}
+					else if ( ItemValue == ItemValue.Fabulous )	// Gold (Fabulous)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#FF69B4>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", "Exceptional", GetNameString() );
+					}
+					else
+					{
+						list.Add( 1053099, "{0}\t{1}", "Exceptional", GetNameString() );
+					}
+				}
 			}
 			else
 			{
-				if ( oreType != 0 )
-					list.Add( 1053099, "#{0}\t{1}", oreType, GetNameString() ); // ~1_oretype~ ~2_armortype~
-				else if ( Name == null )
-					list.Add( LabelNumber );
+				if ( oreType != null )
+				{
+					if( ItemValue == ItemValue.Trash  )		//  Gray (Junk)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#808080>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", oreType, GetNameString() );
+					}	
+					else if( ItemValue == ItemValue.Common )	// White (Common)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#FFFAFA>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", oreType, GetNameString() );
+					}
+					else if( ItemValue == ItemValue.Uncommon ) 	// Green (Uncommon)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#1EFF00>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", oreType, GetNameString() );
+					}
+					else if( ItemValue == ItemValue.Rare )		// Blue (Rare)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#0070FF>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", oreType, GetNameString() );
+					}
+					else if( ItemValue == ItemValue.Epic )		// Purple (Epic)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#A335EE>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", oreType, GetNameString() );
+					}
+					else if ( ItemValue == ItemValue.Legendary )	// Orange (Legendary)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#FF8000>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", oreType, GetNameString() );
+					}
+					else if ( ItemValue == ItemValue.Fabled )	// Red (Fabled)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#FF0000>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", oreType, GetNameString() );
+					}
+					else if ( ItemValue == ItemValue.Mythical )	// Gold (Mythical)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#B8860B>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", oreType, GetNameString() );
+					}
+					else if ( ItemValue == ItemValue.Fabulous )	// Gold (Fabulous)
+					{
+						list.Add( 1053099, "<BASEFONT COLOR=#FF69B4>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", oreType, GetNameString() );
+					}
+					else
+					{
+						list.Add( 1053099, "{0}\t{1}", oreType, GetNameString() );
+					}
+				}
 				else
-					list.Add( Name );
+				{
+					base.AddNameProperty( list );
+				}
 			}
 		}
 

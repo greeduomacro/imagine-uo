@@ -128,6 +128,8 @@ namespace Server.Items
 			m_DefaultIndex = -1;
 
 			m_Level = SecureLevel.CoOwners;
+
+			ItemValue = ItemValue.Common;
 		}
 
 		[Constructable]

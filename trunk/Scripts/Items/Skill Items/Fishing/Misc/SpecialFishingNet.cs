@@ -20,6 +20,8 @@ namespace Server.Items
 				Hue = Utility.RandomList( m_Hues );
 			else
 				Hue = 0x8A0;
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		private static int[] m_Hues = new int[]

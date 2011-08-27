@@ -15,6 +15,7 @@ namespace Server.Items
 		public StoneMiningBook() : base( 0xFBE )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public StoneMiningBook( Serial serial ) : base( serial )

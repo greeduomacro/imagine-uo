@@ -61,6 +61,7 @@ namespace Server.Items
 			Hue = CraftResources.GetHue( resource );
 
 			m_Resource = resource;
+			ItemValue = ItemValue.Common;
 		}
 
 		public BaseScales( Serial serial ) : base( serial )

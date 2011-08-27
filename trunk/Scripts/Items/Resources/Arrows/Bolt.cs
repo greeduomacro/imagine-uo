@@ -22,6 +22,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Bolt( Serial serial ) : base( serial )

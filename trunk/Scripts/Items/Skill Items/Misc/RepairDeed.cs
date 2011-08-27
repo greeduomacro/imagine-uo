@@ -138,6 +138,8 @@ namespace Server.Items
 			m_Crafter = crafter;
 			Hue = 0x1BC;
 			LootType = LootType.Blessed;
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public RepairDeed( Serial serial ) : base( serial )

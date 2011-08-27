@@ -15,6 +15,7 @@ namespace Server.Items
 		public SandMiningBook() : base( 0xFF4 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public SandMiningBook( Serial serial ) : base( serial )

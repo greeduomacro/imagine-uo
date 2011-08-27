@@ -128,6 +128,7 @@ namespace Server.Items
 		{
 			Weight = 10.0;
 			m_Redyable = true;
+			ItemValue = ItemValue.Common;
 		}
 		
 		public override void GetContextMenuEntries( Mobile from, List<ContextMenuEntry> list )

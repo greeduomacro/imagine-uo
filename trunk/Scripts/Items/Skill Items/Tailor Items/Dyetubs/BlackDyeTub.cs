@@ -9,6 +9,7 @@ namespace Server.Items
 		{
 			Hue = DyedHue = 0x0001;
 			Redyable = false;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public BlackDyeTub( Serial serial ) : base( serial )

@@ -20,6 +20,7 @@ namespace Server.Items
 		public SpecialDyeTub()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public override void OnDoubleClick( Mobile from )

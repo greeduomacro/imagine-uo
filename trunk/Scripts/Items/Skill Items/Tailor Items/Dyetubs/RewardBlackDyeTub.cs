@@ -21,6 +21,7 @@ namespace Server.Items
 			Hue = DyedHue = 0x0001;
 			Redyable = false;
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public override void OnDoubleClick( Mobile from )

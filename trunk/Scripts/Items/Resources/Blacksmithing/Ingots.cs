@@ -80,6 +80,7 @@ namespace Server.Items
 			Hue = CraftResources.GetHue( resource );
 
 			m_Resource = resource;
+			ItemValue = ItemValue.Common;
 		}
 
 		public BaseIngot( Serial serial ) : base( serial )

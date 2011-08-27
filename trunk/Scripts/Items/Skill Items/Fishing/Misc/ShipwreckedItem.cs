@@ -17,6 +17,8 @@ namespace Server.Items
 				weight = 1;
 
 			this.Weight = weight;
+
+			ItemValue = ItemValue.Uncommon;
 		}
 
 		public override void OnSingleClick( Mobile from )

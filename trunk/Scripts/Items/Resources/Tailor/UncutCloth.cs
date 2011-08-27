@@ -25,6 +25,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public UncutCloth( Serial serial ) : base( serial )

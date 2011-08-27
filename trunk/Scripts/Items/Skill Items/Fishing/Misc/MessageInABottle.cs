@@ -48,6 +48,8 @@ namespace Server.Items
 			Weight = 1.0;
 			m_TargetMap = map;
 			m_Level = level;
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		public MessageInABottle( Serial serial ) : base( serial )

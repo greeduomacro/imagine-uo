@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Server.Network;
 using Server.Gumps;
 
@@ -90,6 +90,11 @@ namespace Server.Items
 			m_TargetLocation = FindLocation( m_TargetMap );
 
 			UpdateHue();
+
+			if ( IsAncient )
+				ItemValue = ItemValue.Epic;
+			else
+				ItemValue = ItemValue.Rare;
 		}
 
 		public SOS( Serial serial ) : base( serial )

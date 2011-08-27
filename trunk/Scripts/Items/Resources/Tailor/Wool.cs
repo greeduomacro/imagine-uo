@@ -17,6 +17,7 @@ namespace Server.Items
 			Stackable = true;
 			Weight = 4.0;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Wool( Serial serial ) : base( serial )

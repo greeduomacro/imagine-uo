@@ -68,6 +68,8 @@ namespace Server.Items
 
 			Stackable = Core.ML;
 			Weight = 1.0;
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public BasePotion( Serial serial ) : base( serial )

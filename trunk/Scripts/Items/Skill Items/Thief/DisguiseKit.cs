@@ -20,6 +20,7 @@ namespace Server.Items
 		public DisguiseKit() : base( 0xE05 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public DisguiseKit( Serial serial ) : base( serial )

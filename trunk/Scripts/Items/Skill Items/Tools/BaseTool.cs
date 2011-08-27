@@ -70,6 +70,7 @@ namespace Server.Items
 		{
 			m_UsesRemaining = uses;
 			m_Quality = ToolQuality.Regular;
+			ItemValue = ItemValue.Common;
 		}
 
 		public BaseTool( Serial serial ) : base( serial )

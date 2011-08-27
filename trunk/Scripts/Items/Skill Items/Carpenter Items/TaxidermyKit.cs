@@ -15,6 +15,8 @@ namespace Server.Items
 		public TaxidermyKit() : base( 0x1EBA )
 		{
 			Weight = 1.0;
+
+			ItemValue = ItemValue.Uncommon;
 		}
 
 		public TaxidermyKit( Serial serial ) : base( serial )

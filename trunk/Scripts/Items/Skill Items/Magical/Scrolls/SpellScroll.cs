@@ -35,6 +35,8 @@ namespace Server.Items
 			Amount = amount;
 
 			m_SpellID = spellID;
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public override void Serialize( GenericWriter writer )

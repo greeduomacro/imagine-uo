@@ -15,6 +15,7 @@ namespace Server.Items
 		public GlassblowingBook() : base( 0xFF4 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public GlassblowingBook( Serial serial ) : base( serial )

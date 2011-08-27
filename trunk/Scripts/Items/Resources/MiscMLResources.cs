@@ -16,6 +16,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Blight( Serial serial )
@@ -52,6 +53,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public LuminescentFungi( Serial serial )
@@ -89,6 +91,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public CapturedEssence( Serial serial )
@@ -132,6 +135,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EyeOfTheTravesty( Serial serial )
@@ -175,6 +179,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Corruption( Serial serial )
@@ -218,6 +223,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public DreadHornMane( Serial serial )
@@ -261,6 +267,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ParasiticPlant( Serial serial )
@@ -304,6 +311,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Muculent( Serial serial )
@@ -347,6 +355,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public DiseasedBark( Serial serial )
@@ -390,6 +399,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public BarkFragment( Serial serial )
@@ -433,6 +443,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public GrizzledBones( Serial serial )
@@ -479,6 +490,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public LardOfParoxysmus( Serial serial )
@@ -521,6 +533,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public PerfectEmerald( Serial serial )
@@ -563,6 +576,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public DarkSapphire( Serial serial )
@@ -606,6 +620,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Turquoise( Serial serial )
@@ -649,6 +664,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EcruCitrine( Serial serial )
@@ -692,6 +708,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public WhitePearl( Serial serial )
@@ -735,6 +752,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public FireRuby( Serial serial )
@@ -778,6 +796,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public BlueDiamond( Serial serial )
@@ -821,6 +840,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public BrilliantAmber( Serial serial )
@@ -864,6 +884,7 @@ namespace Server.Items
 			Stackable = true;
 			Amount = amount;
 			Hue = 150;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Scourge( Serial serial )
@@ -908,6 +929,7 @@ namespace Server.Items
 			Stackable = true;
 			Amount = amount;
 			Hue = 883;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Putrefication( Serial serial )
@@ -952,6 +974,7 @@ namespace Server.Items
 			Stackable = true;
 			Amount = amount;
 			Hue = 731;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Taint( Serial serial )
@@ -981,7 +1004,7 @@ namespace Server.Items
 		public PristineDreadHorn()
 			: base( 0x315A )
 		{
-			
+			ItemValue = ItemValue.Common;
 		}
 
 		public PristineDreadHorn( Serial serial )
@@ -1024,6 +1047,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public SwitchItem( Serial serial )

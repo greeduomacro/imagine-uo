@@ -43,6 +43,8 @@ namespace Server.Items
 
 			m_Resource = resource;
 			Hue = CraftResources.GetHue( resource );
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public override void GetProperties( ObjectPropertyList list )

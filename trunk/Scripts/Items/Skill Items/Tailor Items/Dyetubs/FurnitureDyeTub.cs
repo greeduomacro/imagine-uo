@@ -23,6 +23,7 @@ namespace Server.Items
 		public FurnitureDyeTub()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public override void OnDoubleClick( Mobile from )

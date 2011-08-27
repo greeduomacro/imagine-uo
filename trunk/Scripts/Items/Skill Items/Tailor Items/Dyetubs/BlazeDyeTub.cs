@@ -10,6 +10,7 @@ namespace Server.Items
 		{
 			Hue = DyedHue = 0x489;
 			Redyable = false;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public BlazeDyeTub( Serial serial ) : base( serial )

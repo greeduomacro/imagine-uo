@@ -464,6 +464,8 @@ namespace Server.Items
 			LootType = LootType.Blessed;
 
 			Content = content;
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public override void OnAfterDuped( Item newItem )
