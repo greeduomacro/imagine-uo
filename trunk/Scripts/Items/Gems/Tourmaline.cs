@@ -20,6 +20,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Tourmaline( Serial serial ) : base( serial )

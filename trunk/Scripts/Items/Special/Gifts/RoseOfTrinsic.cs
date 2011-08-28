@@ -63,6 +63,8 @@ namespace Server.Items
 
 			m_Petals = 0;
 			StartSpawnTimer( TimeSpan.FromMinutes( 1.0 ) );
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public override void GetProperties( ObjectPropertyList list )

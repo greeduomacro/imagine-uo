@@ -195,6 +195,7 @@ namespace Server.Items
 		[Constructable]
 		public DartBoardSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public DartBoardSouthDeed( Serial serial ) : base( serial )

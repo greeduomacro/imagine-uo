@@ -13,6 +13,7 @@ namespace Server.Items
 		{
 			LootType = LootType.Blessed;
 			Weight = 5.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public MagicalRope( Serial serial ) : base( serial )

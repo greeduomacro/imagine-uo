@@ -41,6 +41,7 @@ namespace Server.Items
 		[Constructable]
 		public StoneOvenEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public StoneOvenEastDeed( Serial serial ) : base( serial )

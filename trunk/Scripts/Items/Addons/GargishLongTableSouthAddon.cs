@@ -45,6 +45,7 @@ namespace Server.Items
 		[Constructable]
 		public GargishLongTableSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public GargishLongTableSouthDeed( Serial serial ) : base( serial )

@@ -48,6 +48,7 @@ namespace Server.Items
 		[Constructable]
 		public BrownBearRugEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public BrownBearRugEastDeed( Serial serial ) : base( serial )
@@ -114,6 +115,7 @@ namespace Server.Items
 		[Constructable]
 		public BrownBearRugSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public BrownBearRugSouthDeed( Serial serial ) : base( serial )
@@ -180,6 +182,7 @@ namespace Server.Items
 		[Constructable]
 		public PolarBearRugEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public PolarBearRugEastDeed( Serial serial ) : base( serial )
@@ -246,6 +249,7 @@ namespace Server.Items
 		[Constructable]
 		public PolarBearRugSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public PolarBearRugSouthDeed( Serial serial ) : base( serial )

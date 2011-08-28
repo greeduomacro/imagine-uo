@@ -15,6 +15,7 @@ namespace Server.Items
 		{
 			Layer = Layer.OneHanded;
 			Weight = 8.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public override void OnDoubleClick( Mobile from )

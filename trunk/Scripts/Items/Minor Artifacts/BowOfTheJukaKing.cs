@@ -18,6 +18,7 @@ namespace Server.Items
 			Slayer = SlayerName.ReptilianDeath;
 			Attributes.AttackChance = 15;
 			Attributes.WeaponDamage = 40;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public BowOfTheJukaKing( Serial serial ) : base( serial )

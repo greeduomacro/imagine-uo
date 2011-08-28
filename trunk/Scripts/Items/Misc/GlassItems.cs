@@ -11,6 +11,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			Movable = true;
+			ItemValue = ItemValue.Common;
 		}
 
 		public SmallFlask( Serial serial ) : base( serial )
@@ -40,6 +41,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			Movable = true;
+			ItemValue = ItemValue.Common;
 		}
 
 		public MediumFlask( Serial serial ) : base( serial )
@@ -69,6 +71,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			Movable = true;
+			ItemValue = ItemValue.Common;
 		}
 
 		public LargeFlask( Serial serial ) : base( serial )
@@ -98,6 +101,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			Movable = true;
+			ItemValue = ItemValue.Common;
 		}
 
 		public CurvedFlask( Serial serial ) : base( serial )
@@ -127,6 +131,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			Movable = true;
+			ItemValue = ItemValue.Common;
 		}
 
 		public LongFlask( Serial serial ) : base( serial )
@@ -156,6 +161,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			Movable = true;
+			ItemValue = ItemValue.Common;
 		}
 
 		public SpinningHourglass( Serial serial ) : base( serial )
@@ -184,6 +190,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public GreenBottle( Serial serial ) : base( serial ) 
@@ -212,6 +219,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public RedBottle( Serial serial ) : base( serial ) 
@@ -240,6 +248,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public SmallBrownBottle( Serial serial ) : base( serial ) 
@@ -268,6 +277,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public SmallGreenBottle( Serial serial ) : base( serial ) 
@@ -296,6 +306,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public SmallVioletBottle( Serial serial ) : base( serial ) 
@@ -324,6 +335,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public TinyYellowBottle( Serial serial ) : base( serial ) 
@@ -352,6 +364,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public SmallBlueFlask( Serial serial ) : base( serial ) 
@@ -380,6 +393,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public SmallYellowFlask( Serial serial ) : base( serial ) 
@@ -408,6 +422,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public SmallRedFlask( Serial serial ) : base( serial ) 
@@ -436,6 +451,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public SmallEmptyFlask( Serial serial ) : base( serial ) 
@@ -464,6 +480,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public YellowBeaker( Serial serial ) : base( serial ) 
@@ -492,6 +509,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public RedBeaker( Serial serial ) : base( serial ) 
@@ -520,6 +538,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public BlueBeaker( Serial serial ) : base( serial ) 
@@ -548,6 +567,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public GreenBeaker( Serial serial ) : base( serial ) 
@@ -576,6 +596,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public EmptyCurvedFlaskW( Serial serial ) : base( serial ) 
@@ -604,6 +625,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public RedCurvedFlask( Serial serial ) : base( serial ) 
@@ -632,6 +654,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public LtBlueCurvedFlask( Serial serial ) : base( serial ) 
@@ -660,6 +683,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public EmptyCurvedFlaskE( Serial serial ) : base( serial ) 
@@ -688,6 +712,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public BlueCurvedFlask( Serial serial ) : base( serial ) 
@@ -716,6 +741,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public GreenCurvedFlask( Serial serial ) : base( serial ) 
@@ -744,6 +770,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public RedRibbedFlask( Serial serial ) : base( serial ) 
@@ -772,6 +799,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public VioletRibbedFlask( Serial serial ) : base( serial ) 
@@ -800,6 +828,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public EmptyRibbedFlask( Serial serial ) : base( serial ) 
@@ -828,6 +857,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public LargeYellowFlask( Serial serial ) : base( serial ) 
@@ -856,6 +886,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public LargeVioletFlask( Serial serial ) : base( serial ) 
@@ -884,6 +915,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public LargeEmptyFlask( Serial serial ) : base( serial ) 
@@ -912,6 +944,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public AniRedRibbedFlask( Serial serial ) : base( serial ) 
@@ -940,6 +973,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public AniLargeVioletFlask( Serial serial ) : base( serial ) 
@@ -968,6 +1002,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public AniSmallBlueFlask( Serial serial ) : base( serial ) 
@@ -996,6 +1031,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public SmallBlueBottle( Serial serial ) : base( serial ) 
@@ -1024,6 +1060,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public SmallGreenBottle2( Serial serial ) : base( serial ) 
@@ -1053,6 +1090,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public EmptyVialsWRack( Serial serial ) : base( serial ) 
@@ -1082,6 +1120,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public FullVialsWRack( Serial serial ) : base( serial ) 
@@ -1110,6 +1149,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public EmptyJar( Serial serial ) : base( serial ) 
@@ -1138,6 +1178,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public FullJar( Serial serial ) : base( serial ) 
@@ -1166,6 +1207,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public HalfEmptyJar( Serial serial ) : base( serial ) 
@@ -1194,6 +1236,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public VioletStemmedBottle( Serial serial ) : base( serial ) 
@@ -1222,6 +1265,7 @@ namespace Server.Items
 		{ 
 			Weight = 3.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public EmptyJars3( Serial serial ) : base( serial ) 
@@ -1250,6 +1294,7 @@ namespace Server.Items
 		{ 
 			Weight = 4.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public EmptyJars4( Serial serial ) : base( serial ) 
@@ -1278,6 +1323,7 @@ namespace Server.Items
 		{ 
 			Weight = 3.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public FullJars3( Serial serial ) : base( serial ) 
@@ -1306,6 +1352,7 @@ namespace Server.Items
 		{ 
 			Weight = 4.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public FullJars4( Serial serial ) : base( serial ) 
@@ -1335,6 +1382,7 @@ namespace Server.Items
 		{ 
 			Weight = 2.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public EmptyJars2( Serial serial ) : base( serial ) 
@@ -1364,6 +1412,7 @@ namespace Server.Items
 		{ 
 			Weight = 2.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public FullJars2( Serial serial ) : base( serial ) 
@@ -1393,6 +1442,7 @@ namespace Server.Items
 		{ 
 			Weight = 2.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public HalfEmptyJars2( Serial serial ) : base( serial ) 
@@ -1421,6 +1471,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public EmptyVial( Serial serial ) : base( serial ) 
@@ -1449,6 +1500,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public HourglassAni( Serial serial ) : base( serial ) 
@@ -1477,6 +1529,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public Hourglass( Serial serial ) : base( serial ) 
@@ -1505,6 +1558,7 @@ namespace Server.Items
 		{ 
 			Weight = 1.0;
 			Movable = true; 
+			ItemValue = ItemValue.Common;
 		} 
 
 		public TinyRedBottle( Serial serial ) : base( serial ) 

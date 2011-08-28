@@ -48,6 +48,7 @@ namespace Server.Items
 		[Constructable]
 		public PentagramDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public PentagramDeed( Serial serial ) : base( serial )

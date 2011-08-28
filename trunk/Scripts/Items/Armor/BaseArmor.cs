@@ -1429,6 +1429,8 @@ namespace Server.Items
 			m_SetAttributes = new AosAttributes( this );
 			m_SetSkillBonuses = new AosSkillBonuses( this );
 			#endregion
+
+			ItemValue = GearScore.GetItemValue( this );
 		}
 
 		public override bool AllowSecureTrade( Mobile from, Mobile to, Mobile newOwner, bool accepted )
@@ -1708,7 +1710,7 @@ namespace Server.Items
 					{
 						list.Add( 1116690, "<BASEFONT COLOR=#FF0000>{0}\t{1}\t{2}<BASEFONT COLOR=#FFFFFF>", "Exceptional", oreType, GetNameString() );
 					}
-					else if ( ItemValue == ItemValue.Mythical )	// Gold (Mythical)
+					else if ( ItemValue == ItemValue.Crafted )	// Gold (Crafted)
 					{
 						list.Add( 1116690, "<BASEFONT COLOR=#B8860B>{0}\t{1}\t{2}<BASEFONT COLOR=#FFFFFF>", "Exceptional", oreType, GetNameString() );
 					}
@@ -1751,7 +1753,7 @@ namespace Server.Items
 					{
 						list.Add( 1053099, "<BASEFONT COLOR=#FF0000>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", "Exceptional", GetNameString() );
 					}
-					else if ( ItemValue == ItemValue.Mythical )	// Gold (Mythical)
+					else if ( ItemValue == ItemValue.Crafted )	// Gold (Crafted)
 					{
 						list.Add( 1053099, "<BASEFONT COLOR=#B8860B>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", "Exceptional", GetNameString() );
 					}
@@ -1797,7 +1799,7 @@ namespace Server.Items
 					{
 						list.Add( 1053099, "<BASEFONT COLOR=#FF0000>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", oreType, GetNameString() );
 					}
-					else if ( ItemValue == ItemValue.Mythical )	// Gold (Mythical)
+					else if ( ItemValue == ItemValue.Crafted )	// Gold (Crafted)
 					{
 						list.Add( 1053099, "<BASEFONT COLOR=#B8860B>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", oreType, GetNameString() );
 					}

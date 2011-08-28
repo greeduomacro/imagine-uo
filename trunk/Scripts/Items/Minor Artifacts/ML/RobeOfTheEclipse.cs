@@ -16,6 +16,8 @@ namespace Server.Items
 			Attributes.Luck = 95;
 
 			// TODO: Supports arcane?
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public RobeOfTheEclipse( Serial serial ) : base( serial )

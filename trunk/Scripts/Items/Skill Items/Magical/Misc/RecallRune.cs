@@ -312,6 +312,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			CalculateHue();
+			ItemValue = Itemvalue.Common;
 		}
 
 		public RecallRune( Serial serial ) : base( serial )

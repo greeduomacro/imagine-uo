@@ -33,6 +33,7 @@ namespace Server.Items
 		{
 			ItemID = 0x14EF;
 			Hue = 0x490;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public ScrollofTranscendence(Serial serial) : base(serial)

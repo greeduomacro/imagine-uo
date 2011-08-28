@@ -14,6 +14,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			LootType = LootType.Newbied;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public SpecialBeardDye( Serial serial ) : base( serial )

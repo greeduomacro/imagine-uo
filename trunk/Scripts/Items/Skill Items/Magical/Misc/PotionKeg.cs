@@ -45,6 +45,7 @@ namespace Server.Items
 		public PotionKeg() : base( 0x1940 )
 		{
 			UpdateWeight();
+			ItemValue = Itemvalue.Common;
 		}
 
 		public virtual void UpdateWeight()

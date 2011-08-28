@@ -465,7 +465,7 @@ namespace Server.Items
 
 			Content = content;
 
-			ItemValue = ItemValue.Common;
+			ItemValue = GearScore.GetItemvalue( this );
 		}
 
 		public override void OnAfterDuped( Item newItem )

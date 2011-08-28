@@ -43,6 +43,7 @@ namespace Server.Items
 		[Constructable]
 		public LargeBedSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public LargeBedSouthDeed( Serial serial ) : base( serial )

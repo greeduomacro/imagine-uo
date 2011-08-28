@@ -55,6 +55,7 @@ namespace Server.Items
 		public HangingAxesDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public HangingAxesDeed( Serial serial ) : base( serial )

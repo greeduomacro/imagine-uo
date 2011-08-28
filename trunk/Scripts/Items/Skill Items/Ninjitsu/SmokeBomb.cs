@@ -10,6 +10,8 @@ namespace Server.Items
 		{
 			Stackable = Core.ML;
 			Weight = 1.0;
+
+			ItemValue = Itemvalue.Common;
 		}
 
 		public SmokeBomb( Serial serial ) : base( serial )

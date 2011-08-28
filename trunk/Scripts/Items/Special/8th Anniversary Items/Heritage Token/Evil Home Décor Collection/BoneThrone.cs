@@ -78,6 +78,7 @@ namespace Server.Items
 		public BoneThroneDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public BoneThroneDeed( Serial serial ) : base( serial )

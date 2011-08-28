@@ -29,6 +29,8 @@ namespace Server.Items
 		public BaseStatuette( int itemID ) : base( itemID )
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Common;
+
 		}
 
 		public BaseStatuette( Serial serial ) : base( serial )

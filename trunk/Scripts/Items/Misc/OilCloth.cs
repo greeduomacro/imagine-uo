@@ -18,6 +18,7 @@ namespace Server.Items
 		public OilCloth() : base( 0x175D )
 		{
 			Hue = 2001;
+			ItemValue = ItemValue.Common;
 		}
 
 		public bool Dye( Mobile from, DyeTub sender )

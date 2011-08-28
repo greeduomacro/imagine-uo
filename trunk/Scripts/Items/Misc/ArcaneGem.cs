@@ -18,6 +18,7 @@ namespace Server.Items
 		{
 			Stackable = Core.ML;
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ArcaneGem( Serial serial ) : base( serial )

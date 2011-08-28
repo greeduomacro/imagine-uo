@@ -25,6 +25,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Uncommon;
 		}
 
 		public override void GetProperties( ObjectPropertyList list )

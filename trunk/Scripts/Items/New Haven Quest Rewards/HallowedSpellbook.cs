@@ -15,6 +15,8 @@ namespace Server.Items
 			Content = 0x3FFFFFFFF;
 
 			Slayer = SlayerName.Silver;
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		public HallowedSpellbook( Serial serial ) : base( serial )

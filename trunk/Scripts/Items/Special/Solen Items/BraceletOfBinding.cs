@@ -92,6 +92,8 @@ namespace Server.Items
 			Weight = 1.0;
 
 			m_Inscription = "";
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		public override void AddNameProperty( ObjectPropertyList list )

@@ -12,6 +12,7 @@ namespace Server.Items
 		public RunedSwitch() : base( 0x2F61 )
 		{
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public RunedSwitch( Serial serial ) : base( serial )

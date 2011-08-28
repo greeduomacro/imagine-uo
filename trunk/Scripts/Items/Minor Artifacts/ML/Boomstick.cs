@@ -20,6 +20,7 @@ namespace Server.Items
 			Attributes.RegenMana = 3;
 			Attributes.CastSpeed = 1;
 			Attributes.LowerRegCost = 20;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public override void GetDamageTypes( Mobile wielder, out int phys, out int fire, out int cold, out int pois, out int nrgy, out int chaos, out int direct )

@@ -13,6 +13,7 @@ namespace Server.Items
 			LootType = LootType.Blessed;
 			Weight = 1.0;
 			Hue = 0x455;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ThrashersTail( Serial serial ) : base( serial )

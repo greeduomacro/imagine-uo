@@ -9,6 +9,7 @@ namespace Server.Items
 		[Constructable] 
 		public BagOfSmokeBombs() : this( 20 ) 
 		{ 
+			ItemValue = Itemvalue.Rare;
 		} 
 		
 		[Constructable] 

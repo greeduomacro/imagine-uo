@@ -11,6 +11,7 @@ namespace Server.Items
 		public TombstoneOfTheDamned() : base( Utility.RandomMinMax( 0xED7, 0xEDE ) )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public TombstoneOfTheDamned( Serial serial ) : base( serial )

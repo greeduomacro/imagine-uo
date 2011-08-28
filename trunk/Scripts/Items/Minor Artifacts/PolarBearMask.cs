@@ -22,6 +22,7 @@ namespace Server.Items
 
 			Attributes.RegenHits = 2;
 			Attributes.NightSight = 1;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public PolarBearMask( Serial serial ) : base( serial )

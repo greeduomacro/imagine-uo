@@ -11,6 +11,7 @@ namespace Server.Items
 		public WindSpirit() : base( 0x1F1F )
 		{
 			Weight = 5.0;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public WindSpirit( Serial serial ) : base( serial )

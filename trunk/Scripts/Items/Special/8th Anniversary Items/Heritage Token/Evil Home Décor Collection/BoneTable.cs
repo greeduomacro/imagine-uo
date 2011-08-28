@@ -40,6 +40,7 @@ namespace Server.Items
 		public BoneTableDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public BoneTableDeed( Serial serial ) : base( serial )

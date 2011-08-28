@@ -15,7 +15,8 @@ namespace Server.Items
 		[Constructable]
 		public TaintedMushroom() : base( Utility.RandomList( m_ItemIDs ) )
 		{
-			Weight = 5;		
+			Weight = 5;
+			ItemValue = ItemValue.Common;	
 		}
 
 		public TaintedMushroom( Serial serial ) : base( serial )

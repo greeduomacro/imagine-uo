@@ -13,6 +13,7 @@ namespace Server.Items
 			LootType = LootType.Blessed;
 			Weight = 1.0;
 			Hue = 0x48; // TODO check
+			ItemValue = ItemValue.Common;
 		}
 
 		public TaintedSeeds( Serial serial ) : base( serial )

@@ -29,6 +29,8 @@ namespace Server.Items
 			ArmorAttributes.SelfRepair = 10;
 			ArmorAttributes.LowerStatReq = 100;
 			ArmorAttributes.MageArmor = 1;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public SamuraiHelm( Serial serial ) : base( serial )

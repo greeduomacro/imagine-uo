@@ -39,6 +39,8 @@ namespace Server.Items
 
 			if ( !Core.AOS )
 				LootType = LootType.Newbied;
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public BaseAddonDeed( Serial serial ) : base( serial )

@@ -18,6 +18,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Common;
 		}
 
 		public BarkeepContract( Serial serial ) : base( serial )

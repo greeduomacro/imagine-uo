@@ -29,6 +29,7 @@ namespace Server.Items
 
 			SkillBonuses.Skill_1_Name = SkillName.Swords;
 			SkillBonuses.Skill_1_Value = 20;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public CaptainJohnsHat( Serial serial ) : base( serial )

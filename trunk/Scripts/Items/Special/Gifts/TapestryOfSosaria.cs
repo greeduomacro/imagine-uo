@@ -28,6 +28,8 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			LootType = LootType.Blessed;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public override void GetContextMenuEntries( Mobile from, List<ContextMenuEntry> list )

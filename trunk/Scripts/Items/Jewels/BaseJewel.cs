@@ -239,6 +239,8 @@ namespace Server.Items
             #region SA
 			m_SAAbsorptionAttributes = new SAAbsorptionAttributes( this );
 			#endregion
+
+			ItemValue = GearScore.GetItemValue( this );
         }
 
 		#region SA

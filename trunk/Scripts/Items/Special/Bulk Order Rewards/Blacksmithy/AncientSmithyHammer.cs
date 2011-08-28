@@ -80,6 +80,7 @@ namespace Server.Items
 			Weight = 8.0;
 			Layer = Layer.OneHanded;
 			Hue = 0x482;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public override void GetProperties( ObjectPropertyList list )

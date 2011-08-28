@@ -20,6 +20,7 @@ namespace Server.Items
 		public ShimmeringCrystals() : base( Utility.RandomList( m_ItemIDs ) )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ShimmeringCrystals( Serial serial ) : base( serial )

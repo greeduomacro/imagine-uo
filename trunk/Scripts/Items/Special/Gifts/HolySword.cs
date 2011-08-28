@@ -22,6 +22,8 @@ namespace Server.Items
 			WeaponAttributes.SelfRepair = 10;
 			WeaponAttributes.LowerStatReq = 100;
 			WeaponAttributes.UseBestSkill = 1;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public HolySword( Serial serial ) : base( serial )

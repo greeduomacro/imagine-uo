@@ -13,6 +13,7 @@ namespace Server.Items
 			LootType = LootType.Blessed;
 			Weight = 1;
 			Hue = 0x47E;
+			ItemValue = ItemValue.Common;
 		}
 
 		public CrystallineFragments( Serial serial ) : base( serial )

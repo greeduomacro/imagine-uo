@@ -74,6 +74,7 @@ namespace Server.Items
 		{
 			m_UsesRemaining = usesRemaining;
 			m_Quality = ToolQuality.Regular;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public override void GetProperties( ObjectPropertyList list )

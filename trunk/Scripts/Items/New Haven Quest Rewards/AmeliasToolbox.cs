@@ -13,6 +13,7 @@ namespace Server.Items
 		{
 			LootType = LootType.Blessed;
 			Hue = 1895; // TODO check
+			ItemValue = Itemvalue.Rare;
 		}
 
 		public AmeliasToolbox( Serial serial ) : base( serial )

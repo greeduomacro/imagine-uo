@@ -344,6 +344,7 @@ namespace Server.Items
 		[Constructable]
 		public ArcheryButteDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public ArcheryButteDeed( Serial serial ) : base( serial )

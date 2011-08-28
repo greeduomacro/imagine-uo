@@ -24,6 +24,7 @@ namespace Server.Items
 
 			WeaponAttributes.HitPoisonArea = 20;
 			WeaponAttributes.ResistPoisonBonus = 15;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public FangOfRactus( Serial serial ) : base( serial )

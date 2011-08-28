@@ -21,6 +21,8 @@ namespace Server.Items
 
 			Attributes.RegenStam = 1;
 			Attributes.RegenMana = 1;
+
+			ItemValue = Itemvalue.Rare;
 		}
 
 		public BulwarkLeggings( Serial serial ) : base( serial )

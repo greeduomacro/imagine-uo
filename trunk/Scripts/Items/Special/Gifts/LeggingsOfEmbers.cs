@@ -25,6 +25,8 @@ namespace Server.Items
 			ArmorAttributes.SelfRepair = 10;
 			ArmorAttributes.MageArmor = 1;
 			ArmorAttributes.LowerStatReq = 100;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public LeggingsOfEmbers( Serial serial ) : base( serial )

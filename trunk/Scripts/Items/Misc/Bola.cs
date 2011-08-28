@@ -20,6 +20,7 @@ namespace Server.Items
 			Weight = 4.0;
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public override void OnDoubleClick( Mobile from )

@@ -21,6 +21,7 @@ namespace Server.Items
 
 			Attributes.BonusStr = 3;
 			Attributes.RegenHits = 1;
+			ItemValue = Itemvalue.Rare;
 		}
 
 		public ArmsOfArmstrong( Serial serial ) : base( serial )

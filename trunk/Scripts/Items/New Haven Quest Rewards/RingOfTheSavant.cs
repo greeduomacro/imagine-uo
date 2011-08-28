@@ -16,6 +16,8 @@ namespace Server.Items
 			Attributes.BonusInt = 3;
 			Attributes.CastRecovery = 1;
 			Attributes.CastSpeed = 1;
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		public RingOfTheSavant( Serial serial ) : base( serial )

@@ -18,6 +18,7 @@ namespace Server.Items
 			Stackable = true;
 			Weight = 1.0;
 			Amount = amount;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public Bottle( Serial serial ) : base( serial )

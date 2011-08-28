@@ -62,6 +62,8 @@ namespace Server.Items
 
 			m_Width = 200;
 			m_Height = 200;
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public virtual void CraftInit( Mobile from )

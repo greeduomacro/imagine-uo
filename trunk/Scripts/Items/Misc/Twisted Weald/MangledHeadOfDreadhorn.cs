@@ -11,6 +11,7 @@ namespace Server.Items
 		public MangledHeadOfDreadhorn() : base( 0x3156 )
 		{
 			Weight = 20.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public MangledHeadOfDreadhorn( Serial serial ) : base( serial )

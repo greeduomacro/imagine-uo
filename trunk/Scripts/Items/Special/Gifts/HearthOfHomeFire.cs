@@ -62,6 +62,7 @@ namespace Server.Items
 		public HearthOfHomeFireDeed()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public override void OnDoubleClick( Mobile from )

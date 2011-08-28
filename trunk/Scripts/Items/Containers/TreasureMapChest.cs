@@ -11,7 +11,7 @@ namespace Server.Items
 {
 	public class TreasureMapChest : LockableContainer
 	{
-		public override int LabelNumber{ get{ return 3000541; } }
+		//public override int LabelNumber{ get{ return 3000541; } }
 
 		public static Type[] Artifacts { get { return m_Artifacts; } }
 
@@ -55,6 +55,7 @@ namespace Server.Items
 
 		public TreasureMapChest( Mobile owner, int level, bool temporary ) : base( 0xE40 )
 		{
+			Name = "a treasure chest";
 			m_Owner = owner;
 			m_Level = level;
 			m_DeleteTime = DateTime.Now + TimeSpan.FromHours( 3.0 );
@@ -66,6 +67,17 @@ namespace Server.Items
 			m_Timer.Start();
 
 			Fill( this, level );
+
+			if ( level == 0 || level == 1 )
+				ItemValue = ItemValue.Common;
+			else if ( level == 2 || level == 3 )
+				ItemValue = ItemValue.Uncommon;
+			else if ( level == 4 || level == 5 )
+				ItemValue = ItemValue.Rare;
+			else if ( level == 6 || level == 7 )
+				ItemValue = ItemValue.Epic;
+			else
+				ItemValue = ItemValue.Legendary;
 		}
 
 		private static void GetRandomAOSStats( out int attributeCount, out int min, out int max )
@@ -218,6 +230,7 @@ namespace Server.Items
 							weapon.DurabilityLevel = (WeaponDurabilityLevel)Utility.Random( 6 );
 						}
 
+						item.ItemValue = GearScore.GetItemValue( item );
 						cont.DropItem( item );
 					}
 					else if ( item is BaseArmor )
@@ -239,6 +252,7 @@ namespace Server.Items
 							armor.Durability = (ArmorDurabilityLevel)Utility.Random( 6 );
 						}
 
+						item.ItemValue = GearScore.GetItemValue( item );
 						cont.DropItem( item );
 					}
 					else if( item is BaseHat )
@@ -255,6 +269,7 @@ namespace Server.Items
 							BaseRunicTool.ApplyAttributesTo( hat, attributeCount, min, max );
 						}
 
+						item.ItemValue = GearScore.GetItemValue( item );
 						cont.DropItem( item );
 					}
 					else if( item is BaseJewel )
@@ -266,6 +281,7 @@ namespace Server.Items
 
 						BaseRunicTool.ApplyAttributesTo( (BaseJewel)item, attributeCount, min, max );
 
+						item.ItemValue = GearScore.GetItemValue( item );
 						cont.DropItem( item );
 					}
 				}

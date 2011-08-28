@@ -19,6 +19,8 @@ namespace Server.Items
 			Attributes.AttackChance = 10;
 			Attributes.WeaponDamage = 20;
 			WeaponAttributes.ResistPhysicalBonus = 10;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public EnchantedTitanLegBone( Serial serial ) : base( serial )

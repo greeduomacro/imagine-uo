@@ -15,6 +15,7 @@ namespace Server.Items
 		{
 			Movable = false;
 			Hue = 0x480;
+			ItemValue = Itemvalue.Rare;
 		}
 
 		public override void OnDoubleClick( Mobile from )

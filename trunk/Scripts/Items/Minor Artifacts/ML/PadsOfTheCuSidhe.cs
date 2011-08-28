@@ -10,6 +10,7 @@ namespace Server.Items
 		[Constructable]
 		public PadsOfTheCuSidhe() : base( 0x47E )
 		{
+			ItemValue = ItemValue.Uncommon;
 		}
 
 		public PadsOfTheCuSidhe( Serial serial ) : base( serial )

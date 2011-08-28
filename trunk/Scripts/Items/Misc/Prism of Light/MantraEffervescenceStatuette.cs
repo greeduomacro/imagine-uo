@@ -10,7 +10,8 @@ namespace Server.Items
 		[Constructable]
 		public MantraEffervescenceStatuette() : base( 0x2D94 )
 		{
-			Weight = 1.0;			
+			Weight = 1.0;	
+			ItemValue = ItemValue.Common;		
 		}
 
 		public MantraEffervescenceStatuette( Serial serial ) : base( serial )

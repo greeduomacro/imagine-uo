@@ -23,6 +23,7 @@ namespace Server.Items
 			Attributes.WeaponSpeed = 40;
 
 			WeaponAttributes.UseBestSkill = 1;
+			ItemValue = ItemValue.Epic;
 			// TODO: Mage Slayer
 		}
 

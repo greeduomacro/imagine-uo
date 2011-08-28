@@ -12,6 +12,7 @@ namespace Server.Items
 		{
 			Stackable = false;
 			Weight = 1.0;
+			ItemValue = ItemValue.Trash;
 		}
 
 		public Skull( Serial serial ) : base( serial )

@@ -19,6 +19,8 @@ namespace Server.Items
 			Attributes.WeaponSpeed = 20;
 			Attributes.WeaponDamage = 50;
 			WeaponAttributes.UseBestSkill = 1;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public CaptainQuacklebushsCutlass( Serial serial ) : base( serial )

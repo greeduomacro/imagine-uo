@@ -12,6 +12,7 @@ namespace Server.Items
 		public IslandStatue() : base( 0x3B0F )
 		{
 			Weight = 1;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public IslandStatue( Serial serial ) : base( serial )

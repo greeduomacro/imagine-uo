@@ -153,6 +153,7 @@ namespace Server.Items
 		public GuillotineDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public GuillotineDeed( Serial serial ) : base( serial )

@@ -11,6 +11,7 @@ namespace Server.Items
 		public ParoxysmusCorrodedStein() : base( 0x9D6 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ParoxysmusCorrodedStein( Serial serial ) : base( serial )

@@ -50,6 +50,7 @@ namespace Server.Items
 		[Constructable]
 		public GargoyleShortTableDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
         public GargoyleShortTableDeed(Serial serial)

@@ -26,6 +26,8 @@ namespace Server.Items
 			CreatePieces();
 
 			Weight = 5.0;
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public abstract void CreatePieces();

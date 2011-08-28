@@ -17,6 +17,7 @@ namespace Server.Items
 			Stackable = true;
 			Amount = amount;
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public ClockParts( Serial serial ) : base( serial )

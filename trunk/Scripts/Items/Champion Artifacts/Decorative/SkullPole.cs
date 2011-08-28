@@ -11,6 +11,7 @@ namespace Server.Items
 		public SkullPole() : base( 0x2204 )
 		{
 			Weight = 5;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public SkullPole( Serial serial ) : base( serial )

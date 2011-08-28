@@ -11,6 +11,7 @@ namespace Server.Items
 		public HoveringWisp() : base( 0x2100 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public HoveringWisp( Serial serial ) : base( serial )

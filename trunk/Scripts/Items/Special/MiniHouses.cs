@@ -21,6 +21,7 @@ namespace Server.Items
         public MiniHouseAddon()
             : this(MiniHouseType.StoneAndPlaster)
         {
+			ItemValue = ItemValue.Rare;
         }
 
         [Constructable]
@@ -29,6 +30,8 @@ namespace Server.Items
             m_Type = type;
 
             Construct();
+
+			ItemValue = ItemValue.Rare;
         }
 
         public void Construct()

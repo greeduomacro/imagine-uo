@@ -10,6 +10,7 @@ namespace Server.Items
 		{
 			Weight = 1;
 			Hue = 0x8A5;
+			ItemValue = ItemValue.Common;
 		}
 
 		public LuckyDagger( Serial serial ) : base( serial )

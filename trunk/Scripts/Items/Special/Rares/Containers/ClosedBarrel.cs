@@ -8,6 +8,7 @@
 		public ClosedBarrel()
 			: base( 0x0FAE )
 		{
+			ItemValue = ItemValue.Rare;
 		}
 
 		public ClosedBarrel( Serial serial )

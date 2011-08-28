@@ -32,6 +32,7 @@ namespace Server.Items
         {
             Weight = 20;
             m_Level = SecureLevel.CoOwners;
+			ItemValue = ItemValue.Rare;
         }
 
         public override void GetContextMenuEntries(Mobile from, List<ContextMenuEntry> list)

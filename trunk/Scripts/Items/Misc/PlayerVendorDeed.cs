@@ -13,6 +13,7 @@ namespace Server.Items
 		public ContractOfEmployment() : base( 0x14F0 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 			//LootType = LootType.Blessed;
 		}
 

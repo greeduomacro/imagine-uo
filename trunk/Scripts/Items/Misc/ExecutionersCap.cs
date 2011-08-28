@@ -8,6 +8,8 @@ namespace Server.Items
 		public ExecutionersCap() : base(0xF83)
 		{
 			Weight = 1.0;
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public ExecutionersCap(Serial serial) : base(serial)

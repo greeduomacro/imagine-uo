@@ -15,6 +15,7 @@ namespace Server.Items
 			Attributes.EnhancePotions = 30;
 			Attributes.LowerRegCost = 20;
 			Resistances.Poison = 10;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public AlchemistsBauble( Serial serial ) : base( serial )

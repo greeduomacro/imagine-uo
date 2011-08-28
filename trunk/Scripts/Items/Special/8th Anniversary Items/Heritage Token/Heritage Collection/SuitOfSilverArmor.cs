@@ -68,6 +68,7 @@ namespace Server.Items
 		public SuitOfSilverArmorDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public SuitOfSilverArmorDeed( Serial serial ) : base( serial )

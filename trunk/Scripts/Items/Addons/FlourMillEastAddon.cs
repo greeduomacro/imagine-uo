@@ -207,6 +207,7 @@ namespace Server.Items
 		[Constructable]
 		public FlourMillEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public FlourMillEastDeed( Serial serial ) : base( serial )

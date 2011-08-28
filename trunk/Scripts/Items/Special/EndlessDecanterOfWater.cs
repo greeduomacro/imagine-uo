@@ -28,6 +28,7 @@ namespace Server.Items
 		public EndlessDecanterOfWater()
 		{
 			Name = "an endless decanter of water";
+			ItemValue = ItemValue.Epic;
 		}
 
 		public EndlessDecanterOfWater( Serial serial ) : base( serial )

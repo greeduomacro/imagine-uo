@@ -18,6 +18,7 @@ namespace Server.Items
 			Resistances.Cold = 5;
 			Resistances.Poison = 5;
 			Resistances.Energy = 5;
+			ItemValue = Itemvalue.Rare;
 		}
 
 		public BraceletOfResilience( Serial serial ) : base( serial )

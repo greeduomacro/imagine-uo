@@ -11,6 +11,7 @@ namespace Server.Items
 		public ResolvesBridle() : base( 0x1374 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ResolvesBridle( Serial serial ) : base( serial )

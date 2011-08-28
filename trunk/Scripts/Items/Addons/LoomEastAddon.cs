@@ -61,6 +61,7 @@ namespace Server.Items
 		[Constructable]
 		public LoomEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public LoomEastDeed( Serial serial ) : base( serial )

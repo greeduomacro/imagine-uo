@@ -15,6 +15,7 @@ namespace Server.Items
 			Weight = 1.0;
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Beeswax( Serial serial ) : base( serial )

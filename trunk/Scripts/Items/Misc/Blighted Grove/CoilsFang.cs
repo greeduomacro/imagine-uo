@@ -13,6 +13,7 @@ namespace Server.Items
 			LootType = LootType.Blessed;
 			Weight = 1.0;
 			Hue = 0x487;
+			ItemValue = ItemValue.Common;
 		}
 
 		public CoilsFang( Serial serial ) : base( serial )

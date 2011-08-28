@@ -11,6 +11,7 @@ namespace Server.Items
 		public ParoxysmusDinner() : base( 0x1E95 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ParoxysmusDinner( Serial serial ) : base( serial )

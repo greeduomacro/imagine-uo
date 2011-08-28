@@ -15,7 +15,7 @@ namespace Server.Items
 		[Constructable]
 		public Quell()
 		{
-            Hue = 0x970;
+            		Hue = 0x970;
 
 			Attributes.SpellChanneling = 1;
 			Attributes.WeaponSpeed = 20;
@@ -24,6 +24,7 @@ namespace Server.Items
 
 			WeaponAttributes.HitLeechMana = 100;
 			WeaponAttributes.UseBestSkill = 1;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public Quell( Serial serial ) : base( serial )

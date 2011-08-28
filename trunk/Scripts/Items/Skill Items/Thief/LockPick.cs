@@ -31,6 +31,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public Lockpick( Serial serial ) : base( serial )

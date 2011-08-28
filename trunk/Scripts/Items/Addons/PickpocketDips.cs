@@ -193,6 +193,7 @@ namespace Server.Items
 		[Constructable]
 		public PickpocketDipEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public PickpocketDipEastDeed( Serial serial ) : base( serial )

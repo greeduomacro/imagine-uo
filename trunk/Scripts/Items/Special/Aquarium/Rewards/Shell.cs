@@ -12,6 +12,7 @@ namespace Server.Items
 		public Shell() : base( Utility.RandomList( 0x3B12, 0x3B13 ) )
 		{
 			Weight = 1;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public Shell( Serial serial ) : base( serial )

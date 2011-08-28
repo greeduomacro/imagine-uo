@@ -76,6 +76,8 @@ namespace Server.Items
 
 			m_Duration = VendorRentalDuration.Instances[0];
 			m_Price = 1500;
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public VendorRentalContract( Serial serial ) : base( serial )

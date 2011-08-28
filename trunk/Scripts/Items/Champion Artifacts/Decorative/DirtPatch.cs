@@ -9,6 +9,7 @@ namespace Server.Items
 		[Constructable]
 		public DirtPatch(): base(0x0913)
 		{
+			ItemValue = ItemValue.Rare;
 		}
 
 		public DirtPatch(Serial serial): base(serial)

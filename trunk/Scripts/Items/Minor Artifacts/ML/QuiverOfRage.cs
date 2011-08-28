@@ -14,6 +14,7 @@ namespace Server.Items
 			
 			WeightReduction = 25;
 			DamageIncrease = 10;
+			ItemValue = ItemValue.Epic;
 		}
 
         public override void AlterBowDamage(ref int phys, ref int fire, ref int cold, ref int pois, ref int nrgy, ref int chaos, ref int direct)

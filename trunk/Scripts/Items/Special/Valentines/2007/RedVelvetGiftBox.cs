@@ -17,6 +17,8 @@ namespace Server.Items
 		public RedVelvetGiftBox()
 			: this( false )
 		{
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		[Constructable]

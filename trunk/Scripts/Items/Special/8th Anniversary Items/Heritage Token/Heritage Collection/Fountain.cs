@@ -39,6 +39,7 @@ namespace Server.Items
 		public FountainDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public FountainDeed( Serial serial ) : base( serial )

@@ -24,6 +24,7 @@ namespace Server.Items
 
 			Weight = 3.0;
 			Attributes.Luck = 95;
+			ItemValue = ItemValue.Epic;
 			// TODO: Supports arcane?
 		}
 

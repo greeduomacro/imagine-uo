@@ -16,6 +16,7 @@ namespace Server.Items
 			// Item ID should be 0x2809 - Temporary solution for clients 7.0.0.0 and up
 			Stackable = Core.ML;
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public EggBomb( Serial serial ) : base( serial )

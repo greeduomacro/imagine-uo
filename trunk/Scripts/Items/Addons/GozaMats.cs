@@ -49,6 +49,7 @@ namespace Server.Items
 		[Constructable]
 		public GozaMatEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public GozaMatEastDeed( Serial serial ) : base( serial )
@@ -116,6 +117,7 @@ namespace Server.Items
 		[Constructable]
 		public GozaMatSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public GozaMatSouthDeed( Serial serial ) : base( serial )
@@ -183,6 +185,7 @@ namespace Server.Items
 		[Constructable]
 		public SquareGozaMatEastDeed()
 		{
+			ItemValue = ItemValue.Common; 
 		}
 
 		public SquareGozaMatEastDeed( Serial serial ) : base( serial )
@@ -250,6 +253,7 @@ namespace Server.Items
 		[Constructable]
 		public SquareGozaMatSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public SquareGozaMatSouthDeed( Serial serial ) : base( serial )
@@ -317,6 +321,7 @@ namespace Server.Items
 		[Constructable]
 		public BrocadeGozaMatEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public BrocadeGozaMatEastDeed( Serial serial ) : base( serial )
@@ -383,6 +388,7 @@ namespace Server.Items
 		[Constructable]
 		public BrocadeGozaMatSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public BrocadeGozaMatSouthDeed( Serial serial ) : base( serial )
@@ -448,6 +454,7 @@ namespace Server.Items
 		[Constructable]
 		public BrocadeSquareGozaMatEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public BrocadeSquareGozaMatEastDeed( Serial serial ) : base( serial )
@@ -515,6 +522,7 @@ namespace Server.Items
 		[Constructable]
 		public BrocadeSquareGozaMatSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public BrocadeSquareGozaMatSouthDeed( Serial serial ) : base( serial )

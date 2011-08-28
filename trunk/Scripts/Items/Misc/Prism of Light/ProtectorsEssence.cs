@@ -11,6 +11,7 @@ namespace Server.Items
 		public ProtectorsEssence() : base( 0x23F )
 		{
 			Weight = 1;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ProtectorsEssence( Serial serial ) : base( serial )

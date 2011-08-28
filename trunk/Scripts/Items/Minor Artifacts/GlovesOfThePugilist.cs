@@ -19,6 +19,7 @@ namespace Server.Items
 			SkillBonuses.SetValues( 0, SkillName.Wrestling, 10.0 );
 			Attributes.BonusDex = 8;
 			Attributes.WeaponDamage = 15;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public GlovesOfThePugilist( Serial serial ) : base( serial )

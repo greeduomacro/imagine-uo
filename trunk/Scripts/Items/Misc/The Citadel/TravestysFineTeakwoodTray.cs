@@ -11,6 +11,7 @@ namespace Server.Items
 		public TravestysFineTeakwoodTray() : base( Utility.Random( 0x991, 2 ) )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public TravestysFineTeakwoodTray( Serial serial ) : base( serial )

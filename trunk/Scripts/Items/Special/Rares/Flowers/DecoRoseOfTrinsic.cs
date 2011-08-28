@@ -10,6 +10,7 @@ namespace Server.Items
 		{
 			Movable = true;
 			Stackable = false;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public DecoRoseOfTrinsic( Serial serial ) : base( serial )

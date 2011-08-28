@@ -44,6 +44,7 @@ namespace Server.Items
 		public Board( int amount )
 			: this( CraftResource.RegularWood, amount )
 		{
+			ItemValue = Itemvalue.Common;
 		}
 
 		public Board( Serial serial )

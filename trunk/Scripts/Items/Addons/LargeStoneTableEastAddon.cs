@@ -50,6 +50,7 @@ namespace Server.Items
 		[Constructable]
 		public LargeStoneTableEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public LargeStoneTableEastDeed( Serial serial ) : base( serial )

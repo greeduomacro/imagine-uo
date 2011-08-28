@@ -15,6 +15,7 @@ namespace Server.Items
 		public GuildDeed() : base( 0x14F0 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public GuildDeed( Serial serial ) : base( serial )

@@ -68,6 +68,7 @@ namespace Server.Items
 		public ScarecrowDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public ScarecrowDeed( Serial serial ) : base( serial )

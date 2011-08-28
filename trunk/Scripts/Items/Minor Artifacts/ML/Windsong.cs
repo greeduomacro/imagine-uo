@@ -19,6 +19,7 @@ namespace Server.Items
 			WeaponAttributes.SelfRepair = 3;
 			
 			Velocity = 25;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public Windsong( Serial serial ) : base( serial )

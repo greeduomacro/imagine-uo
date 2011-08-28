@@ -21,6 +21,8 @@ namespace Server.Items
 
 			Attributes.BonusHits = 2;
 			Attributes.ReflectPhysical = 5;
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		public TunicOfGuarding( Serial serial ) : base( serial )

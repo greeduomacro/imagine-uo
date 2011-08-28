@@ -17,6 +17,7 @@ namespace Server.Items
 		{
 			Hue = hue;
 			Weight = 20;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public ColoredAnvil( Serial serial ) : base( serial )

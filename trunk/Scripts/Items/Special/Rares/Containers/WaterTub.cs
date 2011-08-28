@@ -13,6 +13,7 @@
 		public Tub()
 			: this( false )
 		{
+			ItemValue = ItemValue.Rare;
 		}
 
 		[Constructable]

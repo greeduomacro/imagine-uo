@@ -9,6 +9,7 @@ namespace Server.Items
 		public Globe() : base( 0x1047 ) // It isn't flipable
 		{
 			Weight = 3.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public Globe( Serial serial ) : base( serial )

@@ -48,6 +48,7 @@ namespace Server.Items
 		[Constructable]
 		public AbbatoirDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public AbbatoirDeed( Serial serial ) : base( serial )

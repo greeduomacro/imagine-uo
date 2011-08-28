@@ -44,6 +44,7 @@ namespace Server.Items
 		[Constructable]
 		public ElvenForgeDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public ElvenForgeDeed( Serial serial ) : base( serial )

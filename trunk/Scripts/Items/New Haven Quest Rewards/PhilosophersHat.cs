@@ -21,6 +21,8 @@ namespace Server.Items
 
 			Attributes.RegenMana = 1;
 			Attributes.LowerRegCost = 7;
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		public PhilosophersHat( Serial serial ) : base( serial )

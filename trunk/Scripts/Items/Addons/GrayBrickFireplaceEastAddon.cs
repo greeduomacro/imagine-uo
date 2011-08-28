@@ -41,6 +41,7 @@ namespace Server.Items
 		[Constructable]
 		public GrayBrickFireplaceEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public GrayBrickFireplaceEastDeed( Serial serial ) : base( serial )

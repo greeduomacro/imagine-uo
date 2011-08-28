@@ -12,6 +12,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			Hue = Utility.RandomMinMax( 0x899, 0x8B0 );
+			ItemValue = ItemValue.Common;
 		}
 
 		public EternallyCorruptTree( Serial serial ) : base( serial )

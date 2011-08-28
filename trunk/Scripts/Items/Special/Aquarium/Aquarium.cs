@@ -992,6 +992,7 @@ namespace Server.Items
 		[Constructable]
 		public AquariumEastDeed() : base()
 		{
+			ItemValue = ItemValue.Legendary;
 		}
 
 		public AquariumEastDeed( Serial serial ) : base( serial )
@@ -1021,6 +1022,7 @@ namespace Server.Items
 		[Constructable]
 		public AquariumNorthDeed() : base()
 		{
+			ItemValue = ItemValue.Legendary;
 		}
 
 		public AquariumNorthDeed( Serial serial ) : base( serial )

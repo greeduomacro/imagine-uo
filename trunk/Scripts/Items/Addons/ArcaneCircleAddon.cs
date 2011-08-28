@@ -52,6 +52,7 @@ namespace Server.Items
 		[Constructable]
 		public ArcaneCircleDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public ArcaneCircleDeed( Serial serial ) : base( serial )

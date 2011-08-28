@@ -22,6 +22,7 @@ namespace Server.Items
 			Attributes.WeaponSpeed = 20;
 
 			WeaponAttributes.HitLeechHits = 40;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public RaedsGlory( Serial serial ) : base( serial )

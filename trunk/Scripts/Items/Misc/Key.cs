@@ -212,12 +212,15 @@ namespace Server.Items
 		[Constructable]
 		public Key( uint val ) : this ( KeyType.Iron, val )
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		[Constructable]
 		public Key( KeyType type, uint LockVal ) : this( type, LockVal, null )
 		{
 			m_KeyVal = LockVal;
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public Key( KeyType type, uint LockVal, Item link ) : base( (int)type )
@@ -227,6 +230,8 @@ namespace Server.Items
 			m_MaxRange = 3;
 			m_KeyVal = LockVal;
 			m_Link = link;
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public Key( Serial serial ) : base( serial )

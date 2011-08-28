@@ -25,6 +25,7 @@ namespace Server.Items
 			Attributes.RegenMana = 3;
 			
 			WeaponAttributes.SelfRepair = 3;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public BrightsightLenses( Serial serial ) : base( serial )

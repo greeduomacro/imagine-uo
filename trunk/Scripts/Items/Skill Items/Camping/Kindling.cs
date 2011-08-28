@@ -19,6 +19,7 @@ namespace Server.Items
 			Stackable = true;
 			Weight = 5.0;
 			Amount = amount;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public Kindling( Serial serial ) : base( serial )

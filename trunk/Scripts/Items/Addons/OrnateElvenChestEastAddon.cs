@@ -44,6 +44,7 @@ namespace Server.Items
 		[Constructable]
 		public OrnateElvenChestEastDeed() : base()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public OrnateElvenChestEastDeed( Serial serial ) : base( serial )

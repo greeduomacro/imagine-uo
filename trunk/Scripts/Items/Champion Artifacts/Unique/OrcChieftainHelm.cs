@@ -30,6 +30,8 @@ namespace Server.Items
 				Attributes.BonusHits = 30;
 			else
 				Attributes.AttackChance = 30;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public OrcChieftainHelm( Serial serial ) : base( serial )

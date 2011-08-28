@@ -55,6 +55,7 @@ namespace Server.Items
 		public HangingSwordsDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public HangingSwordsDeed( Serial serial ) : base( serial )

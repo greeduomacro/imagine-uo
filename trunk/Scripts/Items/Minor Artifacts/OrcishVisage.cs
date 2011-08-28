@@ -23,6 +23,7 @@ namespace Server.Items
 			ArmorAttributes.SelfRepair = 3;
 			Attributes.BonusStr = 10;
 			Attributes.BonusStam = 5;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public OrcishVisage( Serial serial ) : base( serial )

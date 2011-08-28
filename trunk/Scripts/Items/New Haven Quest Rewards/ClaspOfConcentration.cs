@@ -17,6 +17,8 @@ namespace Server.Items
 			Attributes.RegenMana = 1;
 			Resistances.Fire = 5;
 			Resistances.Cold = 5;
+
+			ItemValue = Itemvalue.Rare;
 		}
 
 		public ClaspOfConcentration( Serial serial ) : base( serial )

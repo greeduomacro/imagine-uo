@@ -157,6 +157,7 @@ namespace Server.Items
 		public BedOfNailsDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public BedOfNailsDeed( Serial serial ) : base( serial )

@@ -8,6 +8,7 @@ namespace Server.Items
 		public SmallEmptyPot() : base(0x11C6)
 		{
 			Weight = 100;
+			ItemValue = ItemValue.Uncommon;
 		}
 
 		public SmallEmptyPot(Serial serial) : base(serial)
@@ -35,6 +36,7 @@ namespace Server.Items
 		public LargeEmptyPot() : base(0x11C7)
 		{
 			Weight = 6;
+			ItemValue = ItemValue.Uncommon;
 		}
 
 		public LargeEmptyPot(Serial serial) : base(serial)

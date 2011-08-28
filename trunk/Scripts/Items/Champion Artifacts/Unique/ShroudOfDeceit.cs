@@ -29,6 +29,7 @@ namespace Server.Items
 
 			SkillBonuses.Skill_1_Name = SkillName.MagicResist;
 			SkillBonuses.Skill_1_Value = 10;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public ShroudOfDeceit( Serial serial ) : base( serial )

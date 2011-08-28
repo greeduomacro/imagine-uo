@@ -10,7 +10,8 @@ namespace Server.Items
 		[Constructable]
 		public Spiderweb() : base( 0x10DD )
 		{
-			Weight = 1.0;			
+			Weight = 1.0;	
+			ItemValue = ItemValue.Rare;		
 		}
 
         public Spiderweb(Serial serial)
@@ -41,6 +42,7 @@ namespace Server.Items
         public EggCaseWeb()
             : base(0x10D8)
         {
+			ItemValue = ItemValue.Rare;
         }
 
         public EggCaseWeb(Serial serial)

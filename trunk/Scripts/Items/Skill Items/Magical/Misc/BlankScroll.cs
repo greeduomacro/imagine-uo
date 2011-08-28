@@ -15,6 +15,7 @@ namespace Server.Items
 			Stackable = true;
 			Weight = 1.0;
 			Amount = amount;
+			ItemValue = Itemvalue.Common;
 		}
 
 		int ICommodity.DescriptionNumber { get { return LabelNumber; } }

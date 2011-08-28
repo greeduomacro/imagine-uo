@@ -21,6 +21,8 @@ namespace Server.Items
 
 			Attributes.BonusStam = 3;
 			Attributes.RegenHits = 1;
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		public GlovesOfSafeguarding( Serial serial ) : base( serial )

@@ -91,6 +91,7 @@ namespace Server.Items
 		public HaunterMirrorDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public HaunterMirrorDeed( Serial serial ) : base( serial )

@@ -339,6 +339,8 @@ namespace Server.Items
 			m_WellSound = wellSound;
 			m_BadlySound = badlySound;
 			UsesRemaining = Utility.RandomMinMax( InitMinUses, InitMaxUses );
+
+			ItemValue = GearScore.GetItemValue( this );
 		}
 
 		public override void GetProperties( ObjectPropertyList list )

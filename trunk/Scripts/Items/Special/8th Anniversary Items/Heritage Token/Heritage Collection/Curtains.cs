@@ -138,6 +138,7 @@ namespace Server.Items
 		public CurtainsDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public CurtainsDeed( Serial serial ) : base( serial )

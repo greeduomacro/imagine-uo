@@ -18,6 +18,8 @@ namespace Server.Items
 			Attributes.SpellChanneling = 1;
 			Attributes.CastSpeed = -1;
 			WeaponAttributes.LowerStatReq = 50;
+
+			ItemValue = Itemvalue.Rare;
 		}
 
 		public EmberStaff( Serial serial ) : base( serial )

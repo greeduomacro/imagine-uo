@@ -215,6 +215,8 @@ namespace Server.Items
 			m_Summoner = new TalismanAttribute();
 			m_AosAttributes = new AosAttributes( this );
 			m_AosSkillBonuses = new AosSkillBonuses( this );
+
+			ItemValue = GearScore.GetItemValue( this );
 		}
 
 		public BaseTalisman( Serial serial ) :  base( serial )

@@ -15,6 +15,7 @@ namespace Server.Items
 			Stackable = true;
 			Weight = 1.0;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		
@@ -51,6 +52,7 @@ namespace Server.Items
 			Stackable = true;
 			Weight = 5.0;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		
@@ -90,6 +92,7 @@ namespace Server.Items
 			Stackable = true;
 			Weight = 5.0;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		
@@ -129,6 +132,7 @@ namespace Server.Items
 			Stackable = true;
 			Weight = 5.0;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		
@@ -168,6 +172,7 @@ namespace Server.Items
 			Stackable = true;
 			Weight = 5.0;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		
@@ -207,6 +212,7 @@ namespace Server.Items
 			Stackable = true;
 			Weight = 1.0;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		
@@ -243,6 +249,7 @@ namespace Server.Items
 			Stackable = true;
 			Weight = 1.0;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		
@@ -279,6 +286,7 @@ namespace Server.Items
 			Stackable = true;
 			Weight = 1.0;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		
@@ -315,6 +323,7 @@ namespace Server.Items
 			Stackable = true;
 			Weight = 1.0;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		
@@ -344,6 +353,7 @@ namespace Server.Items
 		public HorseShoes() : base( 0xFB6 )
 		{
 			Weight = 3.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public HorseShoes( Serial serial ) : base( serial )
@@ -371,6 +381,7 @@ namespace Server.Items
 		public ForgedMetal() : base( 0xFB8 )
 		{
 			Weight = 5.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ForgedMetal( Serial serial ) : base( serial )
@@ -398,6 +409,7 @@ namespace Server.Items
 		public Whip() : base( 0x166E )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Whip( Serial serial ) : base( serial )
@@ -425,6 +437,7 @@ namespace Server.Items
 		public PaintsAndBrush() : base( 0xFC1 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public PaintsAndBrush( Serial serial ) : base( serial )
@@ -452,6 +465,7 @@ namespace Server.Items
 		public PenAndInk() : base( 0xFBF )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public PenAndInk( Serial serial ) : base( serial )
@@ -479,6 +493,7 @@ namespace Server.Items
 		public ChiselsNorth() : base( 0x1026 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ChiselsNorth( Serial serial ) : base( serial )
@@ -506,6 +521,7 @@ namespace Server.Items
 		public ChiselsWest() : base( 0x1027 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ChiselsWest( Serial serial ) : base( serial )
@@ -533,6 +549,7 @@ namespace Server.Items
 		public DirtyPan() : base( 0x9E8 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public DirtyPan( Serial serial ) : base( serial )
@@ -560,6 +577,7 @@ namespace Server.Items
 		public DirtySmallRoundPot() : base( 0x9E7 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public DirtySmallRoundPot( Serial serial ) : base( serial )
@@ -587,6 +605,7 @@ namespace Server.Items
 		public DirtyPot() : base( 0x9E6 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public DirtyPot( Serial serial ) : base( serial )
@@ -614,6 +633,7 @@ namespace Server.Items
 		public DirtyRoundPot() : base( 0x9DF )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public DirtyRoundPot( Serial serial ) : base( serial )
@@ -641,6 +661,7 @@ namespace Server.Items
 		public DirtyFrypan() : base( 0x9DE )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public DirtyFrypan( Serial serial ) : base( serial )
@@ -668,6 +689,7 @@ namespace Server.Items
 		public DirtySmallPot() : base( 0x9DD )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public DirtySmallPot( Serial serial ) : base( serial )
@@ -695,6 +717,7 @@ namespace Server.Items
 		public DirtyKettle() : base( 0x9DC )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public DirtyKettle( Serial serial ) : base( serial )

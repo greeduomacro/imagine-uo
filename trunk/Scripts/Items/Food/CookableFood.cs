@@ -25,6 +25,7 @@ namespace Server.Items
 		public CookableFood( int itemID, int cookingLevel ) : base( itemID )
 		{
 			m_CookingLevel = cookingLevel;
+			ItemValue = ItemValue.Common;
 		}
 
 		public CookableFood( Serial serial ) : base( serial )

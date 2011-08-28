@@ -13,6 +13,8 @@ namespace Server.Items
 		{
 			Hue = 0x20;
 			LootType = LootType.Blessed;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public RoseInAVase( Serial serial )

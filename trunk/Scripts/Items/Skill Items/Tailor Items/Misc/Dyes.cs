@@ -10,6 +10,7 @@ namespace Server.Items
 		public Dyes() : base( 0xFA9 )
 		{
 			Weight = 3.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public Dyes( Serial serial ) : base( serial )

@@ -44,6 +44,7 @@ namespace Server.Items
 		[Constructable]
 		public AlchemistTableSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public AlchemistTableSouthDeed( Serial serial ) : base( serial )

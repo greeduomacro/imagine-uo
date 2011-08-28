@@ -11,7 +11,8 @@ namespace Server.Items
 		public TragicRemainsOfTravesty() : base( Utility.Random( 0x122A, 6 ) )
 		{
 			Weight = 1.0;					
-			Hue = Utility.RandomList( 0x11E, 0x846 );	
+			Hue = Utility.RandomList( 0x11E, 0x846 );
+			ItemValue = ItemValue.Common;	
 		}
 
 		public TragicRemainsOfTravesty( Serial serial ) : base( serial )

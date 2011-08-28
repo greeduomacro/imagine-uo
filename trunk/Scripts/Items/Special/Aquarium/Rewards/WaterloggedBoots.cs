@@ -22,6 +22,8 @@ namespace Server.Items
 				ItemID = 0x170B;
 				Weight = 3.0;
 			}
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public WaterloggedBoots( Serial serial ) : base( serial )

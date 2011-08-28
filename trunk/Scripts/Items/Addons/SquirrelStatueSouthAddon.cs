@@ -44,6 +44,7 @@ namespace Server.Items
 		[Constructable]
 		public SquirrelStatueSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public SquirrelStatueSouthDeed( Serial serial ) : base( serial )

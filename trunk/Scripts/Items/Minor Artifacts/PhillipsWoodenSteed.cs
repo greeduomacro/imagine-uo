@@ -9,6 +9,7 @@ namespace Server.Items
 		public PhillipsWoodenSteed() : base( MonsterStatuetteType.PhillipsWoodenSteed )
 		{
 			LootType = LootType.Regular;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public override bool ForceShowProperties{ get{ return ObjectPropertyList.Enabled; } }

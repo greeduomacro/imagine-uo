@@ -91,6 +91,8 @@ namespace Server.Engines.Mahjong
 			m_Players = new MahjongPlayers( this, MaxPlayers, BaseScore );
 			m_LastReset = DateTime.Now;
 			m_Level = SecureLevel.CoOwners;
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public MahjongGame( Serial serial ) : base( serial )

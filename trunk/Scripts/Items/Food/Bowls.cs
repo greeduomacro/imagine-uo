@@ -8,6 +8,7 @@ namespace Server.Items
 		public EmptyWoodenBowl() : base( 0x15F8 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EmptyWoodenBowl( Serial serial ) : base( serial )
@@ -35,6 +36,7 @@ namespace Server.Items
 		public EmptyPewterBowl() : base( 0x15FD )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EmptyPewterBowl( Serial serial ) : base( serial )
@@ -405,6 +407,7 @@ namespace Server.Items
 		public EmptyWoodenTub() : base( 0x1605 )
 		{
 			Weight = 2.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EmptyWoodenTub( Serial serial ) : base( serial )
@@ -433,6 +436,7 @@ namespace Server.Items
 		public EmptyPewterTub() : base( 0x1603 )
 		{
 			Weight = 2.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EmptyPewterTub( Serial serial ) : base( serial )

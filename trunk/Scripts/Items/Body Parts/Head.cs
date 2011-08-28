@@ -68,6 +68,7 @@ namespace Server.Items
 		{
 			m_HeadType = headType;
 			m_PlayerName = playerName;
+			ItemValue = ItemValue.Trash;
 		}
 
 		public Head( Serial serial )

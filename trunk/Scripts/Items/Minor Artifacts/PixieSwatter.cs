@@ -22,6 +22,7 @@ namespace Server.Items
 			WeaponAttributes.ResistEnergyBonus = 12;
 
 			Slayer = SlayerName.Fey;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public override void GetDamageTypes( Mobile wielder, out int phys, out int fire, out int cold, out int pois, out int nrgy, out int chaos, out int direct )

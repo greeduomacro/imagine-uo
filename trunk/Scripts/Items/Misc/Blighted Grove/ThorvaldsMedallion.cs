@@ -13,6 +13,7 @@ namespace Server.Items
 			LootType = LootType.Blessed;
 			Weight = 1.0;
 			Hue = 0x47F; // TODO check
+			ItemValue = ItemValue.Common;
 		}
 
 		public ThorvaldsMedallion( Serial serial ) : base( serial )

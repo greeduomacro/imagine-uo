@@ -28,6 +28,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		[Constructable]
@@ -37,12 +38,14 @@ namespace Server.Items
 			LootType = LootType.Blessed;
 			Owner = owner;
 			InvalidateProperties();
+			ItemValue = ItemValue.Epic;
 		}
 
 		public PersonalBlessDeed( Serial serial ) : base( serial )
 		{
 			Weight = 1.0;
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public override void Serialize( GenericWriter writer )

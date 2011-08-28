@@ -59,6 +59,7 @@ namespace Server.Items
 		public UnmadeBedDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public UnmadeBedDeed( Serial serial ) : base( serial )

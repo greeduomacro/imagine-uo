@@ -11,6 +11,7 @@ namespace Server.Items
 			LootType = LootType.Regular;
 
 			Hue = Utility.RandomList( 0, 0x482, 0x489, 0x495, 0x4F2 );
+			ItemValue = ItemValue.Rare;
 		}
 
 		public SeahorseStatuette( Serial serial ) : base( serial )

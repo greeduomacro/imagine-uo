@@ -12,6 +12,7 @@ namespace Server.Items
 		{
 			LootType = LootType.Blessed;
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public OrdersFromMinax( Serial serial ) : base( serial )

@@ -25,6 +25,7 @@ namespace Server.Items
 			Attributes.DefendChance = 20;
 
 			ArmorAttributes.SelfRepair = 2;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public override Race RequiredRace

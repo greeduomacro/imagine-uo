@@ -8,7 +8,8 @@ namespace Server.Items
 		[Constructable]
 		public DecorativeBlood() : base( 0x1D95 )
 		{
-			Weight = 5.0;			
+			Weight = 5.0;
+			ItemValue = ItemValue.Rare;		
 		}
 
         public DecorativeBlood(Serial serial)

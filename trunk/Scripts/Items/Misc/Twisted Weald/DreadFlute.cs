@@ -16,6 +16,7 @@ namespace Server.Items
 			Weight = 1.0;
 			ReplenishesCharges = true;
 			Hue = 0x4F2;
+			ItemValue = ItemValue.Uncommon;
 		}
 
 		public DreadFlute( Serial serial ) : base( serial )

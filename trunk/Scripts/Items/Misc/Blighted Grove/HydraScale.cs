@@ -13,6 +13,7 @@ namespace Server.Items
 			LootType = LootType.Blessed;
 			Weight = 1.0;
 			Hue = 0xC2; // TODO check
+			ItemValue = ItemValue.Common;
 		}
 
 		public HydraScale( Serial serial ) : base( serial )

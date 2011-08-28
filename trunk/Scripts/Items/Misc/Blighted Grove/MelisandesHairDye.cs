@@ -13,6 +13,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			Hue = Utility.RandomMinMax( 0x47E, 0x499 );
+			ItemValue = ItemValue.Common;
 		}
 
 		public MelisandesHairDye( Serial serial ) : base( serial )

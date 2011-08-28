@@ -11,6 +11,7 @@ namespace Server.Items
 			Name = "A Healthy Gland";
 			Weight = 1.0;
 			Hue = 0x6;
+			ItemValue = ItemValue.Uncommon;
 		}
 
 		public PlagueBeastGland( Serial serial ) : base( serial )

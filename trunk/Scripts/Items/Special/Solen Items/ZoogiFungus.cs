@@ -19,6 +19,8 @@ namespace Server.Items
 			Stackable = true;
 			Weight = 0.1;
 			Amount = amount;
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		public ZoogiFungus( Serial serial ) : base( serial )

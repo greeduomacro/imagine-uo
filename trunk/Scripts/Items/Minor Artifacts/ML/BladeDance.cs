@@ -21,6 +21,7 @@ namespace Server.Items
 			Attributes.WeaponDamage = 30;
 			WeaponAttributes.HitLeechMana = 20;
 			WeaponAttributes.UseBestSkill = 1;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public BladeDance( Serial serial ) : base( serial )

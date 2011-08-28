@@ -11,6 +11,7 @@ namespace Server.Items
 		public AdmiralsHeartyRum() : base( BeverageType.Ale )
 		{
 			Hue = 0x66C;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public AdmiralsHeartyRum( Serial serial ) : base( serial )

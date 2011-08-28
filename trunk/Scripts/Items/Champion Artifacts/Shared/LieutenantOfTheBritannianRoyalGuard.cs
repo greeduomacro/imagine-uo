@@ -20,6 +20,7 @@ namespace Server.Items
 			Attributes.BonusInt = 5;
 			Attributes.RegenMana = 2;
 			Attributes.LowerRegCost = 10;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public LieutenantOfTheBritannianRoyalGuard( Serial serial ) : base( serial )

@@ -20,6 +20,7 @@ namespace Server.Items
 			
 			Attributes.RegenHits = 2;
 			Attributes.LowerManaCost = 10;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public TotemOfVoid( Serial serial ) :  base( serial )

@@ -47,6 +47,7 @@ namespace Server.Items
 		[Constructable]
 		public WaterTroughEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public WaterTroughEastDeed( Serial serial ) : base( serial )

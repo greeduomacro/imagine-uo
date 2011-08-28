@@ -11,6 +11,7 @@ namespace Server.Items
 		public GhostShipAnchor() : base( 0x14F7 )
 		{
 			Hue = 0x47E;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public GhostShipAnchor( Serial serial ) : base( serial )

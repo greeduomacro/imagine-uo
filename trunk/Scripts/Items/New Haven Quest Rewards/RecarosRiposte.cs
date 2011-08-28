@@ -16,6 +16,8 @@ namespace Server.Items
 			Attributes.AttackChance = 5;
 			Attributes.WeaponSpeed = 10;
 			Attributes.WeaponDamage = 25;
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		public RecarosRiposte( Serial serial ) : base( serial )

@@ -8,6 +8,7 @@ namespace Server.Items
 		[Constructable]
 		public LeftLeg() : base( 0x1DA3 )
 		{
+			ItemValue = ItemValue.Trash;
 		}
 
 		public LeftLeg( Serial serial ) : base( serial )

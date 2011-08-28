@@ -15,6 +15,7 @@ namespace Server.Items
 			Attributes.RegenMana = 1;
 			Attributes.CastSpeed = 1;
 			Attributes.IncreasedKarmaLoss = 5;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public OssianGrimoire( Serial serial ) : base( serial )

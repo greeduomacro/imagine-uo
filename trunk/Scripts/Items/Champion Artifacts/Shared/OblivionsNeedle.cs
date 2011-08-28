@@ -21,6 +21,7 @@ namespace Server.Items
 			Attributes.WeaponDamage = 40;
 
 			WeaponAttributes.HitLeechStam = 50;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public OblivionsNeedle( Serial serial ) : base( serial )

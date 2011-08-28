@@ -7,7 +7,8 @@ namespace Server.Items
     {
 		[Constructable]
 		public DecorationLargeVase() : base( 0xB47 )
-		{		
+		{	
+			ItemValue = ItemValue.Rare;	
 		}
 
         public DecorationLargeVase(Serial serial)
@@ -36,6 +37,7 @@ namespace Server.Items
         public DecorationSmallVase()
             : base(0xB48)
         {
+			ItemValue = ItemValue.Rare;
         }
 
         public DecorationSmallVase(Serial serial)

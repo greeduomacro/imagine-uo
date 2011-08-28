@@ -48,6 +48,7 @@ namespace Server.Items
 		public GoldenDecorativeRugDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public GoldenDecorativeRugDeed( Serial serial ) : base( serial )

@@ -3,10 +3,8 @@ using Server;
 
 namespace Server.Items
 {
-    public class NightEyes : Glasses, ITokunoDyable
+	public class NightEyes : Glasses, ITokunoDyable
 	{
-
-	
 		public override int BasePhysicalResistance{ get{ return 10; } }
 		public override int BaseFireResistance{ get{ return 10; } }
 		public override int BaseColdResistance{ get{ return 10; } }
@@ -25,7 +23,8 @@ namespace Server.Items
 		
 			Attributes.NightSight = 1;
 			Attributes.DefendChance = 10;
-			Attributes.CastRecovery = 3;			
+			Attributes.CastRecovery = 3;	
+			ItemValue = ItemValue.Epic;		
 		}
 
 		public NightEyes( Serial serial ) : base( serial )

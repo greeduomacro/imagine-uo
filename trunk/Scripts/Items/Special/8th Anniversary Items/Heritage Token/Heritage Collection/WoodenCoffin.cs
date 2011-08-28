@@ -84,6 +84,7 @@ namespace Server.Items
 		public WoodenCoffinDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public WoodenCoffinDeed( Serial serial ) : base( serial )

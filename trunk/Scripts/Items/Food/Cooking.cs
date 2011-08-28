@@ -28,6 +28,7 @@ namespace Server.Items
 		{
 			Stackable = Core.ML;
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Dough( Serial serial ) : base( serial )
@@ -128,6 +129,7 @@ namespace Server.Items
 			Stackable = Core.ML;
 			Weight = 1.0;
 			Hue = 150;
+			ItemValue = ItemValue.Common;
 		}
 
 		public SweetDough( Serial serial ) : base( serial )
@@ -231,6 +233,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			Stackable = true;
+			ItemValue = ItemValue.Common;
 		}
 
 		public JarHoney( Serial serial ) : base( serial )
@@ -299,6 +302,7 @@ namespace Server.Items
 		public BowlFlour() : base( 0xa1e )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public BowlFlour( Serial serial ) : base( serial )
@@ -327,6 +331,7 @@ namespace Server.Items
 		public WoodenBowl() : base( 0x15f8 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public WoodenBowl( Serial serial ) : base( serial )
@@ -355,6 +360,7 @@ namespace Server.Items
 		public PitcherWater() : base(Utility.Random( 0x1f9d, 2 ))
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public PitcherWater( Serial serial ) : base( serial )
@@ -439,6 +445,7 @@ namespace Server.Items
 		{
 			Weight = 5.0;
 			m_Quantity = 20;
+			ItemValue = ItemValue.Common;
 		}
 
 		public SackFlour( Serial serial ) : base( serial )
@@ -506,6 +513,7 @@ namespace Server.Items
 		public SackFlourOpen() : base(UtilityItem.RandomChoice( 0x1046, 0x103a ))
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public SackFlourOpen( Serial serial ) : base( serial )
@@ -582,6 +590,7 @@ namespace Server.Items
 		public Eggshells() : base( 0x9b4 )
 		{
 			Weight = 0.5;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Eggshells( Serial serial ) : base( serial )
@@ -608,6 +617,7 @@ namespace Server.Items
 		[Constructable]
 		public WheatSheaf() : this( 1 )
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		[Constructable]
@@ -616,6 +626,7 @@ namespace Server.Items
 			Weight = 1.0;
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Common;
 		}
 
 		public override void OnDoubleClick( Mobile from )

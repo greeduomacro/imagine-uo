@@ -16,6 +16,7 @@ namespace Server.Items
 			Attributes.BonusInt = 5;
 			Attributes.SpellDamage = 10;
 			Attributes.CastSpeed = 2;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public DjinnisRing( Serial serial ) : base( serial )

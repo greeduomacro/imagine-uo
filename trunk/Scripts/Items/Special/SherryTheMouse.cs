@@ -31,6 +31,8 @@ namespace Server.Items
 
             Hue = 0xB8F;
             LootType = LootType.Blessed;
+
+			ItemValue = ItemValue.Rare;
         }
 
         public override void GetProperties(ObjectPropertyList list)

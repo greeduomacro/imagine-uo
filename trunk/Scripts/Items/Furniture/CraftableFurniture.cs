@@ -51,6 +51,7 @@ namespace Server.Items
 	
 		public CraftableFurniture( int itemID ) : base( itemID )
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public CraftableFurniture( Serial serial ) : base( serial )

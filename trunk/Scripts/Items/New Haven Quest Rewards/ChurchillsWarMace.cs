@@ -17,6 +17,8 @@ namespace Server.Items
 			Attributes.WeaponSpeed = 10;
 			Attributes.WeaponDamage = 25;
 			WeaponAttributes.LowerStatReq = 70;
+
+			ItemValue = Itemvalue.Rare;
 		}
 
 		public ChurchillsWarMace( Serial serial ) : base( serial )

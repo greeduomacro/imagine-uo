@@ -9,7 +9,8 @@ namespace Server.Items
 
 		[Constructable]
 		public MummyWrapping() : base( 0xE21 )
-		{		
+		{
+			ItemValue = ItemValue.Rare;		
 		}
 
         public MummyWrapping(Serial serial)

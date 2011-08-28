@@ -94,10 +94,13 @@ namespace Server.Items
 		[Constructable]
 		public ParrotPerchAddonDeed() : this( null )
 		{
+			ItemValue = ItemValue.Common;
 		}
 		
 		public ParrotPerchAddonDeed( PetParrot parrot )
 		{
+			ItemValue = ItemValue.Common;
+
 			LootType = LootType.Blessed;
 		
 			m_Parrot = parrot;

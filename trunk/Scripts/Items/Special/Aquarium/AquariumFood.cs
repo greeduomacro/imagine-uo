@@ -11,6 +11,7 @@ namespace Server.Items
 		[Constructable]
 		public AquariumFood() : base( 0xEFC )
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public AquariumFood( Serial serial ) : base( serial )

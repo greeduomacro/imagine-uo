@@ -9,6 +9,7 @@ namespace Server.Items
 		public Torso() : base( 0x1D9F )
 		{
 			Weight = 2.0;
+			ItemValue = ItemValue.Trash;
 		}
 
 		public Torso( Serial serial ) : base( serial )

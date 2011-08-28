@@ -9,6 +9,7 @@ namespace Server.Items
 		public Dressform() : base(0xec6)
 		{
 			Weight = 10;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public Dressform(Serial serial) : base(serial)

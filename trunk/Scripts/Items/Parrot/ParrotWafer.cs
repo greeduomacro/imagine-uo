@@ -12,6 +12,7 @@ namespace Server.Items
 		{
 			Hue = 0x38;
 			Stackable = true;
+			ItemValue = ItemValue.Common;
 		}
 	
 		public ParrotWafer( Serial serial ) : base( serial )

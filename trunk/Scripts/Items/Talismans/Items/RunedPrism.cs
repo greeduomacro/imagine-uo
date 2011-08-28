@@ -10,6 +10,7 @@ namespace Server.Items
 		public RunedPrism() : base( 0x2F57 )
 		{
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public RunedPrism( Serial serial ) : base( serial )

@@ -116,6 +116,7 @@ namespace Server.Items
 		[Constructable]
 		public SpinningwheelSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public SpinningwheelSouthDeed( Serial serial ) : base( serial )

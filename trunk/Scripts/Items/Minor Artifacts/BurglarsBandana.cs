@@ -26,6 +26,8 @@ namespace Server.Items
 			SkillBonuses.SetValues( 2, SkillName.Snooping, 10.0 );
 
 			Attributes.BonusDex = 5;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public BurglarsBandana( Serial serial ) : base( serial )

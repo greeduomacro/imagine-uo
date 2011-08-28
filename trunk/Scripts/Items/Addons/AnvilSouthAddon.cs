@@ -40,6 +40,7 @@ namespace Server.Items
 		[Constructable]
 		public AnvilSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public AnvilSouthDeed( Serial serial ) : base( serial )

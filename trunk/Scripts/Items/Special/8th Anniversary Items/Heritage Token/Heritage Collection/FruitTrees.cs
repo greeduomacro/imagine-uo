@@ -193,6 +193,7 @@ namespace Server.Items
 		public PeachTreeDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public PeachTreeDeed( Serial serial ) : base( serial )

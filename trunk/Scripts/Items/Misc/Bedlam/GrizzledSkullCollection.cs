@@ -11,6 +11,7 @@ namespace Server.Items
 		public GrizzledSkullCollection() : base( 0x21FC )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public GrizzledSkullCollection( Serial serial ) : base( serial )

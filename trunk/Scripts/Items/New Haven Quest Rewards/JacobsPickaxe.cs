@@ -14,6 +14,8 @@ namespace Server.Items
 			UsesRemaining = 20;
 
 			Timer.DelayCall( TimeSpan.FromMinutes( 5 ), TimeSpan.FromMinutes( 5 ), new TimerCallback( Tick_Callback ) );
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		private void Tick_Callback()

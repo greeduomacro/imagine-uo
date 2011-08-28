@@ -17,6 +17,7 @@ namespace Server.Items
 		public Spyglass() : base( 0x14F5 )
 		{
 			Weight = 3.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public override void OnDoubleClick( Mobile from )

@@ -39,6 +39,7 @@ namespace Server.Items
 		public Clock( int itemID ) : base( itemID )
 		{
 			Weight = 3.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public Clock( Serial serial ) : base( serial )

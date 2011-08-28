@@ -19,6 +19,8 @@ namespace Server.Items
 			Attributes.LowerManaCost = 10;
 			Attributes.CastSpeed = 1;
 			Attributes.CastRecovery = 1;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public ScrappersCompendium( Serial serial ) : base( serial )

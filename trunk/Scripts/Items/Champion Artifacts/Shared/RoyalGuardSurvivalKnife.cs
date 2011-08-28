@@ -21,6 +21,7 @@ namespace Server.Items
 
 			WeaponAttributes.UseBestSkill = 1;
 			WeaponAttributes.LowerStatReq = 50;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public RoyalGuardSurvivalKnife( Serial serial ) : base( serial )

@@ -10,6 +10,7 @@ namespace Server.Items
 		public EnchantedSwitch() : base( 0x2F5C )
 		{
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public EnchantedSwitch( Serial serial ) : base( serial )

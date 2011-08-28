@@ -67,6 +67,7 @@ namespace Server.Items
 
 		public BaseContainer( int itemID ) : base( itemID )
 		{
+			ItemValue = ItemValue.Trash;
 		}
 
 		public override bool IsAccessibleTo( Mobile m )

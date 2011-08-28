@@ -68,6 +68,7 @@ namespace Server.Items
 		public SmallFishingNetDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public SmallFishingNetDeed( Serial serial ) : base( serial )

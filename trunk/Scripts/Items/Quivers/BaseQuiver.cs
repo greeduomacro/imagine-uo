@@ -103,6 +103,8 @@ namespace Server.Items
 			m_Attributes = new AosAttributes( this );
 			m_SetAttributes = new AosAttributes( this );
 			m_SetSkillBonuses = new AosSkillBonuses( this );
+
+			ItemValue = GearScore.GetItemValue( this );
 		}
 
 		public BaseQuiver( Serial serial ) : base( serial )

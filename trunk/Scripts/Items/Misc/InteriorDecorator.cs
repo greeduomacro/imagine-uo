@@ -28,6 +28,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Common;
 		}
 
 		public override int LabelNumber{ get{ return 1041280; } } // an interior decorator

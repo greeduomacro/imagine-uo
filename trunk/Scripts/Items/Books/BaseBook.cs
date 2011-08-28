@@ -125,6 +125,8 @@ namespace Server.Items
 			{
 				m_Pages = content.Copy();
 			}
+
+			ItemValue = ItemValue.Common;
 		}
 
 		// Intended for defined books only

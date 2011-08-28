@@ -191,6 +191,8 @@ namespace Server.Items
 				Hue = Utility.RandomSlimeHue();
 			else if( m_Type == MonsterStatuetteType.RedDeath )
 				Hue = 0x21;
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		public override bool HandlesOnMovement{ get{ return m_TurnedOn && IsLockedDown; } }

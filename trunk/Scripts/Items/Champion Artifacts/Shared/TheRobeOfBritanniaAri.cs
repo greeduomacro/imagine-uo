@@ -19,6 +19,7 @@ namespace Server.Items
 		{
 			Hue = 0x486;
 			StrRequirement = 0;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public TheRobeOfBritanniaAri( Serial serial ) : base( serial )

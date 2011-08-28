@@ -1150,6 +1150,7 @@ namespace Server.Items
 		public BaseBeverage()
 		{
 			ItemID = ComputeItemID();
+			ItemValue = ItemValue.Common;
 		}
 
 		public BaseBeverage( BeverageType type )
@@ -1157,6 +1158,7 @@ namespace Server.Items
 			m_Content = type;
 			m_Quantity = MaxQuantity;
 			ItemID = ComputeItemID();
+			ItemValue = ItemValue.Common;
 		}
 
 		public BaseBeverage( Serial serial ) : base( serial )

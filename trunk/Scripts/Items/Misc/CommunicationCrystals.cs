@@ -94,6 +94,8 @@ namespace Server.Items
 			m_Charges = charges;
 
 			m_Receivers = new List<ReceiverCrystal>();
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public BroadcastCrystal( Serial serial ) : base( serial )
@@ -344,6 +346,7 @@ namespace Server.Items
 		public ReceiverCrystal() : base( 0x1ED0 )
 		{
 			Light = LightType.Circle150;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ReceiverCrystal( Serial serial ) : base( serial )

@@ -105,6 +105,8 @@ namespace Server.Items
 			this.BagOfSendingHue = hue;
 
 			m_Charges = Utility.RandomMinMax( 3, 9 );
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		public override void GetProperties( ObjectPropertyList list )

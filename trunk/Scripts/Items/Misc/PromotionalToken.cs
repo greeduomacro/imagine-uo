@@ -18,6 +18,7 @@ namespace Server.Items
 			LootType = LootType.Blessed;
 			Light = LightType.Circle300;
 			Weight = 5.0;
+			ItemValue = ItemValue.Legendary;
 		}
 
 		public PromotionalToken( Serial serial ) : base( serial )

@@ -40,6 +40,7 @@ namespace Server.Items
 		public AppleTrunkDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public AppleTrunkDeed( Serial serial ) : base( serial )

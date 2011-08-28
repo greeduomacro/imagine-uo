@@ -24,6 +24,7 @@ namespace Server.Items
 			Attributes.DefendChance = 15;
 			ArmorAttributes.LowerStatReq = 100;
 			ArmorAttributes.MageArmor = 1;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public HeartOfTheLion( Serial serial ) : base( serial )

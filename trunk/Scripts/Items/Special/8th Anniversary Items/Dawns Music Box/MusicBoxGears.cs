@@ -48,6 +48,8 @@ namespace Server.Items.MusicBox
 		{
 			m_Music = music;
 			Weight = 1.0;
+
+			ItemValue = ItemValue.Rare;
 		}
 
         public MusicBoxGears( Serial serial ): base( serial )

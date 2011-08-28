@@ -9,6 +9,7 @@ namespace Server.Items
 		[Constructable] 
 		public BagOfingots() : this( 5000 ) 
 		{ 
+			ItemValue = Itemvalue.Rare;
 		} 
 
 		[Constructable] 

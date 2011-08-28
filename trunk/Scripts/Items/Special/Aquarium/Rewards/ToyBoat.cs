@@ -13,6 +13,7 @@ namespace Server.Items
 		public ToyBoat() : base( 0x14F3 )
 		{
 			Weight = 1;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public ToyBoat( Serial serial ) : base( serial )

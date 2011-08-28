@@ -11,6 +11,7 @@ namespace Server.Items
 		[Constructable]
 		public CraftysFishingHat() : base( 0x1713 )
 		{
+			ItemValue = ItemValue.Epic;
 		}
 
 		public CraftysFishingHat( Serial serial ) : base( serial )

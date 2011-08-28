@@ -73,6 +73,8 @@ namespace Server.Items.MusicBox
             
             while( Tracks.Count < 4 )
             	AddSong( TrackInfo.RandomSong( TrackRarity.Common ) );
+
+		ItemValue = ItemValue.Epic;
         }
 
         public DawnsMusicBox( Serial serial ): base( serial )

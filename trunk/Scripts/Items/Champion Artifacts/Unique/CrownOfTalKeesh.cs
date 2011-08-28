@@ -26,6 +26,7 @@ namespace Server.Items
 			Attributes.BonusInt = 8;
 			Attributes.RegenMana = 4;
 			Attributes.SpellDamage = 10;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public CrownOfTalKeesh( Serial serial ) : base( serial )

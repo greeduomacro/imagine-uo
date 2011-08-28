@@ -93,6 +93,7 @@ namespace Server.Items
 			m_Charges = Utility.RandomMinMax( 3, 9 );
 
 			m_PetName = "";
+			ItemValue = ItemValue.Rare;
 		}
 
 		public override void AddNameProperty( ObjectPropertyList list )

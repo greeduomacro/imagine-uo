@@ -32,6 +32,7 @@ namespace Server.Items
 			Weight = 1.0;
 			Hue = 2419;
 			UsesRemaining = charges;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public PowderOfTemperament( Serial serial ) : base( serial )

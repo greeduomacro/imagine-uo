@@ -26,6 +26,7 @@ namespace Server.Items
 		public DragonBardingDeed() : base( 0x14F0 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public override void GetProperties( ObjectPropertyList list )

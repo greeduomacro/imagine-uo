@@ -8,6 +8,7 @@ namespace Server.Items
 		public PottedCactus() : base(0x1E0F)
 		{
 			Weight = 100;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public PottedCactus(Serial serial) : base(serial)
@@ -35,6 +36,7 @@ namespace Server.Items
 		public PottedCactus1() : base(0x1E10)
 		{
 			Weight = 100;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public PottedCactus1(Serial serial) : base(serial)
@@ -62,6 +64,7 @@ namespace Server.Items
 		public PottedCactus2() : base(0x1E11)
 		{
 			Weight = 100;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public PottedCactus2(Serial serial) : base(serial)
@@ -89,6 +92,7 @@ namespace Server.Items
 		public PottedCactus3() : base(0x1E12)
 		{
 			Weight = 100;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public PottedCactus3(Serial serial) : base(serial)
@@ -116,6 +120,7 @@ namespace Server.Items
 		public PottedCactus4() : base(0x1E13)
 		{
 			Weight = 100;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public PottedCactus4(Serial serial) : base(serial)
@@ -143,6 +148,7 @@ namespace Server.Items
 		public PottedCactus5() : base(0x1E14)
 		{
 			Weight = 100;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public PottedCactus5(Serial serial) : base(serial)

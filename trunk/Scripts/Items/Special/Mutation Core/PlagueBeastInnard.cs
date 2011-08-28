@@ -18,6 +18,7 @@ namespace Server.Items
 			Hue = hue;
 			Movable = false;
 			Weight = 1.0;
+			ItemValue = ItemValue.Uncommon;
 		}
 
 		public virtual bool Scissor( Mobile from, Scissors scissors )

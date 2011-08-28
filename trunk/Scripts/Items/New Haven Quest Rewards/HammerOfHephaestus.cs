@@ -16,6 +16,8 @@ namespace Server.Items
 			Hue = 0x0;
 
 			Timer.DelayCall( TimeSpan.FromMinutes( 5 ), TimeSpan.FromMinutes( 5 ), new TimerCallback( Tick_Callback ) );
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		private void Tick_Callback()

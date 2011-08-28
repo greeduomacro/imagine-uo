@@ -11,6 +11,7 @@ namespace Server.Items
 		public ShipModelOfTheHMSCape() : base( 0x14F3 )
 		{
 			Hue = 0x37B;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public ShipModelOfTheHMSCape( Serial serial ) : base( serial )

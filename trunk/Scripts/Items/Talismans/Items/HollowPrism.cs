@@ -10,6 +10,7 @@ namespace Server.Items
 		public HollowPrism() : base( 0x2F5D )
 		{
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public HollowPrism( Serial serial ) : base( serial )

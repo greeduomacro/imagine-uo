@@ -13,6 +13,7 @@ namespace Server.Items
 			LootType = LootType.Blessed;
 			Weight = 1.0;
 			Hue = 0x51D; // TODO check
+			ItemValue = ItemValue.Common;
 		}
 
 		public AbscessTail( Serial serial ) : base( serial )

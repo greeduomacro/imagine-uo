@@ -41,6 +41,7 @@ namespace Server.Items
 		[Constructable]
 		public SandstoneFireplaceEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public SandstoneFireplaceEastDeed( Serial serial ) : base( serial )

@@ -31,6 +31,8 @@ namespace Server.Items
 			
 			m_Skill = skill;
 			m_Value = value;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public SpecialScroll( Serial serial ) : base( serial )

@@ -14,6 +14,7 @@ namespace Server.Items
 		public PowerCrystal() : base( 0x1F1C )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public PowerCrystal( Serial serial ) : base( serial )

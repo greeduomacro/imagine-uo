@@ -20,6 +20,7 @@ namespace Server.Items
 
 			SkillBonuses.Skill_1_Name = SkillName.Stealth;
 			SkillBonuses.Skill_1_Value = 5;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public EmbroideredOakLeafCloak( Serial serial ) : base( serial )

@@ -561,7 +561,10 @@ namespace Server
 
 	public enum ItemValue
 	{
-		// Standard
+		// Standard UO Color (Yellow)
+		None,			// Standard Yellow
+
+		// Standard Value Types
 		Trash,			// Gray
 		Common,			// White
 		Uncommon,		// Green
@@ -569,15 +572,14 @@ namespace Server
 		Epic,			// Purple
 		Legendary,		// Orange
 
-		// Event / Extra
-		Fabled,			// Red
-		Mythical,		// Gold
-		Fabulous,		// Pink ( No offence intended :P )
+		// Event
+		Fabled,			// Red (Event Item)
 
-		// Standard UO Color (Yellow)
-		None			// Standard Yellow
-		
+		// Crafting
+		Crafted,		// Gold
 
+		// Extra
+		Fabulous		// Pink
 	}
 
 	public class Item : IEntity, IHued, IComparable<Item>, ISerializable, ISpawnable
@@ -1049,9 +1051,9 @@ namespace Server
 				{
 					list.Add( 1053099, "<BASEFONT COLOR=#FF0000>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", fill, name );
 				}
-				else if ( ItemValue == ItemValue.Mythical )	// Gold (Mythical)
+				else if ( ItemValue == ItemValue.Crafted )	// Gold (Mythical)
 				{
-					list.Add( 1053099, "<BASEFONT COLOR=#B8860B>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", fill, name );
+					list.Add( 1053099, "<BASEFONT COLOR=#DAA520>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", fill, name );
 				}
 				else if ( ItemValue == ItemValue.Fabulous )	// Gold (Fabulous)
 				{
@@ -1059,50 +1061,50 @@ namespace Server
 				}
 				else
 				{
-					list.Add( LabelNumber );
+					list.Add( name );
 				}
 			}
 			else
 			{
 				if( ItemValue == ItemValue.Trash  )		//  Gray (Junk)
 				{
-					list.Add( 1050039, "<BASEFONT COLOR=#808080>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount, name );
+					list.Add( 1053099, "<BASEFONT COLOR=#808080>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
 				}
 				else if( ItemValue == ItemValue.Common )	// White (Common)
 				{
-					list.Add( 1050039, "<BASEFONT COLOR=#FFFAFA>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount, name );
+					list.Add( 1053099, "<BASEFONT COLOR=#FFFAFA>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
 				}
 				else if( ItemValue == ItemValue.Uncommon ) 	// Green (Uncommon)
 				{
-					list.Add( 1050039, "<BASEFONT COLOR=#1EFF00>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount, name );
+					list.Add( 1053099, "<BASEFONT COLOR=#1EFF00>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
 				}
 				else if( ItemValue == ItemValue.Rare )		// Blue (Rare)
 				{
-					list.Add( 1050039, "<BASEFONT COLOR=#0070FF>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount, name );
+					list.Add( 1053099, "<BASEFONT COLOR=#0070FF>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
 				}
 				else if( ItemValue == ItemValue.Epic )		// Purple (Epic)
 				{
-					list.Add( 1050039, "<BASEFONT COLOR=#A335EE>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount, name );
+					list.Add( 1053099, "<BASEFONT COLOR=#A335EE>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
 				}
 				else if ( ItemValue == ItemValue.Legendary )	// Orange (Legendary)
 				{
-					list.Add( 1050039, "<BASEFONT COLOR=#FF8000>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount, name );
+					list.Add( 1053099, "<BASEFONT COLOR=#FF8000>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
 				}
 				else if ( ItemValue == ItemValue.Fabled )	// Red (Fabled)
 				{
-					list.Add( 1050039, "<BASEFONT COLOR=#FF0000>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount, name );
+					list.Add( 1053099, "<BASEFONT COLOR=#FF0000>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
 				}
-				else if ( ItemValue == ItemValue.Mythical )	// Gold (Mythical)
+				else if ( ItemValue == ItemValue.Crafted )	// Gold (Mythical)
 				{
-					list.Add( 1050039, "<BASEFONT COLOR=#B8860B>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount, name );
+					list.Add( 1053099, "<BASEFONT COLOR=#DAA520>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
 				}
 				else if ( ItemValue == ItemValue.Fabulous )	// Gold (Fabulous)
 				{
-					list.Add( 1050039, "<BASEFONT COLOR=#FF69B4>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount, name );
+					list.Add( 1053099, "<BASEFONT COLOR=#FF69B4>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
 				}
 				else
 				{
-					list.Add( 1050039, "{0}\t#{1}", m_Amount, name ); // ~1_NUMBER~ ~2_ITEMNAME~
+					list.Add( 1053099, "{0}\t{1}", m_Amount.ToString(), name );
 				}
 			}
 		}
@@ -4778,12 +4780,16 @@ namespace Server
 				World.m_ItemTypes.Add( ourType );
 				m_TypeRef = World.m_ItemTypes.Count - 1;
 			}
+
+			m_ItemValue = ItemValue.None;
 		}
 
 		[Constructable]
 		public Item( int itemID ) : this()
 		{
 			m_ItemID = itemID;
+
+			m_ItemValue = ItemValue.None;
 		}
 
 		public Item( Serial serial )

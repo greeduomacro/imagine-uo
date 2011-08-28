@@ -80,6 +80,7 @@ namespace Server.Items
 		public HouseLadderDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public HouseLadderDeed( Serial serial ) : base( serial )

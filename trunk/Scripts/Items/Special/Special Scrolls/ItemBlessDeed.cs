@@ -71,6 +71,7 @@ namespace Server.Items
         {
             Weight = 1.0;
             LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
         }
 
         public ItemBlessDeed(Serial serial)

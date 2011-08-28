@@ -46,6 +46,7 @@ namespace Server.Items
 
 		public Food( int itemID ) : this( 1, itemID )
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public Food( int amount, int itemID ) : base( itemID )
@@ -53,6 +54,7 @@ namespace Server.Items
 			Stackable = true;
 			Amount = amount;
 			m_FillFactor = 1;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Food( Serial serial ) : base( serial )

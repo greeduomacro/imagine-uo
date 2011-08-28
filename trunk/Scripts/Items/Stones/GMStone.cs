@@ -16,7 +16,6 @@ namespace Server.Items
 		public GMStone() : base( 0xED4 )
 		{
 			Movable = false;
-			Hue = 0x489;
 		}
 
 		public GMStone( Serial serial ) : base( serial )

@@ -16,6 +16,7 @@ namespace Server.Items
 		{
 			Hue = 0x466;
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public FireHorn( Serial serial ) : base( serial )

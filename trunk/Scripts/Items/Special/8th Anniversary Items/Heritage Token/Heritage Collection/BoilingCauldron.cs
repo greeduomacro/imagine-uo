@@ -45,6 +45,7 @@ namespace Server.Items
 		public BoilingCauldronDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public BoilingCauldronDeed( Serial serial ) : base( serial )

@@ -100,6 +100,7 @@ namespace Server.Items
 		public DisturbingPortraitDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public DisturbingPortraitDeed( Serial serial ) : base( serial )

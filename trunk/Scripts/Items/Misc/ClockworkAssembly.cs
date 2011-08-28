@@ -17,6 +17,7 @@ namespace Server.Items
 		{
 			Weight = 5.0;
 			Hue = 1102;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ClockworkAssembly( Serial serial ) : base( serial )

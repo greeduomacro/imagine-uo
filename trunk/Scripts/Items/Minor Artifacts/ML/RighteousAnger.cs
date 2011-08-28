@@ -20,6 +20,7 @@ namespace Server.Items
 			Attributes.DefendChance = 5;
 			Attributes.WeaponSpeed = 35;
 			Attributes.WeaponDamage = 40;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public RighteousAnger( Serial serial ) : base( serial )

@@ -25,6 +25,7 @@ namespace Server.Items
 
 			WeaponAttributes.HitHarm = 33;
 			WeaponAttributes.UseBestSkill = 1;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public TalonBite( Serial serial ) : base( serial )

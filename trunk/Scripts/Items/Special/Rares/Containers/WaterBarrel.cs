@@ -15,6 +15,7 @@
 		public WaterBarrel()
 			: this( false )
 		{
+			ItemValue = ItemValue.Rare;
 		}
 
 		[Constructable]

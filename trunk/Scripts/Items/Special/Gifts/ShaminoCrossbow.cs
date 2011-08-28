@@ -20,6 +20,8 @@ namespace Server.Items
 			Attributes.WeaponDamage = 40;
 			WeaponAttributes.SelfRepair = 10;
 			WeaponAttributes.LowerStatReq = 100;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public ShaminoCrossbow( Serial serial ) : base( serial )

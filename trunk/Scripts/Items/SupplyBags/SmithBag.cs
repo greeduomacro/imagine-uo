@@ -9,6 +9,7 @@ namespace Server.Items
 		[Constructable] 
 		public SmithBag() : this( 5000 ) 
 		{ 
+			ItemValue = Itemvalue.Rare;
 		} 
 
 		[Constructable] 

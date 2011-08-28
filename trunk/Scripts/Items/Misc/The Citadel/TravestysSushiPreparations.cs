@@ -11,6 +11,7 @@ namespace Server.Items
 		public TravestysSushiPreparations() : base( Utility.Random( 0x1E15, 2 ) )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public TravestysSushiPreparations( Serial serial ) : base( serial )

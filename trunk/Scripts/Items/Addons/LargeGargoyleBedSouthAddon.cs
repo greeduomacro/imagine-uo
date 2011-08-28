@@ -57,6 +57,7 @@ namespace Server.Items
 		[Constructable]
 		public LargeGargoyleBedSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
         public LargeGargoyleBedSouthDeed(Serial serial)

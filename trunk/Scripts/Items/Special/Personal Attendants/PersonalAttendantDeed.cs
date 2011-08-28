@@ -32,6 +32,7 @@ namespace Server.Items
 
 			LootType = LootType.Blessed;
 			Weight = 1.0;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public PersonalAttendantDeed( Serial serial ) : base( serial )

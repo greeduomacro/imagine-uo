@@ -40,6 +40,7 @@ namespace Server.Items
 		[Constructable]
 		public SmallForgeDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public SmallForgeDeed( Serial serial ) : base( serial )

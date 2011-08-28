@@ -8,6 +8,7 @@ namespace Server.Items
 		public Wasabi() : base( 0x24E8 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Wasabi( Serial serial ) : base( serial )
@@ -64,6 +65,7 @@ namespace Server.Items
 		public EmptyBentoBox() : base( 0x2834 )
 		{
 			Weight = 5.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public EmptyBentoBox( Serial serial ) : base( serial )
@@ -187,6 +189,7 @@ namespace Server.Items
 		public GreenTeaBasket() : base( 0x284B )
 		{
 			Weight = 10.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public GreenTeaBasket( Serial serial ) : base( serial )

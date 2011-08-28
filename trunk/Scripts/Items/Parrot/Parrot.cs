@@ -20,6 +20,7 @@ namespace Server.Items
 		{
 			Weight = 1;								
 			Hue = Utility.RandomList( m_Hues );
+			ItemValue = ItemValue.Uncommon;
 		}
 
 		public ParrotItem( Serial serial ) : base( serial )

@@ -11,6 +11,7 @@ namespace Server.Items
 		public SweatOfParoxysmus() : base( 0xF01 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public SweatOfParoxysmus( Serial serial ) : base( serial )

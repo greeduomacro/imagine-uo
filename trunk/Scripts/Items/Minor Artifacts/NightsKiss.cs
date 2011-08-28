@@ -19,6 +19,7 @@ namespace Server.Items
 			Slayer = SlayerName.Repond;
 			Attributes.WeaponSpeed = 30;
 			Attributes.WeaponDamage = 35;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public NightsKiss( Serial serial ) : base( serial )

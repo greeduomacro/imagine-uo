@@ -20,6 +20,7 @@ namespace Server.Items
 
 			SkillBonuses.SetValues( 0, SkillName.SpiritSpeak, 10.0 );
 			SkillBonuses.SetValues( 1, SkillName.Necromancy, 5.0 );
+			ItemValue = ItemValue.Epic;
 		}
 
 		public BloodwoodSpirit( Serial serial ) :  base( serial )

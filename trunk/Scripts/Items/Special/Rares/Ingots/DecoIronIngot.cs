@@ -10,6 +10,7 @@ namespace Server.Items
 		{
 			Movable = true;
 			Stackable = true;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public DecoIronIngot( Serial serial ) : base( serial )

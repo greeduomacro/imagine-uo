@@ -10,6 +10,7 @@ namespace Server.Items
 		public Beads() : base( 0x108B )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Beads( Serial serial ) : base( serial )

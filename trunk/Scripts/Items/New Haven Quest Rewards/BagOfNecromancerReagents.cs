@@ -9,6 +9,7 @@ namespace Server.Items
 		[Constructable] 
 		public BagOfNecromancerReagents() : this( 100 ) 
 		{ 
+			ItemValue = Itemvalue.Rare;
 		} 
 		
 		[Constructable] 

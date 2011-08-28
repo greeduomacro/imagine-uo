@@ -141,6 +141,7 @@ namespace Server.Items
 		public SacrificialAltarDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public SacrificialAltarDeed( Serial serial ) : base( serial )

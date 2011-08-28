@@ -369,6 +369,7 @@ namespace Server.Items
 		[Constructable]
 		public BallotBoxDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public BallotBoxDeed( Serial serial ) : base( serial )

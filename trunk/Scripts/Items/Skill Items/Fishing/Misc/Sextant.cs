@@ -9,6 +9,7 @@ namespace Server.Items
 		public Sextant() : base( 0x1058 )
 		{
 			Weight = 2.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public Sextant( Serial serial ) : base( serial )

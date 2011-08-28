@@ -19,6 +19,7 @@ namespace Server.Items
 			Attributes.SpellDamage = 5;
 			Attributes.CastRecovery = 2;
 			Attributes.LowerManaCost = 5;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public StaffOfPower( Serial serial ) : base( serial )

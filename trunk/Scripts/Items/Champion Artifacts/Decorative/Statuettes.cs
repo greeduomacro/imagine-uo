@@ -12,6 +12,7 @@ namespace Server.Items
         {
             Name = "Ophidian Warrior";
             Weight = 5.0;
+			ItemValue = ItemValue.Rare;
         }
 
         public OphidianWarriorStatuette(Serial serial)
@@ -56,6 +57,7 @@ namespace Server.Items
         {
             Name = "Ophidian Arch Mage";
             Weight = 5.0;
+			ItemValue = ItemValue.Rare;
         }
 
         public OphidianArchMageStatuette(Serial serial)
@@ -103,6 +105,7 @@ namespace Server.Items
         {
             Name = "Ophidian Knight";
             Weight = 5.0;
+			ItemValue = ItemValue.Rare;
         }
 
         public OphidianKnightStatuette(Serial serial)
@@ -147,6 +150,7 @@ namespace Server.Items
         {
             Name = "Ophidian Mage";
             Weight = 5.0;
+			ItemValue = ItemValue.Rare;
         }
 
         public OphidianMageStatuette(Serial serial)
@@ -191,6 +195,7 @@ namespace Server.Items
         {
             Name = "Minotaur Statuette";
             Weight = 1.0;
+			ItemValue = ItemValue.Rare;
         }
 
         public MinotaurStatuette(Serial serial)
@@ -235,6 +240,7 @@ namespace Server.Items
         {
             Name = "Dread Spider";
             Weight = 5.0;
+			ItemValue = ItemValue.Rare;
         }
 
         public DreadSpiderStatuette(Serial serial)
@@ -280,6 +286,7 @@ namespace Server.Items
             Hue = Utility.RandomList(0x899, 0x8A2, 0x8B0);
             Name = "Slime Statuette";
             Weight = 1.0;
+			ItemValue = ItemValue.Rare;
         }
 
         public SlimeStatuette(Serial serial)
@@ -324,6 +331,7 @@ namespace Server.Items
         {
             Name = "Dread Horn";
             Weight = 5.0;
+			ItemValue = ItemValue.Rare;
         }
 
         public DreadHornStatuette(Serial serial)
@@ -368,6 +376,7 @@ namespace Server.Items
         {
             Name = "Red Death";
             Weight = 5.0;
+			ItemValue = ItemValue.Rare;
         }
 
         public RedDeathStatuette(Serial serial)
@@ -412,6 +421,7 @@ namespace Server.Items
         {
             Name = "Plague Beast";
             Weight = 5.0;
+			ItemValue = ItemValue.Rare;
         }
 
         public PlagueBeastStatuette(Serial serial)

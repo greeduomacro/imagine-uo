@@ -12,6 +12,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			FillFactor = 20;
+			ItemValue = ItemValue.Common;;
 		}
 	
 		public FruitBowl( Serial serial ) : base( serial )

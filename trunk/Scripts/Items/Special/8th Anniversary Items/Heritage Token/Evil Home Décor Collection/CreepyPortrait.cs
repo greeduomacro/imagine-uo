@@ -107,6 +107,7 @@ namespace Server.Items
 		public CreepyPortraitDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public CreepyPortraitDeed( Serial serial ) : base( serial )

@@ -11,6 +11,7 @@ namespace Server.Items
 		public GlobOfMonstreousInterredGrizzle() : base( 0x2F3 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public GlobOfMonstreousInterredGrizzle( Serial serial ) : base( serial )

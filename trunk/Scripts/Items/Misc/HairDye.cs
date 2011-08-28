@@ -13,6 +13,7 @@ namespace Server.Items
 		public HairDye() : base( 0xEFF )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public HairDye( Serial serial ) : base( serial )

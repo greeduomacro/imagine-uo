@@ -20,6 +20,7 @@ namespace Server.Items
 			Attributes.WeaponDamage = -50;
 
 			WeaponAttributes.SelfRepair = 4;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public MelisandesCorrodedHatchet( Serial serial ) : base( serial )

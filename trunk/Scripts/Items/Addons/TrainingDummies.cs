@@ -203,6 +203,7 @@ namespace Server.Items
 		[Constructable]
 		public TrainingDummyEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public TrainingDummyEastDeed( Serial serial ) : base( serial )
@@ -261,6 +262,7 @@ namespace Server.Items
 		[Constructable]
 		public TrainingDummySouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public TrainingDummySouthDeed( Serial serial ) : base( serial )

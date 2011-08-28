@@ -55,6 +55,7 @@ namespace Server.Items
 		public BrokenVanityDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public BrokenVanityDeed( Serial serial ) : base( serial )

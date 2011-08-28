@@ -56,6 +56,7 @@ namespace Server.Items
 		{
 			Weight = 4.0;
 			Layer = Layer.OneHanded;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public Fukiya( Serial serial ) : base( serial )

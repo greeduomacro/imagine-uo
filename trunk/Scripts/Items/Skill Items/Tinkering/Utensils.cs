@@ -9,6 +9,7 @@ namespace Server.Items
 		public Fork() : base( 0x9F4 )
 		{
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public Fork( Serial serial ) : base( serial )
@@ -36,6 +37,7 @@ namespace Server.Items
 		public ForkLeft() : base( 0x9F4 )
 		{
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public ForkLeft( Serial serial ) : base( serial )
@@ -63,6 +65,7 @@ namespace Server.Items
 		public ForkRight() : base( 0x9F5 )
 		{
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public ForkRight( Serial serial ) : base( serial )
@@ -91,6 +94,7 @@ namespace Server.Items
 		public Spoon() : base( 0x9F8 )
 		{
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public Spoon( Serial serial ) : base( serial )
@@ -118,6 +122,7 @@ namespace Server.Items
 		public SpoonLeft() : base( 0x9F8 )
 		{
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public SpoonLeft( Serial serial ) : base( serial )
@@ -145,6 +150,7 @@ namespace Server.Items
 		public SpoonRight() : base( 0x9F9 )
 		{
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public SpoonRight( Serial serial ) : base( serial )
@@ -173,6 +179,7 @@ namespace Server.Items
 		public Knife() : base( 0x9F6 )
 		{
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public Knife( Serial serial ) : base( serial )
@@ -200,6 +207,7 @@ namespace Server.Items
 		public KnifeLeft() : base( 0x9F6 )
 		{
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public KnifeLeft( Serial serial ) : base( serial )
@@ -227,6 +235,7 @@ namespace Server.Items
 		public KnifeRight() : base( 0x9F7 )
 		{
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public KnifeRight( Serial serial ) : base( serial )
@@ -254,6 +263,7 @@ namespace Server.Items
 		public Plate() : base( 0x9D7 )
 		{
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public Plate( Serial serial ) : base( serial )

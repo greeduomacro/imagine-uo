@@ -11,6 +11,7 @@ namespace Server.Items
 		[Constructable]
 		public CaptainBlackheartsFishingPole() : base()
 		{
+			ItemValue = ItemValue.Epic;
 		}
 
 		public CaptainBlackheartsFishingPole( Serial serial ) : base( serial )

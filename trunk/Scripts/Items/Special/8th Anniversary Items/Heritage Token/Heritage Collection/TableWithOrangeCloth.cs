@@ -40,6 +40,7 @@ namespace Server.Items
 		public TableWithOrangeClothDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public TableWithOrangeClothDeed( Serial serial ) : base( serial )

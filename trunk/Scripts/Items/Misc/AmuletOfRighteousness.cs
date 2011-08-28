@@ -30,6 +30,8 @@ namespace Server.Items
 			Weight = 1.0;	
 			
 			m_UsesRemaining = uses;
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public AmuletOfRighteousness( Serial serial ) : base( serial )

@@ -15,6 +15,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			Hue = 0x851;
+			ItemValue = ItemValue.Common;
 		}
 
 		public ParoxysmusSwampDragonStatuette( Serial serial ) : base( serial )

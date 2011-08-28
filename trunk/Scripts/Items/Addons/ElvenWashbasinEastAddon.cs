@@ -43,6 +43,7 @@ namespace Server.Items
 		[Constructable]
 		public ElvenWashBasinEastDeed() : base()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public ElvenWashBasinEastDeed( Serial serial ) : base( serial )

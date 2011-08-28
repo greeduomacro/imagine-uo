@@ -22,6 +22,8 @@ namespace Server.Items
 			
 			if ( 0.01 > Utility.RandomDouble() )
 				Hue = Utility.RandomList( m_Hues );
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		public AquariumFishingNet( Serial serial ) : base( serial )

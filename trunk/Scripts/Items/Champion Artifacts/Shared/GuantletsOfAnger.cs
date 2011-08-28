@@ -26,6 +26,7 @@ namespace Server.Items
 			Attributes.BonusHits = 8;
 			Attributes.RegenHits = 2;
 			Attributes.DefendChance = 10;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public GauntletsOfAnger( Serial serial ) : base( serial )

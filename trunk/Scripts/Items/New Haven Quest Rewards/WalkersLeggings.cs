@@ -18,6 +18,8 @@ namespace Server.Items
 		public WalkersLeggings() : base()
 		{
 			LootType = LootType.Blessed;
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		public WalkersLeggings( Serial serial ) : base( serial )

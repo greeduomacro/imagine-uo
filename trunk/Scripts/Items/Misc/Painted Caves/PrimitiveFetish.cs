@@ -12,6 +12,7 @@ namespace Server.Items
 			LootType = LootType.Blessed;
 			Weight = 1.0;
 			Hue = 0x244;
+			ItemValue = ItemValue.Common;
 		}
 
 		public PrimitiveFetish( Serial serial ) : base( serial )

@@ -59,6 +59,8 @@ namespace Server.Items
 			LootType = LootType.Blessed;
 
 			m_Worth = worth;
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public override bool DisplayLootType{ get{ return Core.AOS; } }

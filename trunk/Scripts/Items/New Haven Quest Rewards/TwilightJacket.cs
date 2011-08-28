@@ -20,6 +20,8 @@ namespace Server.Items
 			LootType = LootType.Blessed;
 
 			Attributes.ReflectPhysical = 5;
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		public TwilightJacket( Serial serial ) : base( serial )

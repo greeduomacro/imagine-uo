@@ -46,6 +46,7 @@ namespace Server.Items
 		[Constructable]
 		public FancyElvenTableEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public FancyElvenTableEastDeed( Serial serial ) : base( serial )

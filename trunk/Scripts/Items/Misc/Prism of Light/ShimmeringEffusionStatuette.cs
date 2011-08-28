@@ -10,7 +10,8 @@ namespace Server.Items
 		[Constructable]
 		public ShimmeringEffusionStatuette() : base( 0x2D87 )
 		{
-			Weight = 1.0;			
+			Weight = 1.0;
+			ItemValue = ItemValue.Common;			
 		}
 
 		public ShimmeringEffusionStatuette( Serial serial ) : base( serial )

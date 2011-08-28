@@ -43,6 +43,7 @@ namespace Server.Items
 		[Constructable]
 		public LargeForgeEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public LargeForgeEastDeed( Serial serial ) : base( serial )

@@ -39,6 +39,7 @@ namespace Server.Items
 		public StatCapScroll( int value ) : base( SkillName.Alchemy, value )
 		{
 			Hue = 0x481;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public StatCapScroll( Serial serial ) : base( serial )

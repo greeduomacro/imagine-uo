@@ -25,6 +25,7 @@ namespace Server.Items
 			Attributes.CastSpeed = 1;
 			Attributes.CastRecovery = 2;
 			ArmorAttributes.MageArmor = 1;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public HelmOfSwiftness( Serial serial ) : base( serial )

@@ -23,6 +23,7 @@ namespace Server.Items
 			//Name = "a firebomb";
 			Weight = 2.0;
 			Hue = 1260;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Firebomb( Serial serial ) : base( serial )

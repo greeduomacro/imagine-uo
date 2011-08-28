@@ -40,6 +40,7 @@ namespace Server.Items
 		public PeachTrunkDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public PeachTrunkDeed( Serial serial ) : base( serial )

@@ -135,6 +135,8 @@ namespace Server.Items
 			m_ActiveItemID = activeItemID;
 
 			m_Account = account;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public override void GetProperties( ObjectPropertyList list )

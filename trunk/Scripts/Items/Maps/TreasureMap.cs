@@ -296,6 +296,19 @@ namespace Server.Items
 			Protected = true;
 
 			AddWorldPin( m_Location.X, m_Location.Y );
+
+			if ( level == 0 || level == 1 )
+				ItemValue = ItemValue.Trash;
+			else if ( level == 2 || level == 3 )
+				ItemValue = ItemValue.Common;
+			else if ( level == 4 )
+				ItemValue = ItemValue.Uncommon;
+			else if ( level == 5 )
+				ItemValue = ItemValue.Rare;
+			else if ( level == 6 )
+				ItemValue = ItemValue.Epic;
+			else
+				ItemValue = ItemValue.Legendary;
 		}
 
 		public TreasureMap( Serial serial ) : base( serial )
@@ -851,18 +864,22 @@ namespace Server.Items
 		}
 
 		public override int LabelNumber
-		{ 
+		{
 			get
-			{ 
+			{
 				if ( m_Decoder != null )
 				{
 					if ( m_Level == 6 )
-						return 1063453;	
+						return 1063453;
+					else if ( m_Level == 7 )
+						return 1116773;
 					else
 						return 1041516 + m_Level;
 				}
 				else if ( m_Level == 6 )
 					return 1063452;
+				else if ( m_Level == 7 )
+					return 1116790;
 				else
 					return 1041510 + m_Level;
 			}

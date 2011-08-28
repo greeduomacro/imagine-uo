@@ -17,6 +17,7 @@ namespace Server.Items
 			Slayer = SlayerName.Silver;
 			//Slayer2 = SlayerName.DaemonDismissal;
 			Slayer2 = SlayerName.Exorcism;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public IolosLute( Serial serial ) : base( serial )

@@ -16,6 +16,7 @@ namespace Server.Items
 		public NameChangeDeed() : base( 0x14F0 )
 		{
 			base.Weight = 1.0;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public NameChangeDeed( Serial serial ) : base( serial )

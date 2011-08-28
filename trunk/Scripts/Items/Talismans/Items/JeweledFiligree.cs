@@ -10,6 +10,7 @@ namespace Server.Items
 		public JeweledFiligree() : base( 0x2F5E )
 		{
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public JeweledFiligree( Serial serial ) : base( serial )

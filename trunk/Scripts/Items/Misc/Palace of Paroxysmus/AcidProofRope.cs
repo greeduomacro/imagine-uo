@@ -12,6 +12,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			Hue = 0x3D1; // TODO check
+			ItemValue = ItemValue.Common;
 		}
 
 		public AcidProofRope( Serial serial ) : base( serial )

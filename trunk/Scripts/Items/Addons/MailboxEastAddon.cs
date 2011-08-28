@@ -89,6 +89,7 @@ namespace Server.Items
 		[Constructable]
 		public MailboxEastAddonDeed() : base()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public MailboxEastAddonDeed( Serial serial ) : base( serial )

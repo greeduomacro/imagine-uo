@@ -57,6 +57,7 @@ namespace Server.Items
 		public StoneStatueDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public StoneStatueDeed( Serial serial ) : base( serial )

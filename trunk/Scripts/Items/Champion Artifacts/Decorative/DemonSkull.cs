@@ -8,7 +8,8 @@ namespace Server.Items
 		[Constructable]
 		public DemonSkull() : base( 0x2251 )
 		{
-            ItemID = Utility.RandomList(0x2251, 0x224F);
+            		ItemID = Utility.RandomList(0x2251, 0x224F);
+			ItemValue = ItemValue.Rare;
 		}
 
 		public DemonSkull( Serial serial ) : base( serial )

@@ -16,6 +16,7 @@ namespace Server.Items
 		{
 			Movable = true;
 			Hue = 0x250;
+			ItemValue = Itemvalue.Rare;
 		}
 
 		[Constructable]

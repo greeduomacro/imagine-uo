@@ -19,6 +19,7 @@ namespace Server.Items
 			Attributes.WeaponSpeed = 20;
 			Attributes.WeaponDamage = 35;
 			WeaponAttributes.UseBestSkill = 1;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public LunaLance( Serial serial ) : base( serial )

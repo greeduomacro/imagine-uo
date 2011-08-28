@@ -26,6 +26,7 @@ namespace Server.Items
 			Weight = 1.0;
 			FillFactor = 0;
 			Stackable = false;
+			ItemValue = ItemValue.Uncommon;
 		}
 	
 		public BaseMagicalFood( Serial serial ) : base( serial )

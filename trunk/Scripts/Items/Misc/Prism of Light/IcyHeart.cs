@@ -11,6 +11,7 @@ namespace Server.Items
 		public IcyHeart() : base( 0x24B )
 		{
 			Weight = 1;
+			ItemValue = ItemValue.Common;
 		}
 
 		public IcyHeart( Serial serial ) : base( serial )

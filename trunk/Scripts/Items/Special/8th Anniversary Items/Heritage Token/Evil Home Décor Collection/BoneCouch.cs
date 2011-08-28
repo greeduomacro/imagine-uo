@@ -95,6 +95,7 @@ namespace Server.Items
 		public BoneCouchDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public BoneCouchDeed( Serial serial ) : base( serial )

@@ -90,6 +90,7 @@ namespace Server.Items
 		public WallTorchDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public WallTorchDeed( Serial serial ) : base( serial )

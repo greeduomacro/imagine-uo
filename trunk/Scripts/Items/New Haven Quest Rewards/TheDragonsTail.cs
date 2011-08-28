@@ -19,6 +19,8 @@ namespace Server.Items
 			WeaponAttributes.HitLeechStam = 16;
 			Attributes.WeaponSpeed = 10;
 			Attributes.WeaponDamage = 25;
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		public TheDragonsTail( Serial serial ) : base( serial )

@@ -31,6 +31,8 @@ namespace Server.Items
 			Attributes.RegenHits = 1;
 
 			SkillBonuses.SetValues( 0, SkillName.Parry, 5 );
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public DupresShield( Serial serial ) : base(serial)

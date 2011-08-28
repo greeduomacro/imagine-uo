@@ -21,6 +21,8 @@ namespace Server.Items
 
 			Attributes.BonusStam = 3;
 			Attributes.ReflectPhysical = 5;
+
+			ItemValue = ItemValue.Rare;
 		}
 
 		public HealersTouch( Serial serial ) : base( serial )

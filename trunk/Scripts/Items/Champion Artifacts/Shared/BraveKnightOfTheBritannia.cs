@@ -22,7 +22,9 @@ namespace Server.Items
 			WeaponAttributes.HitHarm = 26;
 			WeaponAttributes.HitLeechHits = 22;
 
-            Hue = 1150;
+            		Hue = 1150;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public override void GetDamageTypes( Mobile wielder, out int phys, out int fire, out int cold, out int pois, out int nrgy, out int chaos, out int direct )

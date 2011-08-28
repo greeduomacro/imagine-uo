@@ -18,6 +18,8 @@ namespace Server.Items
 		public BaseFish( int itemID ) : base( itemID )
 		{
 			StartTimer();
+
+			ItemValue = ItemValue.Uncommon;
 		}
 
 		public BaseFish( Serial serial ) : base( serial )

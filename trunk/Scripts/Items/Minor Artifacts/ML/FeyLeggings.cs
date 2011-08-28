@@ -25,6 +25,7 @@ namespace Server.Items
 			Attributes.DefendChance = 20;
 
 			ArmorAttributes.MageArmor = 1;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public override Race RequiredRace { get { return Race.Elf; } }

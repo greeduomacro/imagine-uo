@@ -40,6 +40,7 @@ namespace Server.Items
 		[Constructable]
 		public SmallStretchedHideEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public SmallStretchedHideEastDeed( Serial serial ) : base( serial )
@@ -98,6 +99,7 @@ namespace Server.Items
 		[Constructable]
 		public SmallStretchedHideSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public SmallStretchedHideSouthDeed( Serial serial ) : base( serial )
@@ -156,6 +158,7 @@ namespace Server.Items
 		[Constructable]
 		public MediumStretchedHideEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public MediumStretchedHideEastDeed( Serial serial ) : base( serial )
@@ -214,6 +217,7 @@ namespace Server.Items
 		[Constructable]
 		public MediumStretchedHideSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public MediumStretchedHideSouthDeed( Serial serial ) : base( serial )

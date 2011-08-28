@@ -43,6 +43,7 @@ namespace Server.Items
 		[Constructable]
 		public ArcaneBookshelfEastDeed() : base()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public ArcaneBookshelfEastDeed( Serial serial ) : base( serial )

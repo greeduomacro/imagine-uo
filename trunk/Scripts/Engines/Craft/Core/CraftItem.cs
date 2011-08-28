@@ -1262,6 +1262,8 @@ namespace Server.Engines.Craft
                             item.Amount = maxAmount;
                     }
 
+		    item.ItemValue = ItemValue.Crafted;
+
                     from.AddToBackpack(item);
 
                     if (from.AccessLevel > AccessLevel.Player)

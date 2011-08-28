@@ -12,9 +12,11 @@ namespace Server.Items
 		{
 			Hue = 0x104;
 
-            DamageIncrease = 10;
+            		DamageIncrease = 10;
 			
 			WeightReduction = 50;
+
+			ItemValue = ItemValue.Epic;
 		}
 
         public override void AlterBowDamage(ref int phys, ref int fire, ref int cold, ref int pois, ref int nrgy, ref int chaos, ref int direct)

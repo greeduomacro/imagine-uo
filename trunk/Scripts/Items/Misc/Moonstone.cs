@@ -35,6 +35,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			m_Type = type;
+			ItemValue = ItemValue.Common;
 		}
 
 		public Moonstone( Serial serial ) : base( serial )

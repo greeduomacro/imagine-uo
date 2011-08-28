@@ -17,6 +17,7 @@ namespace Server.Items
 		{
 			Weight = 1.0;
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public HairRestylingDeed( Serial serial ) : base( serial )

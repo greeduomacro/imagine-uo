@@ -11,6 +11,7 @@ namespace Server.Items
 		public TravestysCollectionOfShells() : base( 0xFD3 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public TravestysCollectionOfShells( Serial serial ) : base( serial )

@@ -21,6 +21,8 @@ namespace Server.Items
 			WeaponAttributes.ResistColdBonus = 8;
 			WeaponAttributes.ResistPoisonBonus = 8;
 			WeaponAttributes.ResistEnergyBonus = 8;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public CavortingClub( Serial serial ) : base( serial )

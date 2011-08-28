@@ -41,6 +41,7 @@ namespace Server.Items
 		[Constructable]
 		public LightFlowerTapestryEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public LightFlowerTapestryEastDeed( Serial serial ) : base( serial )
@@ -100,6 +101,7 @@ namespace Server.Items
 		[Constructable]
 		public LightFlowerTapestrySouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public LightFlowerTapestrySouthDeed( Serial serial ) : base( serial )
@@ -159,6 +161,7 @@ namespace Server.Items
 		[Constructable]
 		public DarkFlowerTapestryEastDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public DarkFlowerTapestryEastDeed( Serial serial ) : base( serial )
@@ -218,6 +221,7 @@ namespace Server.Items
 		[Constructable]
 		public DarkFlowerTapestrySouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public DarkFlowerTapestrySouthDeed( Serial serial ) : base( serial )

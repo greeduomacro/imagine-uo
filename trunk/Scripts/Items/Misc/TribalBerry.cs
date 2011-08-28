@@ -18,6 +18,7 @@ namespace Server.Items
 			Stackable = true;
 			Amount = amount;
 			Hue = 6;
+			ItemValue = ItemValue.Common;
 		}
 
 		public TribalBerry( Serial serial ) : base( serial )

@@ -11,6 +11,7 @@ namespace Server.Items
 		public HornOfTheDreadhorn() : base( 0x315C )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public HornOfTheDreadhorn( Serial serial ) : base( serial )

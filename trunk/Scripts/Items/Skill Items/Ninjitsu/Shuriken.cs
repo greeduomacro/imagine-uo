@@ -46,6 +46,8 @@ namespace Server.Items
 			Weight = 1.0;
 
 			m_UsesRemaining = amount;
+
+			ItemValue = Itemvalue.Common;
 		}
 
 		public Shuriken( Serial serial ) : base( serial )

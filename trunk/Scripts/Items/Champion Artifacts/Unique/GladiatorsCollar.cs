@@ -21,12 +21,13 @@ namespace Server.Items
 		[Constructable]
 		public GladiatorsCollar()
 		{
-            Hue = 0x209;
+            		Hue = 0x209;
 
 			Attributes.BonusHits = 10;
 			Attributes.AttackChance = 10;
 
 			ArmorAttributes.MageArmor = 1;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public GladiatorsCollar( Serial serial ) : base( serial )

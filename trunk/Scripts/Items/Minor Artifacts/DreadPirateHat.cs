@@ -23,6 +23,8 @@ namespace Server.Items
 			Attributes.BonusDex = 8;
 			Attributes.AttackChance = 10;
 			Attributes.NightSight = 1;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public DreadPirateHat( Serial serial ) : base( serial )

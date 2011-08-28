@@ -18,6 +18,7 @@ namespace Server.Items
 		public EnhancedBandage( int amount ) : base( amount )
 		{
 			Hue = 0x8A5;
+			ItemValue = ItemValue.Uncommon;
 		}
 
 		public EnhancedBandage( Serial serial ) : base( serial )
@@ -86,6 +87,8 @@ namespace Server.Items
 			m_Charges = charges;
 
 			m_Timer = Timer.DelayCall( RechargeTime, RechargeTime, new TimerCallback( Recharge ) );
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public FountainOfLife( Serial serial ) : base( serial )
@@ -225,6 +228,7 @@ namespace Server.Items
 		{
 			LootType = LootType.Blessed;
 			m_Charges = charges;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public FountainOfLifeDeed( Serial serial ) : base( serial )

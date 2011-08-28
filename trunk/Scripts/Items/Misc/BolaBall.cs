@@ -16,6 +16,7 @@ namespace Server.Items
 			Stackable = true;
 			Amount = amount;
 			Hue = 0x8AC;
+			ItemValue = ItemValue.Common;
 		}
 
 		public BolaBall( Serial serial ) : base( serial )

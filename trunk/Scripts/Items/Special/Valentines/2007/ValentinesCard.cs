@@ -25,6 +25,8 @@ namespace Server.Items
 			LootType = LootType.Blessed;
 			Hue = Utility.RandomDouble() < .001 ? 0x47E : 0xE8;
 			m_LabelNumber = Utility.Random(1077589, 5);
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		/*

@@ -20,6 +20,7 @@ namespace Server.Items
 
 		public BaseWindChimes( int itemID ) : base( itemID )
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		private static int[] m_Sounds = new int[] { 0x505, 0x506, 0x507 };
@@ -142,6 +143,7 @@ namespace Server.Items
 		[Constructable]
 		public WindChimes() : base( 0x2832 )
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public WindChimes( Serial serial ) : base( serial )
@@ -168,6 +170,7 @@ namespace Server.Items
 		[Constructable]
 		public FancyWindChimes() : base( 0x2833 )
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public FancyWindChimes( Serial serial ) : base( serial )

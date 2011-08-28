@@ -22,6 +22,8 @@ namespace Server.Items
 			ArmorAttributes.DurabilityBonus = 49;
 			Attributes.ReflectPhysical = 5;
 			Attributes.DefendChance = 5;
+
+			ItemValue = Itemvalue.Rare;
 		}
 
 		public EscutcheonDeAriadne( Serial serial ) : base(serial)

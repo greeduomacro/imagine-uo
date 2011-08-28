@@ -21,6 +21,7 @@ namespace Server.Items
 
 			WeaponAttributes.HitLeechMana = 100;
 			WeaponAttributes.UseBestSkill = 1;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public Calm( Serial serial ) : base( serial )

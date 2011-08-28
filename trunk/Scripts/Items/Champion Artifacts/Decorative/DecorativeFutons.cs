@@ -11,6 +11,7 @@ namespace Server.Items
             : base(0x295C)
         {
             Weight = 5.0;
+			ItemValue = ItemValue.Rare;
         }
 
         public DecorativePinkFuton(Serial serial)
@@ -51,6 +52,7 @@ namespace Server.Items
             : base(0x295E)
         {
             Weight = 5.0;
+			ItemValue = ItemValue.Rare;
         }
 
         public DecorativeGoldFuton(Serial serial)

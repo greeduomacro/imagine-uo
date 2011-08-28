@@ -29,6 +29,7 @@ namespace Server.Items
 			LootType = LootType.Blessed;
 			Layer = Layer.Talisman;
 			Weight = 1.0;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public BaseFormTalisman( Serial serial ) : base( serial )

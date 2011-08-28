@@ -11,6 +11,7 @@ namespace Server.Items
 		public StringOfPartsOfParoxysmusVictims() : base( 0xFD2 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public StringOfPartsOfParoxysmusVictims( Serial serial ) : base( serial )

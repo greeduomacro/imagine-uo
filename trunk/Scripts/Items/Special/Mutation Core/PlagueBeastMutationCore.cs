@@ -24,6 +24,8 @@ namespace Server.Items
 			Name = "a plague beast mutation core";
 			Weight = 1.0;
 			Hue = 0x480;
+
+			ItemValue = ItemValue.Uncommon;
 		}
 
 		public virtual bool Scissor( Mobile from, Scissors scissors )

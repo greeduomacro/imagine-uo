@@ -142,6 +142,8 @@ namespace Server.Items
 
             if (Value == 105.0 || skill == Server.SkillName.Blacksmith || skill == Server.SkillName.Tailoring )
 				LootType = LootType.Regular;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public PowerScroll( Serial serial ) : base( serial )

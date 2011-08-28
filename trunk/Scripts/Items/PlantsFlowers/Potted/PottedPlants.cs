@@ -8,6 +8,7 @@ namespace Server.Items
 		public PottedPlant() : base(0x11CA)
 		{
 			Weight = 100;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public PottedPlant(Serial serial) : base(serial)
@@ -35,6 +36,7 @@ namespace Server.Items
 		public PottedPlant1() : base(0x11CB)
 		{
 			Weight = 100;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public PottedPlant1(Serial serial) : base(serial)
@@ -62,6 +64,7 @@ namespace Server.Items
 		public PottedPlant2() : base(0x11CC)
 		{
 			Weight = 100;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public PottedPlant2(Serial serial) : base(serial)

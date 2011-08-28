@@ -22,6 +22,8 @@ namespace Server.Items
 
 			WeaponAttributes.HitLeechMana = 100;
 			WeaponAttributes.UseBestSkill = 1;
+
+			ItemValue = ItemValue.Epic;
 		}
 
 		public Pacify( Serial serial ) : base( serial )

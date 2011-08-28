@@ -11,6 +11,7 @@ namespace Server.Items
 		public FishBones() : base( 0x3B0C )
 		{
 			Weight = 1;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public FishBones( Serial serial ) : base( serial )

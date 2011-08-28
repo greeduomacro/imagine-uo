@@ -68,6 +68,7 @@ namespace Server.Items
 		public BrokenChestOfDrawersDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public BrokenChestOfDrawersDeed( Serial serial ) : base( serial )

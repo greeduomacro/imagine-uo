@@ -78,6 +78,7 @@ namespace Server.Items
 		public MountedPixieOrangeDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public MountedPixieOrangeDeed( Serial serial ) : base( serial )

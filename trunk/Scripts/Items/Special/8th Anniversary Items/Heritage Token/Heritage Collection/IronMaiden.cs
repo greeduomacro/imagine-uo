@@ -114,6 +114,7 @@ namespace Server.Items
 		public IronMaidenDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public IronMaidenDeed( Serial serial ) : base( serial )

@@ -18,6 +18,7 @@ namespace Server.Items
 			
 			LootType = LootType.Blessed;
 			Hue = 0x100;
+			ItemValue = ItemValue.Common;
 		}
 		
 		public MinotaurArtifact( Serial serial ) : base( serial )

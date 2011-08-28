@@ -15,6 +15,7 @@ namespace Server.Items
 		{
 			LootType = LootType.Blessed;
 			Weight = 5.0;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public PersonalAttendantToken( Serial serial ) : base( serial )

@@ -17,6 +17,7 @@ namespace Server.Items
 		public Scissors() : base( 0xF9F )
 		{
 			Weight = 1.0;
+			ItemValue = Itemvalue.Common;
 		}
 
 		public Scissors( Serial serial ) : base( serial )

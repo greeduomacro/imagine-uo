@@ -10,6 +10,7 @@ namespace Server.Items
 		[Constructable]
 		public CandelabraOfSouls() : base( 0xB26 )
 		{
+			ItemValue = ItemValue.Rare;
 		}
 
 		public CandelabraOfSouls( Serial serial ) : base( serial )

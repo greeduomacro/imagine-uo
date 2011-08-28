@@ -25,6 +25,7 @@ namespace Server.Items
 		public DetectiveBoots()
 		{
 			Level = Utility.RandomMinMax( 0, 2 );
+			ItemValue = ItemValue.Rare;
 		}
 
 		public DetectiveBoots( Serial serial ) : base( serial )

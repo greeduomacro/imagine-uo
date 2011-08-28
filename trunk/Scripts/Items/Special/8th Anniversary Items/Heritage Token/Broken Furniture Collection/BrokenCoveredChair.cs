@@ -68,6 +68,7 @@ namespace Server.Items
 		public BrokenCoveredChairDeed() : base()
 		{
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public BrokenCoveredChairDeed( Serial serial ) : base( serial )

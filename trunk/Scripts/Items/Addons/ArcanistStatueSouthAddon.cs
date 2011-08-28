@@ -44,6 +44,7 @@ namespace Server.Items
 		[Constructable]
 		public ArcanistStatueSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public ArcanistStatueSouthDeed( Serial serial ) : base( serial )

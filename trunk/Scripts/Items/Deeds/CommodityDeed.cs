@@ -84,6 +84,7 @@ namespace Server.Items
 			m_Commodity = commodity;
 
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Common;
 		}
 
 		[Constructable]

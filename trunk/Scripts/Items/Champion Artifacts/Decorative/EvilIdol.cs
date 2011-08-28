@@ -10,7 +10,8 @@ namespace Server.Items
 		[Constructable]
 		public EvilIdol() : base( 0x1F18 )
 		{
-			Weight = 5.0;			
+			Weight = 5.0;	
+			ItemValue = ItemValue.Rare;		
 		}
 
         public EvilIdol(Serial serial)

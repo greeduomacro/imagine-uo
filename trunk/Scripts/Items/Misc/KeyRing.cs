@@ -20,6 +20,8 @@ namespace Server.Items
 			Weight = 1.0; // They seem to have no weight on OSI ?!
 
 			m_Keys = new List<Key>();
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public override bool OnDragDrop( Mobile from, Item dropped )

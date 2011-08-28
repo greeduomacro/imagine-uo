@@ -11,6 +11,7 @@ namespace Server.Items
 		[Constructable]
 		public AquariumMessage() : base()
 		{
+			ItemValue = ItemValue.Rare;
 		}
 
 		public AquariumMessage( Serial serial ) : base( serial )

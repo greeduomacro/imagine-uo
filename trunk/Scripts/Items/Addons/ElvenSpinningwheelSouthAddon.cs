@@ -120,6 +120,7 @@ namespace Server.Items
 		[Constructable]
 		public ElvenSpinningwheelSouthDeed()
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		public ElvenSpinningwheelSouthDeed( Serial serial ) : base( serial )

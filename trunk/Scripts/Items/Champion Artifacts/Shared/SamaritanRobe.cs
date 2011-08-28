@@ -18,6 +18,7 @@ namespace Server.Items
 		public SamaritanRobe()
 		{
 			Hue = 0x558;
+			ItemValue = ItemValue.Rare;
 		}
 
 		public SamaritanRobe( Serial serial ) : base( serial )

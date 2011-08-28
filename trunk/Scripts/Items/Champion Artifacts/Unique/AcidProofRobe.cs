@@ -19,6 +19,7 @@ namespace Server.Items
 		{
 			Hue = 0x455;
 			LootType = LootType.Blessed;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public AcidProofRobe( Serial serial ) : base( serial )

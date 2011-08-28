@@ -48,6 +48,7 @@ namespace Server.Items
 		{
 			ItemID = 0x14EF;
 			Hue = 0x4AB;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public ScrollofAlacrity(Serial serial) : base(serial)

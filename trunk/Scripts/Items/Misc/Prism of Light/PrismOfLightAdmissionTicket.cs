@@ -14,6 +14,7 @@ namespace Server.Items
 		public PrismOfLightAdmissionTicket() : base( 0x14EF )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 		
 		public PrismOfLightAdmissionTicket( Serial serial ) : base( serial )

@@ -11,6 +11,7 @@ namespace Server.Items
 		[Constructable]
 		public PowerGenerator() : this( Utility.RandomMinMax( 3, 6 ) )
 		{
+			ItemValue = ItemValue.Common;
 		}
 
 		[Constructable]

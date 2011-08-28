@@ -9,6 +9,7 @@ namespace Server.Items
 		[Constructable]
 		public CompleteNecromancerSpellbook() : base( (ulong) 0x1FFFF )
 		{
+			ItemValue = Itemvalue.Rare;
 		}
 
 		public CompleteNecromancerSpellbook( Serial serial ) : base( serial )

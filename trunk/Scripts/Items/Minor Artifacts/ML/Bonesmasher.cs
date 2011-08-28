@@ -21,6 +21,7 @@ namespace Server.Items
 
 			WeaponAttributes.HitLeechMana = 40;
 			WeaponAttributes.SelfRepair = 2;
+			ItemValue = ItemValue.Epic;
 		}
 
 		public Bonesmasher( Serial serial ) : base( serial )

@@ -11,6 +11,7 @@ namespace Server.Items
 		public MonsterousInterredGrizzleMaggots() : base( 0x2633 )
 		{
 			Weight = 1.0;
+			ItemValue = ItemValue.Common;
 		}
 
 		public MonsterousInterredGrizzleMaggots( Serial serial ) : base( serial )

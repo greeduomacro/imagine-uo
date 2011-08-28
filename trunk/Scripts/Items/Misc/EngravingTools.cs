@@ -43,6 +43,8 @@ namespace Server.Items
 			Hue = 0x48D;
 			
 			m_UsesRemaining = uses;
+
+			ItemValue = ItemValue.Common;
 		}
 
 		public BaseEngravingTool( Serial serial ) : base( serial )
