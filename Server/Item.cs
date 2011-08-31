@@ -562,7 +562,7 @@ namespace Server
 	public enum ItemValue
 	{
 		// Standard UO Color (Yellow)
-		None,			// Standard Yellow
+		None,			// Nothing
 
 		// Standard Value Types
 		Trash,			// Gray
@@ -574,9 +574,15 @@ namespace Server
 
 		// Event
 		Fabled,			// Red (Event Item)
+		OOAK,			// Light Blue (One Of A Kind)
+
+		// Pvp
+		Ancient,		// Yellow
 
 		// Crafting
 		Crafted,		// Gold
+		Resource,		// Olive
+		Reagent,		// Magenta
 
 		// Extra
 		Fabulous		// Pink
@@ -1018,94 +1024,21 @@ namespace Server
 		/// </summary>
 		public virtual void AddNameProperty( ObjectPropertyList list )
 		{
-			string name = GetNameString();
-			string fill = "";
+			string name = this.Name;
 
-			if ( m_Amount <= 1 )
+			if ( name == null )
 			{
-				if( ItemValue == ItemValue.Trash  )		//  Gray (Junk)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#808080>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", fill, name );
-				}
-				else if( ItemValue == ItemValue.Common )	// White (Common)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#FFFAFA>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", fill, name );
-				}
-				else if( ItemValue == ItemValue.Uncommon ) 	// Green (Uncommon)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#1EFF00>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", fill, name );
-				}
-				else if( ItemValue == ItemValue.Rare )		// Blue (Rare)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#0070FF>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", fill, name );
-				}
-				else if( ItemValue == ItemValue.Epic )		// Purple (Epic)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#A335EE>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", fill, name );
-				}
-				else if ( ItemValue == ItemValue.Legendary )	// Orange (Legendary)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#FF8000>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", fill, name );
-				}
-				else if ( ItemValue == ItemValue.Fabled )	// Red (Fabled)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#FF0000>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", fill, name );
-				}
-				else if ( ItemValue == ItemValue.Crafted )	// Gold (Mythical)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#DAA520>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", fill, name );
-				}
-				else if ( ItemValue == ItemValue.Fabulous )	// Gold (Fabulous)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#FF69B4>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", fill, name );
-				}
+				if ( m_Amount <= 1 )
+					list.Add( LabelNumber );
 				else
-				{
-					list.Add( name );
-				}
+					list.Add( 1050039, "{0}\t#{1}", m_Amount, LabelNumber ); // ~1_NUMBER~ ~2_ITEMNAME~
 			}
 			else
 			{
-				if( ItemValue == ItemValue.Trash  )		//  Gray (Junk)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#808080>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
-				}
-				else if( ItemValue == ItemValue.Common )	// White (Common)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#FFFAFA>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
-				}
-				else if( ItemValue == ItemValue.Uncommon ) 	// Green (Uncommon)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#1EFF00>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
-				}
-				else if( ItemValue == ItemValue.Rare )		// Blue (Rare)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#0070FF>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
-				}
-				else if( ItemValue == ItemValue.Epic )		// Purple (Epic)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#A335EE>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
-				}
-				else if ( ItemValue == ItemValue.Legendary )	// Orange (Legendary)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#FF8000>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
-				}
-				else if ( ItemValue == ItemValue.Fabled )	// Red (Fabled)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#FF0000>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
-				}
-				else if ( ItemValue == ItemValue.Crafted )	// Gold (Mythical)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#DAA520>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
-				}
-				else if ( ItemValue == ItemValue.Fabulous )	// Gold (Fabulous)
-				{
-					list.Add( 1053099, "<BASEFONT COLOR=#FF69B4>{0}\t{1}<BASEFONT COLOR=#FFFFFF>", m_Amount.ToString(), name );
-				}
+				if ( m_Amount <= 1 )
+					list.Add( name );
 				else
-				{
-					list.Add( 1053099, "{0}\t{1}", m_Amount.ToString(), name );
-				}
+					list.Add( 1050039, "{0}\t{1}", m_Amount, Name ); // ~1_NUMBER~ ~2_ITEMNAME~
 			}
 		}
 
@@ -1185,11 +1118,59 @@ namespace Server
 		}
 
 		/// <summary>
+		/// Overridable. Displays cliloc 1072788-1072789. 
+		/// </summary>
+		public virtual void AddItemValueProperty( ObjectPropertyList list )
+		{
+			if ( ItemValue == ItemValue.Trash )
+				list.Add( 1150541, "[ <BASEFONT COLOR=#808080>Garbage<BASEFONT COLOR=#FFFFFF> ]" );
+
+			if ( ItemValue == ItemValue.Common )
+				list.Add( 1150541, "[ <BASEFONT COLOR=#FFFAFA>Common<BASEFONT COLOR=#FFFFFF> ]" );
+
+			if ( ItemValue == ItemValue.Uncommon )
+				list.Add( 1150541, "[ <BASEFONT COLOR=#1EFF00>Uncommon<BASEFONT COLOR=#FFFFFF> ]" );
+
+			if ( ItemValue == ItemValue.Rare )
+				list.Add( 1150541, "[ <BASEFONT COLOR=#0070FF>Rare<BASEFONT COLOR=#FFFFFF> ]" );
+
+			if ( ItemValue == ItemValue.Epic )
+				list.Add( 1150541, "[ <BASEFONT COLOR=#A335EE>Epic<BASEFONT COLOR=#FFFFFF> ]" );
+
+			if ( ItemValue == ItemValue.Legendary )
+				list.Add( 1150541, "[ <BASEFONT COLOR=#FF8000>Legendary<BASEFONT COLOR=#FFFFFF> ]" );
+
+			if ( ItemValue == ItemValue.Fabled )
+				list.Add( 1150541, "[ <BASEFONT COLOR=#FF0000>Fabled<BASEFONT COLOR=#FFFFFF> ]" );
+
+			if ( ItemValue == ItemValue.OOAK )
+				list.Add( 1150541, "[ <BASEFONT COLOR=#B0E0E6>One Of A Kind<BASEFONT COLOR=#FFFFFF> ]" );
+
+			if ( ItemValue == ItemValue.Ancient )
+				list.Add( 1150541, "[ <BASEFONT COLOR=#FFFF00>Ancient<BASEFONT COLOR=#FFFFFF> ]" );
+
+			if ( ItemValue == ItemValue.Crafted )
+				list.Add( 1150541, "[ <BASEFONT COLOR=#B8860B>Crafted<BASEFONT COLOR=#FFFFFF> ]" );
+
+			if ( ItemValue == ItemValue.Resource )
+				list.Add( 1150541, "[ <BASEFONT COLOR=#808000>Resource<BASEFONT COLOR=#FFFFFF> ]" );
+
+			if ( ItemValue == ItemValue.Reagent )
+				list.Add( 1150541, "[ <BASEFONT COLOR=#FF00FF>Reagent<BASEFONT COLOR=#FFFFFF> ]" );
+
+			if ( ItemValue == ItemValue.Fabulous )
+				list.Add( 1150541, "[ <BASEFONT COLOR=#FF69B4>Fabulous<BASEFONT COLOR=#FFFFFF> ]" );
+		}
+
+		/// <summary>
 		/// Overridable. Adds header properties. By default, this invokes <see cref="AddNameProperty" />, <see cref="AddBlessedForProperty" /> (if applicable), and <see cref="AddLootTypeProperty" /> (if <see cref="DisplayLootType" />).
 		/// </summary>
 		public virtual void AddNameProperties( ObjectPropertyList list )
 		{
 			AddNameProperty( list );
+
+			if ( ItemValue != ItemValue.None )
+				AddItemValueProperty( list );
 
 			if ( IsSecure )
 				AddSecureProperty( list );
@@ -4698,6 +4679,7 @@ namespace Server
 			set{ SetFlag( ImplFlag.PayedInsurance, value ); }
 		}
 
+		[CommandProperty( AccessLevel.GameMaster )]
 		public Mobile BlessedFor
 		{
 			get
