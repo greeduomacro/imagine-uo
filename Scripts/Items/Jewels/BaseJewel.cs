@@ -496,6 +496,17 @@ namespace Server.Items
 
 			if ( m_HitPoints >= 0 && m_MaxHitPoints > 0 )
 				list.Add( 1060639, "{0}\t{1}", m_HitPoints, m_MaxHitPoints ); // durability ~1_val~ / ~2_val~
+
+			if ( IsSetItem && !m_SetEquipped )
+			{
+				list.Add( 1072378 ); // <br>Only when full set is present:				
+				GetSetProperties( list );
+			}
+		}
+
+		public virtual void GetSetProperties( ObjectPropertyList list )
+		{											
+			SetHelper.GetSetProperties( list, this );
 		}
 
 		public override void Serialize( GenericWriter writer )
