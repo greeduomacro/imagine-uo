@@ -4763,7 +4763,7 @@ namespace Server
 				m_TypeRef = World.m_ItemTypes.Count - 1;
 			}
 
-			m_ItemValue = ItemValue.None;
+			m_ItemValue = ItemValue.Common;
 		}
 
 		[Constructable]

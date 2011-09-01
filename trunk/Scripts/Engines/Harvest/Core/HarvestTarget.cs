@@ -6,6 +6,7 @@ using Server.Multis;
 using Server.Mobiles;
 using Server.Engines.Quests;
 using Server.Engines.Quests.Hag;
+using Server.FSGraveDiggingSystem;
 
 namespace Server.Engines.Harvest
 {
@@ -48,6 +49,11 @@ namespace Server.Engines.Harvest
 
 								return;
 							}
+						}
+						else
+						{
+							FSGraveSystem.StartDig( m_Tool, from, targeted );
+							return;
 						}
 					}
 				}
