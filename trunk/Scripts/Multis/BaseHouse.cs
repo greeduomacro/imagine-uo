@@ -83,30 +83,21 @@ namespace Server.Multis
 				if ( acct.Inactive )
 					return DecayType.Condemned;
 
-				List<BaseHouse> allHouses = new List<BaseHouse>();
+				int nHouses = 0;
+				int maxHouses = GetMaxHouses( acct );
 
 				for ( int i = 0; i < acct.Length; ++i )
 				{
 					Mobile mob = acct[i];
 
 					if ( mob != null )
-						allHouses.AddRange( GetHouses( mob ) );
+						nHouses += GetHouses( mob ).Count;
 				}
 
-				BaseHouse newest = null;
-
-				for ( int i = 0; i < allHouses.Count; ++i )
-				{
-					BaseHouse check = allHouses[i];
-
-					if ( newest == null || IsNewer( check, newest ) )
-						newest = check;
-				}
-
-				if ( this == newest )
+				if ( nHouses > maxHouses )
+					return DecayType.ManualRefresh;
+				else
 					return DecayType.AutoRefresh;
-
-				return DecayType.ManualRefresh;
 			}
 		}
 
@@ -210,7 +201,18 @@ namespace Server.Multis
 		public virtual TimeSpan RestrictedPlacingTime { get { return TimeSpan.FromHours( 1.0 ); } }
 
 		[CommandProperty( AccessLevel.GameMaster )]
-		public virtual double BonusStorageScalar { get { return (Core.ML ? 1.2 : 1.0); } }
+		public virtual double BonusStorageScalar 
+		{
+			get 
+			{
+				Account acct = m_Owner.Account as Account;
+				int bank = Convert.ToInt32( acct.GetTag( "maxStorage" ) );
+
+				Double math = (Double)bank / 25 * 0.2;
+
+				return 1.0 + math;
+			} 
+		}
 
 		private bool m_Public;
 
@@ -3149,16 +3151,43 @@ namespace Server.Multis
 			return false;
 		}
 
+		public static int GetMaxHouses( Account a )
+		{
+			int houses = Convert.ToInt32( a.GetTag( "maxHouses" ) );
+
+			if ( houses < 1 )
+			{
+				houses = 1;
+				a.SetTag( "maxHouses", "1" );
+			}
+
+			return houses;
+		}
+
 		public static bool HasAccountHouse( Mobile m )
 		{
+			if( m.AccessLevel >= AccessLevel.GameMaster ) 
+				return false;
+
 			Account a = m.Account as Account;
 
 			if ( a == null )
 				return false;
 
+			int maxHouses = GetMaxHouses( a );
+
+			int nHouses = 0;
+
 			for ( int i = 0; i < a.Length; ++i )
-				if ( a[i] != null && HasHouse( a[i] ) )
-					return true;
+			{
+				Mobile mob = a[i];
+
+				if ( mob != null )
+					nHouses += GetHouses( mob ).Count;
+			}
+
+			if ( nHouses >= maxHouses ) 
+				return true;
 
 			return false;
 		}

@@ -18,7 +18,7 @@ namespace Server.Accounting
 	{
 		public static readonly TimeSpan YoungDuration = TimeSpan.FromHours( 40.0 );
 
-		public static readonly TimeSpan InactiveDuration = TimeSpan.FromDays( 180.0 );
+		public static readonly TimeSpan InactiveDuration = TimeSpan.FromDays( 30.0 );
 
 		private string m_Username, m_PlainPassword, m_CryptPassword, m_NewCryptPassword;
 		private AccessLevel m_AccessLevel;
@@ -1109,12 +1109,31 @@ namespace Server.Accounting
 			}
 		}
 
+		public int GetCharSlots()
+		{
+			int chars = Convert.ToInt32( this.GetTag( "maxChars" ) );
+
+			if ( chars < 5 )
+			{
+				chars = 5;
+				this.SetTag( "maxChars", "5" );
+			}
+
+			if ( chars > 7 )
+			{
+				chars = 7;
+				this.SetTag( "maxChars", "7" );
+			}
+
+			return chars;
+		}
+
 		/// <summary>
 		/// Gets the maximum amount of characters allowed to be created on this account. Values other than 1, 5, 6, or 7 are not supported by the client.
 		/// </summary>
 		public int Limit
 		{
-			get { return ( Core.SA ? 7 : Core.AOS ? 6 : 5 ); }
+			get{ return GetCharSlots(); }
 		}
 
 		/// <summary>
