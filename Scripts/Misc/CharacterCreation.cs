@@ -703,6 +703,15 @@ namespace Server.Misc
 				newChar.BankBox.DropItem( ticket );
 			}
 
+			Account acct = newChar.Account as Account;
+			int bank = Convert.ToInt32( acct.GetTag( "maxStorage" ) );
+
+			if ( bank < 25 )
+				bank = 0;
+
+			if ( bank != 0 )
+				newChar.BankBox.MaxItems += bank;
+
 			CityInfo city = GetStartLocation( args, young );
 			//CityInfo city = new CityInfo( "Britain", "Sweet Dreams Inn", 1496, 1628, 10, Map.Felucca );
 
