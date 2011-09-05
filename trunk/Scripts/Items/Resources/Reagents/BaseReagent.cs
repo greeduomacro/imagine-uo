@@ -18,7 +18,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
-			ItemValue = ItemValue.Common;
+			ItemValue = ItemValue.Reagent;
 		}
 
 		public BaseReagent( Serial serial ) : base( serial )

@@ -141,7 +141,14 @@ namespace Server.Items
 				return CheckTalisman( bt );
 			}
 
-			return ItemValue.Trash;
+			if ( item is Spellbook )
+			{
+				Spellbook sp = item as Spellbook;
+
+				return CheckSpellbook( sp );
+			}
+
+			return ItemValue.Common;
 		}
 
 		public static ItemValue CheckArmor( BaseArmor item )
@@ -362,20 +369,34 @@ namespace Server.Items
 				value += 2;
 			}
 
-			if ( value == 0 )
-				return ItemValue.Trash;
+			if ( item is BaseShield )
+			{
+				if ( value <= 30 )
+					return ItemValue.Common;
 
-			if ( value <= 50 )
-				return ItemValue.Common;
+				if ( value <= 80 )
+					return ItemValue.Uncommon;
 
-			if ( value <= 100 )
-				return ItemValue.Uncommon;
+				if ( value <= 180 )
+					return ItemValue.Rare;
 
-			if ( value <= 200 )
-				return ItemValue.Rare;
+				if ( value <= 280 )
+					return ItemValue.Epic;
+			}
+			else
+			{
+				if ( value <= 50 )
+					return ItemValue.Common;
 
-			if ( value <= 300 )
-				return ItemValue.Epic;
+				if ( value <= 100 )
+					return ItemValue.Uncommon;
+
+				if ( value <= 200 )
+					return ItemValue.Rare;
+
+				if ( value <= 300 )
+					return ItemValue.Epic;
+			}
 
 			return ItemValue.Legendary;
 		}
@@ -658,30 +679,24 @@ namespace Server.Items
 			//Start Element Damage
 
 			if ( item.AosElementDamages.Chaos > 0 )
-				value += item.AosElementDamages.Chaos;
+				value += item.AosElementDamages.Chaos / 2;
 
 			if ( item.AosElementDamages.Cold > 0 )
-				value += item.AosElementDamages.Cold;
+				value += item.AosElementDamages.Cold / 2;
 
 			if ( item.AosElementDamages.Direct > 0 )
-				value += item.AosElementDamages.Direct;
+				value += item.AosElementDamages.Direct / 2;
 
 			if ( item.AosElementDamages.Energy > 0 )
-				value += item.AosElementDamages.Energy;
+				value += item.AosElementDamages.Energy / 2;
 
 			if ( item.AosElementDamages.Fire > 0 )
-				value += item.AosElementDamages.Fire;
-
-			if ( item.AosElementDamages.Physical > 0 )
-				value += item.AosElementDamages.Physical;
+				value += item.AosElementDamages.Fire / 2;
 
 			if ( item.AosElementDamages.Poison > 0 )
-				value += item.AosElementDamages.Poison;
+				value += item.AosElementDamages.Poison / 2 ;
 
 			//Start Calculate
-
-			if ( value == 0 )
-				return ItemValue.Trash;
 
 			if ( value <= 50 )
 				return ItemValue.Common;
@@ -835,9 +850,6 @@ namespace Server.Items
 				value += item.Resistances.Poison;
 
 			//Start Calculate
-
-			if ( value == 0 )
-				return ItemValue.Trash;
 
 			if ( value <= 50 )
 				return ItemValue.Common;
@@ -1045,9 +1057,6 @@ namespace Server.Items
 
 			//Start Calculate
 
-			if ( value == 0 )
-				return ItemValue.Trash;
-
 			if ( value <= 50 )
 				return ItemValue.Common;
 
@@ -1153,9 +1162,6 @@ namespace Server.Items
 				value += item.LowerAmmoCost;
 
 			//Start Calculate
-
-			if ( value == 0 )
-				return ItemValue.Trash;
 
 			if ( value <= 50 )
 				return ItemValue.Common;
@@ -1297,8 +1303,143 @@ namespace Server.Items
 
 			//Start Calculate
 
-			if ( value == 0 )
-				return ItemValue.Trash;
+			if ( value <= 50 )
+				return ItemValue.Common;
+
+			if ( value <= 100 )
+				return ItemValue.Uncommon;
+
+			if ( value <= 200 )
+				return ItemValue.Rare;
+
+			if ( value <= 300 )
+				return ItemValue.Epic;
+
+			return ItemValue.Legendary;
+		}
+
+		public static ItemValue CheckSpellbook( Spellbook item )
+		{
+			int value = 0;
+
+			foreach( int i in Enum.GetValues(typeof( AosAttribute ) ) )
+			{
+				if ( item != null && item.Attributes[ (AosAttribute)i ] > 0 )
+					value += 2;
+			}
+
+			//Start skill bonus
+
+			if ( item.SkillBonuses.Skill_1_Value > 0 )
+			{
+				value += (int)item.SkillBonuses.Skill_1_Value * 4;
+				value += 2;
+			}
+
+			if ( item.SkillBonuses.Skill_2_Value > 0 )
+			{
+				value += (int)item.SkillBonuses.Skill_2_Value * 4;
+				value += 2;
+			}
+
+			if ( item.SkillBonuses.Skill_3_Value > 0 )
+			{
+				value += (int)item.SkillBonuses.Skill_3_Value * 4;
+				value += 2;
+			}
+
+			if ( item.SkillBonuses.Skill_4_Value > 0 )
+			{
+				value += (int)item.SkillBonuses.Skill_4_Value * 4;
+				value += 2;
+			}
+
+			if ( item.SkillBonuses.Skill_5_Value > 0 )
+			{
+				value += (int)item.SkillBonuses.Skill_5_Value * 4;
+				value += 2;
+			}
+
+			//Start standard attributes
+
+			if ( item.Attributes.AttackChance > 0 )
+				value += item.Attributes.AttackChance * 2;
+
+			if ( item.Attributes.BonusDex > 0 )
+				value += item.Attributes.BonusDex * 4;
+
+			if ( item.Attributes.BonusHits > 0 )
+				value += item.Attributes.BonusHits * 2;
+
+			if ( item.Attributes.BonusInt > 0 )
+				value += item.Attributes.BonusInt * 4;
+
+			if ( item.Attributes.BonusMana > 0 )
+				value += item.Attributes.BonusMana * 2;
+
+			if ( item.Attributes.BonusStam > 0 )
+				value += item.Attributes.BonusStam * 2;
+
+			if ( item.Attributes.BonusStr > 0 )
+				value += item.Attributes.BonusStr * 4;
+
+			if ( item.Attributes.CastRecovery > 0 )
+				value += item.Attributes.CastRecovery * 10;
+
+			if ( item.Attributes.CastSpeed > 0 )
+				value += item.Attributes.CastSpeed * 10;
+
+			if ( item.Attributes.DefendChance > 0 )
+				value += item.Attributes.DefendChance * 2;
+
+			if ( item.Attributes.EnhancePotions > 0 )
+				value += item.Attributes.EnhancePotions;
+
+			if ( item.Attributes.LowerManaCost > 0 )
+				value += item.Attributes.LowerManaCost * 2;
+
+			if ( item.Attributes.LowerRegCost > 0 )
+				value += item.Attributes.LowerRegCost;
+
+			if ( item.Attributes.Luck > 0 )
+				value += item.Attributes.Luck / 2;
+
+			if ( item.Attributes.NightSight > 0 )
+				value += 10;
+
+			if ( item.Attributes.ReflectPhysical > 0 )
+				value += item.Attributes.ReflectPhysical * 2;
+
+			if ( item.Attributes.RegenHits > 0 )
+				value += item.Attributes.RegenHits * 10;
+
+			if ( item.Attributes.RegenMana > 0 )
+				value += item.Attributes.RegenMana * 10;
+
+			if ( item.Attributes.RegenStam > 0 )
+				value += item.Attributes.RegenStam * 10;
+
+			if ( item.Attributes.SpellChanneling > 0 )
+				value += 10;
+
+			if ( item.Attributes.SpellDamage > 0 )
+				value += item.Attributes.SpellDamage * 2;
+
+			if ( item.Attributes.WeaponDamage > 0 )
+				value += item.Attributes.WeaponDamage * 2;
+
+			if ( item.Attributes.WeaponSpeed > 0 )
+				value += item.Attributes.WeaponSpeed * 2;
+
+			// Start Slayer
+
+			if ( item.Slayer != SlayerName.None )
+				value += 20;
+
+			if ( item.Slayer2 != SlayerName.None )
+				value += 20;
+
+			//Start Calculate
 
 			if ( value <= 50 )
 				return ItemValue.Common;

@@ -55,7 +55,7 @@ namespace Server.Items
 			Stackable = Core.ML;
 
 			m_Resource = resource;
-			ItemValue = ItemValue.Common;
+			ItemValue = ItemValue.Resource;
 		}
 
 		public BaseGranite( Serial serial ) : base( serial )

@@ -23,6 +23,7 @@ namespace Server.Items
 		{
 			Stackable = true;
 			Amount = amount;
+			ItemValue = ItemValue.Resource;
 		}
 
 		public Shaft( Serial serial ) : base( serial )

@@ -1,32 +1,27 @@
 using System;
+using Server.Gumps;
 using Server.Items;
 
 namespace Server.Items
 {
-	public class Bone : Item, ICommodity
+	public class CashShopStone : Item
 	{
-		int ICommodity.DescriptionNumber { get { return LabelNumber; } }
-		bool ICommodity.IsDeedable { get { return true; } }
-
 		[Constructable]
-		public Bone() : this( 1 )
+		public CashShopStone() : base( 0xED4 )
 		{
+			Name = "Cash Shop Stone";
+			Movable = false;
 		}
 
-		[Constructable]
-		public Bone( int amount ) : base( 0xf7e )
+		public override void OnDoubleClick( Mobile from )
 		{
-			Stackable = true;
-			Amount = amount;
-			Weight = 1.0;
-			ItemValue = ItemValue.Resource;
+			from.CloseGump( typeof( CashShopGump ) );
+			from.SendGump( new CashShopGump() );
 		}
 
-		public Bone( Serial serial ) : base( serial )
+		public CashShopStone( Serial serial ) : base( serial )
 		{
 		}
-
-		
 
 		public override void Serialize( GenericWriter writer )
 		{
