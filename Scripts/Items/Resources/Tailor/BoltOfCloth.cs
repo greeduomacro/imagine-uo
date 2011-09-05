@@ -21,6 +21,7 @@ namespace Server.Items
 			Stackable = true;
 			Weight = 5.0;
 			Amount = amount;
+			ItemValue = ItemValue.Resource;
 		}
 
 		public BoltOfCloth( Serial serial ) : base( serial )
