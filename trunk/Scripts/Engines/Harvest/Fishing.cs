@@ -128,6 +128,7 @@ namespace Server.Engines.Harvest
 
 		private static MutateEntry[] m_MutateTable = new MutateEntry[]
 			{
+				new MutateEntry(  80.0,  80.0,  4080.0,  true, typeof( AncientMoonstone ), typeof( BleachedRemains ), typeof( DeepSeaScroll ), typeof( PerfectSaltWaterPearl ), typeof( SpicedRum ) ),
 				new MutateEntry(  80.0,  80.0,  4080.0,  true, typeof( SpecialFishingNet ) ),
 				new MutateEntry(  80.0,  80.0,  4080.0,  true, typeof( BigFish ) ),
 				new MutateEntry(  90.0,  80.0,  4080.0,  true, typeof( TreasureMap ) ),
@@ -369,7 +370,7 @@ namespace Server.Engines.Harvest
 
 		public override bool Give( Mobile m, Item item, bool placeAtFeet )
 		{
-			if ( item is TreasureMap || item is MessageInABottle || item is SpecialFishingNet )
+			if ( item is TreasureMap || item is MessageInABottle || item is SpecialFishingNet || item is PerfectSaltWaterPearl || item is SpicedRum )
 			{
 				BaseCreature serp;
 
@@ -446,6 +447,31 @@ namespace Server.Engines.Harvest
 				{
 					number = 1008124;
 					name = item.ItemData.Name;
+				}
+				else if ( item is AncientMoonstone )
+				{
+					number = 1008124;
+					name = "an ancient moonstone";
+				}
+				else if ( item is BleachedRemains )
+				{
+					number = 1008124;
+					name = "some bleached reamins";
+				}
+				else if ( item is DeepSeaScroll )
+				{
+					number = 1008124;
+					name = "an ancient scroll from the deep";
+				}
+				else if ( item is PerfectSaltWaterPearl )
+				{
+					number = 1008125;
+					name = "a perfect salt water pearl";
+				}
+				else if ( item is SpicedRum )
+				{
+					number = 1008125;
+					name = "some well aged spiced rum";
 				}
 				else if ( item is TreasureMap )
 				{
