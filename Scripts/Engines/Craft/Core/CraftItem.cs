@@ -9,35 +9,36 @@ using Server.Commands;
 
 namespace Server.Engines.Craft
 {
-    public enum ConsumeType
-    {
-        All, Half, None
-    }
+	public enum ConsumeType
+	{
+		All, Half, None
+	}
 
-    public interface ICraftable
-    {
-        int OnCraft(int quality, bool makersMark, Mobile from, CraftSystem craftSystem, Type typeRes, BaseTool tool, CraftItem craftItem, int resHue);
-    }
+	public interface ICraftable
+	{
+		int OnCraft(int quality, bool makersMark, Mobile from, CraftSystem craftSystem, Type typeRes, BaseTool tool, CraftItem craftItem, int resHue);
+	}
 
-    public class CraftItem
-    {
+	public class CraftItem
+	{
         #region Mondain's Legacy
         public static void Initialize()
         {
-            CraftSystem sys;
+		CraftSystem sys;
 
-            sys = DefAlchemy.CraftSystem;
-            sys = DefBlacksmithy.CraftSystem;
-            sys = DefBowFletching.CraftSystem;
-            sys = DefCarpentry.CraftSystem;
-            sys = DefCartography.CraftSystem;
-            sys = DefCooking.CraftSystem;
-            sys = DefGlassblowing.CraftSystem;
-            sys = DefInscription.CraftSystem;
-            sys = DefMasonry.CraftSystem;
-            sys = DefTailoring.CraftSystem;
-            sys = DefTinkering.CraftSystem;
-        }
+		sys = DefAlchemy.CraftSystem;
+		sys = DefBlacksmithy.CraftSystem;
+		sys = DefBowFletching.CraftSystem;
+		sys = DefCarpentry.CraftSystem;
+		sys = DefCartography.CraftSystem;
+		sys = DefCooking.CraftSystem;
+		sys = DefGlassblowing.CraftSystem;
+		sys = DefInscription.CraftSystem;
+		sys = DefMasonry.CraftSystem;
+		sys = DefTailoring.CraftSystem;
+		sys = DefTinkering.CraftSystem;
+		sys = DefRunescribing.CraftSystem;
+	}
         #endregion
 
         private CraftResCol m_arCraftRes;
@@ -413,6 +414,8 @@ namespace Server.Engines.Craft
 
         private static Type[] m_MarkableTable = new Type[]
 				{
+					typeof( BaseMinorRune ), typeof( BaseSupremeRune ),
+
 					#region Mondain's Legacy
 					typeof( BlueDiamondRing ), typeof( BrilliantAmberBracelet ),
 					typeof( DarkSapphireBracelet ), typeof( EcruCitrineRing ), 

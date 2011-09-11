@@ -6,6 +6,7 @@ using Server.Engines.PartySystem;
 using Server.Gumps;
 using Server.Multis;
 using Server.Network;
+using Server.Engines.Quests;
 
 namespace Server.Items
 {
@@ -310,6 +311,22 @@ namespace Server.Items
 			{
 				Item item = Loot.RandomGem();
 				cont.DropItem( item );
+			}
+
+			int bonus = level * 2;
+
+			if ( level > 0 && Utility.Random( 100 ) < 15 + bonus )
+			{
+				switch ( Utility.Random( 6 ) )
+				{
+					case 1: cont.DropItem( BaseReward.FletcherRecipe() ); break;
+					case 2: cont.DropItem( BaseReward.TailorRecipe() ); break;
+					case 3: cont.DropItem( BaseReward.SmithRecipe() ); break;
+					case 4: cont.DropItem( BaseReward.TinkerRecipe() ); break;
+					case 5: cont.DropItem( BaseReward.CarpRecipe() ); break;
+					case 6: cont.DropItem( new RecipeScroll( Utility.RandomMinMax( 10001, 10001 ) ) ); break;
+
+				}
 			}
 
 			if ( level == 6 && Core.AOS )

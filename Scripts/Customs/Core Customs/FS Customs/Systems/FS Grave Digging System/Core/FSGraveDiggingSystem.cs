@@ -116,7 +116,13 @@ namespace Server.FSGraveDiggingSystem
 				}
 				else if ( Utility.Random( 100 ) < chance )
 				{
-					from.AddToBackpack( GiveReward( from, tool ) );
+					int roll = Utility.Random( 2 );
+
+					switch ( roll )
+					{
+						case 0: from.AddToBackpack( GiveReward( from, tool ) ); break;
+						case 1: from.AddToBackpack( Runescribing.GetResoureDrop( false, true ) ); break;
+					}
 				}
 				else
 				{

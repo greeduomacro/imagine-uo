@@ -7,6 +7,8 @@ using Server.Engines.Craft;
 using Server.Network;
 using Server.Spells;
 using Server.Targeting;
+using Server.ContextMenus;
+using Server.Gumps;
 
 namespace Server.Items
 {
@@ -35,6 +37,15 @@ namespace Server.Items
 
 	public class Spellbook : Item, ICraftable, ISlayer, IEngravable
 	{
+        	private bool m_SlayerSelect;
+
+		[CommandProperty(AccessLevel.GameMaster)]
+		public bool SlayerSelect
+		{
+			get { return m_SlayerSelect; }
+			set { m_SlayerSelect = value; InvalidateProperties(); }
+		}
+
 		#region Mondain's Legacy
 		private string m_EngravedText;
 		private BookQuality m_Quality;
@@ -89,6 +100,32 @@ namespace Server.Items
 			{
 				from.BeginTarget( -1, false, TargetFlags.None, new TargetCallback( AllSpells_OnTarget ) );
 				from.SendMessage( "That is not a spellbook. Try again." );
+			}
+		}
+
+		public override void GetContextMenuEntries(Mobile from, List<ContextMenuEntry> list)
+		{
+			base.GetContextMenuEntries(from, list);
+
+			if ( SlayerSelect == true && RootParent == from )
+				list.Add( new SlayerSelectEntry( from, this ) );
+		}
+
+		private class SlayerSelectEntry : ContextMenuEntry
+		{
+			private Mobile m_From;
+			private Spellbook m_Item;
+			
+			public SlayerSelectEntry( Mobile from, Spellbook item ) : base( 5089, -1 )
+			{
+  				m_From = from;
+				m_Item = item;
+			}
+
+			public override void OnClick()
+			{
+				m_From.CloseGump( typeof( SlayerSelectSpellbookGump ) );
+				m_From.SendGump( new SlayerSelectSpellbookGump( m_Item ) );
 			}
 		}
 
@@ -601,6 +638,9 @@ namespace Server.Items
 		{
 			base.GetProperties( list );
 
+			if ( m_SlayerSelect == true )
+				list.Add( "Multi-Slayer" );
+
 			#region Mondain's Legacy
 			if ( m_Quality == BookQuality.Exceptional )
 				list.Add( 1063341 ); // exceptional
@@ -750,7 +790,9 @@ namespace Server.Items
 		{
 			base.Serialize( writer );
 
-			writer.Write( (int) 5 ); // version
+			writer.Write( (int) 6 ); // version
+
+			writer.Write( (bool) m_SlayerSelect );
 
 			#region Mondain's Legacy version 5
 			writer.Write( (byte) m_Quality );
@@ -780,6 +822,11 @@ namespace Server.Items
 
 			switch ( version )
 			{
+				case 6:
+				{
+					m_SlayerSelect = reader.ReadBool();
+					goto case 5;
+				}
 				case 5:
 				{
 					#region Mondain's Legacy

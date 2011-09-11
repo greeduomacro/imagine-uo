@@ -99,6 +99,18 @@ namespace Server.Engines.Craft
 				return true;
 			}
 
+			private bool IsSpecialArmor( BaseArmor armor )
+			{
+				// Armor repairable but not craftable
+
+				if( m_CraftSystem is DefTinkering )
+				{
+					return ( armor is Glasses );
+				}
+
+				return false;
+			}
+
 			private bool IsSpecialClothing( BaseClothing clothing )
 			{
 				// Armor repairable but not craftable
@@ -256,10 +268,10 @@ namespace Server.Engines.Craft
 					{
 						number = 1044278; // That item has been repaired many times, and will break if repairs are attempted again.
 					}
-                    else if (targeted is DragonsEnd || targeted is KatrinasCrook || targeted is JaanasStaff) // Quick fix
-                    {
-                        number = 1044277; // That item cannot be repaired.
-                    }
+                    			else if (targeted is DragonsEnd || targeted is KatrinasCrook || targeted is JaanasStaff) // Quick fix
+                    			{
+                        			number = 1044277; // That item cannot be repaired.
+                    			}
 					else
 					{
 						if ( CheckWeaken( from, skill, weapon.HitPoints, weapon.MaxHitPoints ) )
@@ -305,7 +317,7 @@ namespace Server.Engines.Craft
 							toWeaken = 3;
 					}
 
-					if ( m_CraftSystem.CraftItems.SearchForSubclass( armor.GetType() ) == null )
+					if ( m_CraftSystem.CraftItems.SearchForSubclass( armor.GetType() ) == null && !IsSpecialArmor( armor ) )
 					{
 						number = (usingDeed)? 1061136 : 1044277; // That item cannot be repaired. // You cannot repair that item with this type of repair contract.
 					}
@@ -321,10 +333,10 @@ namespace Server.Engines.Craft
 					{
 						number = 1044278; // That item has been repaired many times, and will break if repairs are attempted again.
 					}
-                    else if (armor is LordBlackthornsExemplar || armor is SentinelsGuard)// quick fix
-                    {
-                        number = 1044277; // That item cannot be repaired.
-                    }
+                    			else if (armor is LordBlackthornsExemplar || armor is SentinelsGuard)// quick fix
+                    			{
+                        			number = 1044277; // That item cannot be repaired.
+                    			}
 					else
 					{
 						if ( CheckWeaken( from, skill, armor.HitPoints, armor.MaxHitPoints ) )

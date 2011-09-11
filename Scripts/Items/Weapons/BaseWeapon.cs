@@ -13,6 +13,7 @@ using Server.Factions;
 using Server.Engines.Craft;
 using System.Collections.Generic;
 using Server.Spells.Spellweaving;
+using Server.Gumps;
 
 namespace Server.Items
 {
@@ -68,6 +69,15 @@ namespace Server.Items
 		 */
 
         #region Var declarations
+
+        private bool m_SlayerSelect;
+
+        [CommandProperty(AccessLevel.GameMaster)]
+        public bool SlayerSelect
+        {
+            get { return m_SlayerSelect; }
+            set { m_SlayerSelect = value; InvalidateProperties(); }
+        }
 
         // Instance values. These values are unique to each weapon.
         private WeaponDamageLevel m_DamageLevel;
@@ -178,40 +188,62 @@ namespace Server.Items
             get { return m_BlessedBy; }
             set { m_BlessedBy = value; InvalidateProperties(); }
         }
-        public override void GetContextMenuEntries(Mobile from, List<ContextMenuEntry> list)
-        {
-            base.GetContextMenuEntries(from, list);
 
-            if (BlessedFor == from && BlessedBy == from && RootParent == from)
-                list.Add(new UnBlessEntry(from, this));
-        }
+		public override void GetContextMenuEntries(Mobile from, List<ContextMenuEntry> list)
+		{
+			base.GetContextMenuEntries(from, list);
 
-        private class UnBlessEntry : ContextMenuEntry
-        {
-            private Mobile m_From;
-            private BaseWeapon m_Weapon; // BaseArmor, BaseWeapon or BaseClothing
+			if ( BlessedFor == from && BlessedBy == from && RootParent == from )
+				list.Add( new UnBlessEntry( from, this ) );
 
-            public UnBlessEntry(Mobile from, BaseWeapon weapon)
-                : base(6208, -1)
-            {
-                m_From = from;
-                m_Weapon = weapon;
-            }
+			if ( SlayerSelect == true && RootParent == from )
+				list.Add( new SlayerSelectEntry( from, this ) );
+		}
 
-            public override void OnClick()
-            {
-                m_Weapon.BlessedFor = null;
-                m_Weapon.BlessedBy = null;
+		private class UnBlessEntry : ContextMenuEntry
+		{
+			private Mobile m_From;
+			private BaseWeapon m_Weapon; // BaseArmor, BaseWeapon or BaseClothing
 
-                Container pack = m_From.Backpack;
+			public UnBlessEntry( Mobile from, BaseWeapon weapon ) : base( 6208, -1 )
+			{
+  				m_From = from;
+				m_Weapon = weapon;
+			}
 
-                if (pack != null)
-                {
-                    pack.DropItem(new PersonalBlessDeed(m_From));
-                    m_From.SendLocalizedMessage(1062200); // A personal bless deed has been placed in your backpack.
-                }
-            }
-        }
+			public override void OnClick()
+			{
+				m_Weapon.BlessedFor = null;
+				m_Weapon.BlessedBy = null;
+
+				Container pack = m_From.Backpack;
+
+				if (pack != null)
+				{
+					pack.DropItem(new PersonalBlessDeed(m_From));
+					m_From.SendLocalizedMessage(1062200); // A personal bless deed has been placed in your backpack.
+				}
+			}
+		}
+
+		private class SlayerSelectEntry : ContextMenuEntry
+		{
+			private Mobile m_From;
+			private BaseWeapon m_Item;
+			
+			public SlayerSelectEntry( Mobile from, BaseWeapon item ) : base( 5089, -1 )
+			{
+  				m_From = from;
+				m_Item = item;
+			}
+
+			public override void OnClick()
+			{
+				m_From.CloseGump( typeof( SlayerSelectWeaponGump ) );
+				m_From.SendGump( new SlayerSelectWeaponGump( m_Item ) );
+			}
+		}
+
         #endregion
         #endregion
 
@@ -2744,7 +2776,9 @@ namespace Server.Items
         {
             base.Serialize(writer);
 
-            writer.Write((int)13); // version
+            writer.Write((int)14); // version
+
+		writer.Write( (bool) m_SlayerSelect );
 
             writer.Write((Mobile)m_BlessedBy); // personal bless deed
 
@@ -2993,6 +3027,11 @@ namespace Server.Items
 
             switch (version)
             {
+		case 14:
+		{
+			m_SlayerSelect = reader.ReadBool();
+			goto case 13;
+		}	
                 case 13:
                 //personal bless deed
                 case 12:
@@ -3551,30 +3590,33 @@ namespace Server.Items
             return attrInfo.WeaponLuck;
         }
 
-        public override void GetProperties(ObjectPropertyList list)
-        {
-            base.GetProperties(list);
+		public override void GetProperties(ObjectPropertyList list)
+		{
+			base.GetProperties(list);
 
-            if (m_Crafter != null)
-                list.Add(1050043, m_Crafter.Name); // crafted by ~1_NAME~
+			if ( m_SlayerSelect == true )
+				list.Add( "Multi-Slayer" );
 
-            #region Factions
-            if (m_FactionState != null)
-                list.Add(1041350); // faction item
-            #endregion
+			if (m_Crafter != null)
+				list.Add(1050043, m_Crafter.Name); // crafted by ~1_NAME~
 
-            #region Mondain's Legacy Sets
-            if (IsSetItem)
-            {
-                list.Add(1073491, Pieces.ToString()); // Part of a Weapon/Armor Set (~1_val~ pieces)
+			#region Factions
+			if (m_FactionState != null)
+				list.Add(1041350); // faction item
+			#endregion
 
-                if (m_SetEquipped)
-                {
-                    list.Add(1073492); // Full Weapon/Armor Set Present			
-                    GetSetProperties(list);
-                }
-            }
-            #endregion
+			#region Mondain's Legacy Sets
+			if (IsSetItem)
+			{
+				list.Add(1073491, Pieces.ToString()); // Part of a Weapon/Armor Set (~1_val~ pieces)
+
+				if (m_SetEquipped)
+				{
+					list.Add(1073492); // Full Weapon/Armor Set Present			
+					GetSetProperties(list);
+				}
+			}
+			#endregion
 
             if (m_AosSkillBonuses != null)
                 m_AosSkillBonuses.GetProperties(list);

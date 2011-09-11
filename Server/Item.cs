@@ -615,6 +615,15 @@ namespace Server
 
 		public virtual bool OverrideItemValue { get { return false; } }
 
+		private int m_ChantSlots;
+
+		[CommandProperty( AccessLevel.GameMaster )]
+		public int ChantSlots
+		{
+			get{ return m_ChantSlots; }
+			set{ m_ChantSlots = value; InvalidateProperties(); }
+		}
+
 		private ItemValue m_ItemValue;
 
 		[CommandProperty( AccessLevel.GameMaster )]
@@ -2111,7 +2120,9 @@ namespace Server
 
 		public virtual void Serialize( GenericWriter writer )
 		{
-			writer.Write( 10 ); // version
+			writer.Write( 11 ); // version
+
+			writer.Write( (int) m_ChantSlots );
 
 			writer.Write( (int) m_ItemValue );
 
@@ -2436,6 +2447,12 @@ namespace Server
 
 			switch ( version )
 			{
+				case 11:
+				{
+					m_ChantSlots = (int)reader.ReadInt();
+
+					goto case 10;
+				}
 				case 10:
 				{
 					m_ItemValue = (ItemValue)reader.ReadInt();

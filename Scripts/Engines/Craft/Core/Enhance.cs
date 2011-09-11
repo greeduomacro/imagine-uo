@@ -340,6 +340,12 @@ namespace Server.Engines.Craft
 
 		public static void BeginTarget( Mobile from, CraftSystem craftSystem, BaseTool tool )
 		{
+			if ( tool is RuneChisel )
+			{
+				Runescribing.Enhance( from, tool );
+				return;
+			}
+
 			CraftContext context = craftSystem.GetContext( from );
 
 			if ( context == null )
